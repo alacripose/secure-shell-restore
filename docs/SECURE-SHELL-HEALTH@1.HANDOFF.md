@@ -24,12 +24,12 @@ be read as an empty one.
 
 | Refusal | When | Subject in the output |
 |---|---|---|
-| `handoff-receipt-unreadable` | the store, the close or a receipt cannot be read against `secure-shell.handoff/1`, or the store is missing | the path |
+| `handoff-receipt-unreadable` | the store, the close or a receipt cannot be read against `secure-shell.handoff/1`, the store is missing, or a receipt's date or evidence is not shaped like one | the path |
 | `handoff-driver-unnamed` | the close names no driver ticket, or the receipts name a different one | the unit |
-| `handoff-absent` | no receipt in the store names this unit and this driver ticket | the unit |
+| `handoff-absent` | no receipt in the store names this unit | the unit |
+| `handoff-author-mismatch` | every receipt for this unit names another author than the closing one | the unit |
 | `handoff-self-verified` | the only verifier for this unit and ticket is the author | the unit |
 | `handoff-not-held` | the second-identity receipt reports something other than `held` | the unit |
-| `handoff-author-mismatch` | no receipt for this unit names this close's author | the unit |
 
 There is no skip flag, no `--force`, no environment bypass and no wildcard unit. A close that cannot be
 verified cannot be made to pass; that is the difference between a ratchet and a suggestion.
@@ -64,7 +64,7 @@ in `tests/handoff/`. The outputs below are the tool's own lines, unedited.
 | second identity, held | `close-with-receipt.json` · `receipts-valid.jsonl` | **0** | `{"author": "agent:author", "driver_ticket": "TICKET-0100", "receipt_digest": "e12be728d4385091", "schema": "secure-shell.handoff/1", "state": "permitted", "unit": "TICKET-9001", "verifier": "agent:verifier"}` |
 | author verifies itself | `close-self-verified.json` · `receipts-self.jsonl` | **1** | `{"reason": "the only verifier is the author (agent:author)", "refusal": "handoff-self-verified", "schema": "secure-shell.handoff/1", "state": "refused", "subject": "TICKET-9001"}` |
 
-`python tools/handoff_ratchet.py self-check` — `RESULT: PASS (0 failed)` over six throwaway cases,
+`python tools/handoff_ratchet.py self-check` — `RESULT: PASS (0 failed)` over eight throwaway cases,
 including a missing store and a receipt whose `evidence` is blank.
 
 `python tests/handoff/run_cases.py` — `3 cases, 0 failed`.
@@ -77,9 +77,22 @@ commands are part of the check set that a unit runs before it commits.
 
 ## 6. This unit's own handoff
 
-`TICKET-0002` is closed through this ratchet, not around it: its author is the agent that wrote the
-ratchet, and its verifier is a separately spawned agent identity that ran the checks in its own
-context and reported what it saw. The receipt is in the store and the close is in `tickets/`.
+`TICKET-0002` is closed through this ratchet, not around it. Its author is the agent that wrote the
+ratchet; its verifier is a separately spawned research agent that read the published commit
+`fc431fc` in its own context and returned `HELD` after quoting the lines behind each decision, and
+which returned a further two documentation defects that were fixed before the close.
+
+| Field | Value |
+|---|---|
+| unit | `TICKET-0002` |
+| author | `buffy:secure_shell_v2` |
+| verifier | `researcher-web:verification-1` |
+| driver ticket | `TICKET-0100` (the driver-training ticket this unit hands off to; not yet opened) |
+| evidence | the verifier's reading of `tools/handoff_ratchet.py` at `fc431fc`, and CI run `41850615681` |
+| result | `held` |
+
+The same close, run against the store before the receipt existed, is refused `handoff-absent`:
+that refusal is what this unit's transcript shows, and it is why the receipt is not decoration.
 
 ## 7. What this does not do
 
@@ -94,3 +107,5 @@ context and reported what it saw. The receipt is in the store and the close is i
   the store is named here as missing rather than implied to exist.
 - Identity is a string, compared case-folded. A receipt is only as good as the identity that wrote it,
   and this repository does not yet mint identities.
+- `evidence` is shape-checked only. A receipt must carry something shaped like a path or a
+  `path:line`, and nothing opens it, so a verifier's evidence is not yet re-read by the ratchet.
