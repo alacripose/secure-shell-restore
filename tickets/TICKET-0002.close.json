@@ -1,0 +1,7 @@
+{
+  "schema": "secure-shell.handoff/1",
+  "unit": "TICKET-0002",
+  "author": "buffy:secure_shell_v2",
+  "driver_ticket": "TICKET-0100",
+  "at": "2026-11-04T14:52:00Z"
+}

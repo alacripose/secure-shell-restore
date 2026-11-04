@@ -1,0 +1,1 @@
+{"schema": "secure-shell.handoff/1", "unit": "TICKET-9001", "author": "agent:author", "verifier": "agent:author", "driver_ticket": "TICKET-0100", "result": "held", "evidence": "tests/handoff/receipts-self.jsonl:1", "at": "2026-11-04T00:00:00Z"}
