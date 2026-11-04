@@ -1,0 +1,4 @@
+# Runtime dependencies for the implementation tree.
+# Pinned to a major range: BLAKE3 is the identity algorithm (decision 6), and the
+# canonical name in the record is defined by this library's output.
+blake3>=1.0.0,<2.0.0

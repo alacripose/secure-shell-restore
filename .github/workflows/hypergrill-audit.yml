@@ -8,6 +8,8 @@ on:
       - ".cache/**"
       - "tickets/**"
       - "tests/**"
+      - "impl/**"
+      - "requirements.txt"
       - ".github/workflows/hypergrill-audit.yml"
   pull_request:
     paths:
@@ -16,6 +18,8 @@ on:
       - ".cache/**"
       - "tickets/**"
       - "tests/**"
+      - "impl/**"
+      - "requirements.txt"
   workflow_dispatch:
 
 jobs:
@@ -28,6 +32,13 @@ jobs:
           python-version: "3.12"
       # The family checkouts are not part of this repository; a run without them reports
       # `unasked` and refuses a probe it cannot resolve rather than passing quietly.
+      - name: Install runtime dependencies
+        run: python -m pip install -r requirements.txt
+      # The exit test of R4. It reads only this repository, so a runner can execute it; the
+      # refusal cases are the plan's own words for the milestone (tampered, ambiguous,
+      # foreign-revision refuse by name).
+      - name: Package identity contract
+        run: python tests/packages/run_cases.py
       - name: Re-audit the 500 slots
         run: python tools/hypergrill_reaudit.py --strict
       # hg_check10 pins refs into the family checkouts (testport1, secure-shell, shploingus-clean).
