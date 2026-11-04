@@ -52,6 +52,8 @@ row already in this table is a ratchet regression, and the ratchet only tightens
 
 | `AF-21` | Kept the first four milestones of a running system entirely in prose, with no runnable byte in the repository | `docs/SECURE-SHELL-RESTORE@1.IMPLEMENTATION-PLAN.md` §3 against the tree at `fa4a0bf`: R0–R4 named, `impl/` absent, no command that could produce or refuse a canonical package name | a plan that reads as progress while nothing in it can be executed, the failure the plan's own rule 11 names | `impl/packages/identity.py` implements `name@rev+blake3:` with named refusals, `tests/packages/run_cases.py` is its exit test, and R2/R3 stay `absent` with the missing host and checkout named |
 
+| `AF-22` | Hashed an ad-hoc manifest: no declared vocabulary, no schema ids, no chunk domains | `impl/packages/identity.py` at `24fc04e` accepted any dictionary, so `package_digest({"anything": 1})` succeeded and an undeclared key silently changed identity | an identity contract whose preimage had no declared shape, one level below `AF-21`'s prose-only milestone | `impl/packages/canonical.py` closes the vocabulary, refuses unknown keys and malformed schema ids by name, separates chunk domains from package identity, and `tests/packages/run_cases_canonical.py` proves re-signing and re-chunking do not move the digest |
+
 Nothing in this table was closed by the agent's own report. Each correction names the file, the check
 or the owner's words that carry it.
 
