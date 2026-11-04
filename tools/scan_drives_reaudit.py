@@ -86,6 +86,7 @@ totals = {"formats": Counter(), "magics": Counter(), "hash_ids": Counter(), "xml
 TMP_OUT = OUT.with_name(OUT.name + ".tmp")
 TMP_STREAM = STREAM.with_name(STREAM.name + ".tmp")
 TMP_STATE = STATE.with_name(STATE.name + ".tmp")
+GENERATED_OUTPUTS = {ROOTDIR / "docs" / "hypergrill" / "AUDIT@2026-11-04.md", ROOTDIR / "docs" / "hypergrill" / "audit@2026-11-04.json"}
 stream = TMP_STREAM.open("w", encoding="utf-8", newline=chr(10))
 report = TMP_OUT.open("w", encoding="utf-8", newline=chr(10))
 
@@ -119,7 +120,7 @@ def add_ref(p: Path, topics: list[str]) -> None:
     digest = ""
     try:
         size = p.stat().st_size
-        if str(p).startswith(str(D)) and digests < MAX_DIGESTS:
+        if str(p).startswith(str(D)) and digests < MAX_DIGESTS and p not in GENERATED_OUTPUTS:
             digest = hashlib.sha256(p.read_bytes()).hexdigest()
             digests += 1
     except OSError:
