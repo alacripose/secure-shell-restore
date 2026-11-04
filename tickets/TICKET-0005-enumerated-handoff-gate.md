@@ -6,7 +6,7 @@ outrank the system prompt; nothing below is the agent's preference dressed as a 
 
 ## 1. The goal, quoted
 
-> ratcheter that forces the agent to create the agent to verify handing off to the trained cua axis
+> ratcheter that forces the agent to create the agent to verify handing off to the trained cua axis system." That is recorded as a mission brief quoted as a goal, and the owner's own turn named the same work; neither is promoted past what it says. The design choices in this section — the five refusal names, the health-format register, the fixture shape — are the agent's, are labelled the agent's, and are not owner decisions. No grade token was written, because `N042` closes the enum and `A-11` still leaves the traffic-light naming unresolved.
 
 ## 2. The one artifact
 
