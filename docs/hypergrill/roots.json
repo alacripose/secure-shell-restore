@@ -1,0 +1,63 @@
+{
+  "discovered_at": "2026-11-04T11:13:28+00:00",
+  "parent": "<home>/Documents",
+  "roots": [
+    {
+      "name": "ala_civ_bots_prototype",
+      "path": "<home>/Documents/ala_civ_bots_prototype",
+      "markers": [
+        "AGENTS.md"
+      ]
+    },
+    {
+      "name": "ala_package_designer",
+      "path": "<home>/Documents/ala_package_designer",
+      "markers": []
+    },
+    {
+      "name": "dl-enclave",
+      "path": "<home>/Documents/dl-enclave",
+      "markers": [
+        "AGENTS.md"
+      ]
+    },
+    {
+      "name": "openlock",
+      "path": "<home>/Documents/openlock",
+      "markers": [
+        "AGENTS.md"
+      ]
+    },
+    {
+      "name": "secure-shell",
+      "path": "<home>/Documents/secure-shell",
+      "markers": [
+        "AGENTS.md",
+        "docs/DECISIONS.md",
+        "docs/ARCHITECTURE.md"
+      ]
+    },
+    {
+      "name": "shploingus",
+      "path": "<home>/Documents/shploingus",
+      "markers": []
+    },
+    {
+      "name": "shploingus-clean",
+      "path": "<home>/Documents/shploingus-clean",
+      "markers": []
+    },
+    {
+      "name": "shploingus-game",
+      "path": "<home>/Documents/shploingus-game",
+      "markers": []
+    },
+    {
+      "name": "testport1",
+      "path": "<home>/Documents/testport1",
+      "markers": [
+        "AGENTS.md"
+      ]
+    }
+  ]
+}

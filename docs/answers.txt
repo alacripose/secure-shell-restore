@@ -1,0 +1,377 @@
+The Rapid Progress of Realtime Simulations_AI(3).txt
+Document
+Using my github integrations, find the secure shell audit, and create the plan from this video transcript to drive the secure shell next version that follows the updated naming schema, uses cua driven development and initial setup, from the debian backed mongo store, blake3 signed package streamer system backed by the axis cua driver system that also has it's versions updated accordingly, starting with the initial shell window from the debian store, verifying that a day's worth of work is handled by the agent and that the agent must first generate the shell from openlock, then using the swf cell runtime's learnings (which needs a project wide audit similar to other audits will will need to be updated to new formats instead of crlf or lf) to provide the qtxml desktop streamed upstream impeccable shell from the debian server shell's store, how to set up the project with the agents.md recorded proposals and auto updating conventions and api tooling from the various projects. I also need you to see how the swf importer locked in on the legacy planet crates formats which is a dying format that is planned to be removd, while still learning from the project's conventions and cellular work style. the intention with the civilians cellular model is to actually train a secure shell system 1 cua driver for handling the shell's recovery, health, pre/post split formats, legacy/updated formats, and provide useful api tools for agents including yourself to import for generating your own small api template to use without mounting every shell component, streaming it from an internal store. When you're done, I'd like 5 files, all following the updated naming structure, as well as mid way through, 20 questions to help clarify things. thanks
+…
+Secure Shell next-version development plan
+The primary repository is alacripose/secure-shell. I located its existing audit, architecture, decisions, implementation plan, and agent conventions.
+
+The most important finding is that this cannot be approached as an ordinary renderer upgrade. The existing project already has explicit architectural decisions that the next version needs to revisit rather than accidentally inherit.
+
+1. Existing audit findings
+Audit located docs/FORMAT-SOURCES-AUDIT.md
+
+The existing 1,180-line audit contains several findings directly relevant to your requested direction.
+
+Existing finding
+
+Consequence for the next version
+
+OpenLock has multiple independently evolved package formats.
+
+Preserve its working shell and display conventions without inheriting every package format.
+
+planet-package has its own package framing, magic, and version grammar.
+
+Do not make it the permanent Secure Shell package dependency.
+
+OpenLock's package-envelope implementation has incomplete signing evidence.
+
+Design a separately verifiable package provenance and signature system.
+
+OpenLock uses MongoDB for its axis-witness comparison workflow.
+
+Its three-reading verification pattern is worth studying, but its unauthenticated local store should not be copied as-is.
+
+The SWF/API tooling and shell development drifted apart.
+
+Make API tooling and the user-visible shell part of the same witnessed development process.
+
+Generated shell assets became substantially larger than their source declarations.
+
+Preserve generated-versus-authored boundaries and automate regeneration.
+
+The existing CUA/control relationship is not fully implemented in Secure Shell.
+
+Make the CUA driver an actual bounded control and verification mechanism, not a screenshot generator.
+
+There is an important architectural conflict to resolve.
+
+The current Secure Shell AGENTS.md explicitly rules out MongoDB, new package formats, and additional signature schemes. Its architecture uses a Debian backend, an append-only ledger, SHA-256 hashing, and Ed25519 checkpoints.
+
+Your requested next version proposes a different direction: a MongoDB-backed server store, BLAKE3-based package integrity, signed package streaming, and a CUA-driven desktop. Those are legitimate proposals, but they must be explicitly recorded as superseding decisions rather than quietly implemented underneath the existing rules.
+
+Relevant existing documents:
+
+Secure Shell agent conventions
+
+Format sources audit
+
+Existing architecture
+
+Recorded decisions
+
+Machine-readable implementation plan
+
+2. Twenty design questions — midpoint review
+These are deliberately decision-oriented. The existing project requires user-owned architectural selections, and I don't want the implementation plan to conceal those choices behind assumed defaults.
+
+Decision record
+
+0/20 answered
+1. Identity and naming
+
+Should the next version retain the repository identity `secure-shell` while independently versioning the shell record, package stream, server API, and CUA driver?
+
+Your decision, preference, or unresolved...
+
+2. Version scheme
+
+Should all interdependent components use one coordinated release version, or should each format and component have its own independently declared schema version?
+
+Your decision, preference, or unresolved...
+
+3. MongoDB authority
+
+Should MongoDB become the canonical durable record for the server, including the project activity ledger, or should MongoDB be the authoritative package/store database while the existing append-only ledger remains independently authoritative?
+
+Your decision, preference, or unresolved...
+
+4. MongoDB topology
+
+Is the intended MongoDB deployment a single Debian-hosted instance initially, with replica-set support designed in, or must replication and failover exist in the first implementation?
+
+Your decision, preference, or unresolved...
+
+5. Persistence and security
+
+Should MongoDB use encrypted storage, authenticated service identities, append-only event permissions, and verified backups as mandatory admission conditions?
+
+Your decision, preference, or unresolved...
+
+6. Package integrity
+
+Should BLAKE3 identify package contents and manifests, with a separate public-key signature algorithm signing the manifest? Which signature algorithm should own that operation?
+
+Your decision, preference, or unresolved...
+
+7. Signing authority
+
+Who owns package signing keys: the Debian server, a separate signing service, or an explicitly delegated user-controlled authority?
+
+Your decision, preference, or unresolved...
+
+8. Stream contract
+
+Should the new streamed package format replace `surface.mount/2`, or should the new signed stream carry mount receipts as an independently versioned subordinate contract?
+
+Your decision, preference, or unresolved...
+
+9. OpenLock generation
+
+Must the first deliverable be an agent-generated shell created from OpenLock's actual source, declarations, and generated assets before any new desktop framework is introduced?
+
+Your decision, preference, or unresolved...
+
+10. Display format
+
+What exactly does QTXML mean in this design: Qt Widgets with XML-defined UI, Qt Quick/QML, or another XML-based desktop representation?
+
+Your decision, preference, or unresolved...
+
+11. Display ownership
+
+Should the Debian server transmit declarations and package content only, with the local desktop client remaining the sole owner of rendering, focus, input, and CUA observation?
+
+Your decision, preference, or unresolved...
+
+12. SWF runtime boundary
+
+Should the SWF cell runtime remain a supported import adapter, with its own package dependencies isolated behind the new streamer API?
+
+Your decision, preference, or unresolved...
+
+13. Planet crate migration
+
+Should all `planet-*` crate dependencies be removed from the eventual runtime, or retained temporarily as a quarantined legacy decoder during migration?
+
+Your decision, preference, or unresolved...
+
+14. Legacy handling
+
+Should legacy packages be imported into an explicit compatibility representation and then rewritten into the new format, or remain immutable and be streamed through a version-specific reader?
+
+Your decision, preference, or unresolved...
+
+15. Split formats
+
+What are the exact pre-split and post-split format families that must remain readable, and should they receive distinct schema identifiers rather than automatic detection?
+
+Your decision, preference, or unresolved...
+
+16. Text normalization
+
+Should the project-wide source migration establish UTF-8, a defined newline policy, and a canonical serialization format, with conversion restricted to explicitly recorded migrations?
+
+Your decision, preference, or unresolved...
+
+17. CUA responsibilities
+
+Should the Axis CUA driver own shell boot, recovery, health inspection, format identification, mounting, and pre/post-migration verification, with every action ticketed and witnessed?
+
+Your decision, preference, or unresolved...
+
+18. Agent API provisioning
+
+Should agents receive a small generated API template and a capability-scoped tool manifest from the internal store, without needing to mount the full desktop or its components?
+
+Your decision, preference, or unresolved...
+
+19. Civilian verification
+
+Should the civilian model exercise the shell continuously through simulated workdays, including jobs, learning trees, courts, interruptions, recovery, and independent verification?
+
+Your decision, preference, or unresolved...
+
+20. Daily acceptance target
+
+What constitutes a successful day of work: a 24-hour continuous simulation, a recorded workday of scheduled cadence ticks, or a defined number of completed and independently verified tasks?
+
+Your decision, preference, or unresolved...
+
+These questions will also be included in the deliverable, so they remain part of the project history rather than disappearing into conversation.
+
+Created and validated all five Secure Shell v2 planning documents, plus a ZIP containing the complete set.
+
+5 files created UTF-8 · LF · 92 KB of Markdown
+
+Download the documents
+Complete five-document bundle
+
+One ZIP · all five Markdown files
+
+Ready
+Download Secure Shell v2 plan bundle
+
+Individual documents
+
+SECURE-SHELL-V2-ARCHITECTURE.md
+System boundaries, Debian/MongoDB store, BLAKE3 package identity, signing, streaming, OpenLock-derived shell, and Qt client.
+
+SECURE-SHELL-V2-IMPLEMENTATION-PLAN.md
+M0–M12 implementation sequence, dependencies, exit conditions, daily-work acceptance, and the 20 owner decisions.
+
+SECURE-SHELL-V2-FORMAT-IMPORT-AUDIT.md
+Existing Secure Shell audit findings, MongoDB history, OpenLock envelope limitations, SWF importer dependencies, legacy format migration, and newline/serialization audit.
+
+SECURE-SHELL-V2-CUA-CIVILIAN-ACCEPTANCE.md
+Axis System-1 CUA, shell recovery, cellular learning, civilian continuity, and a full lived-workday verification protocol.
+
+SECURE-SHELL-V2-AGENT-BOOTSTRAP-API.md
+Agent project setup, AGENTS.md proposal lifecycle, health ratchet, MCP/API contracts, and small internally streamed API templates.
+
+The most important findings
+The SWF importer really is tied to the legacy crate family. Its current manifest directly depends on planet-aead, planet-package, and planet-shell-ledger, with planet-client in development tests. It still emits the V4PKG001 frame through planet-package. The newer hashed format identifier work does not, by itself, replace that frame.
+
+Secure Shell's current rules conflict with the requested v2 direction. The existing architecture explicitly rejects MongoDB and new package formats. The plan therefore makes a superseding owner decision its first milestone, rather than quietly building around those restrictions.
+
+BLAKE3 and signing are separate responsibilities. The documents use BLAKE3 for package content identity and leave the public-key signature suite as an explicit decision. A hash is not a signature or an authorization verdict.
+
+The civilian system is not yet the completed cellular CUA architecture. The repositories show meaningful System-1 and persistence work, but the rechecked specification identifies the full cellular learning system and lived verification as unfinished. The new acceptance document preserves that distinction.
+
+The 20 questions were shown in the middle of the work and are also preserved in the implementation plan. Unanswered questions remain open rather than becoming hidden assumptions.
+
+The files passed the UTF-8, LF, file-count, and archive checks. I did not modify or push any GitHub repository; these are local planning deliverables, not claimed implementation commits.
+
+The next step is to settle the 20 decisions, especially the store authority, package signature, stream/mount contract, Qt XML meaning, and workday definition, before opening the first implementation tickets.
+
+
+SECURE-SHELL-V2-ARCHITECTURE.md
+Document
+
+SECURE-SHELL-V2-IMPLEMENTATION-PLAN.md
+Document
+
+SECURE-SHELL-V2-FORMAT-IMPORT-AUDIT.md
+Document
+2 more
+Here are my Secure Shell next-version design decisions. Preserve unanswered items as open decisions:
+1. Identity and naming: secure shell and pins the version and hash by name
+2. Version scheme: the version is independent and bumps per revision while still pinning which version it's compiling against in name
+3. MongoDB authority: mongodb is not optional except for outside of scratch workspaces the cua model provides
+4. MongoDB topology: debian provides everything, the first version is actually called a restore, it rebuilds the database on Debian and streams the basic tui desktop environment first, with the cua driver showing spinning loaders for things that are being developed by cua or are being requested by the agent for training the cua driver via the web or dependencies. the tui taskbar provides as well the console default window which is the actual debian console, among streaming other debian features securely through the format. The thing about CUA is it has to be performant and support thousands of workers at scale which the minecraft ala-civ-bots-prototype was a test for
+5. Persistence and security: Yes
+6. Package integrity: whatever's fast, stateful, can be streamed over the network, ran on small things but hugely scaleable, and can be operated by the trained cua drivers
+7. Signing authority: the debian server
+8. Stream contract: carry mount receipts as an independently versioned subordinate contract
+9. OpenLock generation: Yes it has to be the programatic shell that begins the debian store regeneration process to provide the streamed debian tui taskbar and console window and the client qtxml reader
+10. Display format: latest qt 6 pinned per release via github ci please read the other projects, it still has to support motion and bitmaps like the swf importer triesto do
+11. Display ownership: yes
+12. SWF runtime boundary: swf importer is examples, yes
+13. Planet crate migration: quarantined legacy decoder during migration
+14. Legacy handling: quarantined legacy decoder during migration, legacy packages be imported into an explicit compatibility representation and then rewritten into the new format,
+15. Split formats: you will have to actually use the github integration and read the files. I have committed the secure shell audit to the swf importer docs
+16. Text normalization: yes please
+17. CUA responsibilities: yes, axis cua driver handles a lot of things, the ratcheting system is designed to judge how much of the system is streamed vs legacy package formats, so cua can work on providing security and streaming to much more than just tbe client, but can actually work through the system over time to learn and adapt to the system it's installed on, and provide more package cells and windows to stream. this includes working down to kernel level stuff on the system, running in an air-gapped system controlled over the network as a real security enhanced authorization system driven by a system 1 model
+18. Agent API provisioning: yes
+19. Civilian verification: civilians is the model for cua agents and have an even further updated representation in cellular_generativity_axis_civilian_expectations_prototype_rechecked
+20. Daily acceptance target: 24-hour continuous simulation
+…
+Your 20 decisions are incorporated. I've revised the five documents around Secure Shell — Restore, rather than treating the project as a conventional v2 renderer upgrade.
+
+5 revised files created Archive verified
+
+Download the Restore document set
+Complete Restore documentation
+
+Five Markdown files · UTF-8 · LF · ZIP
+
+Download all five files
+
+Individual files
+
+Restore architecture
+
+Implementation plan and 20 recorded decisions
+
+Format and SWF importer audit
+
+CUA and civilian acceptance specification
+
+Agent bootstrap and internal API specification
+
+Important architectural changes
+1. Restore is the first release.
+
+The implementation sequence now begins with OpenLock generation, followed by Debian database reconstruction, MongoDB-backed package admission, and the first streamed TUI desktop containing the taskbar and actual Debian console.
+
+2. Qt 6 is the product client.
+
+I checked Qt's official release information. Qt 6.12.0 LTS, released September 30, 2026, is the current baseline. The plan specifies pinning its exact version through GitHub CI, rather than using floating dependencies. 
+
+qt.io
++2
+
+3. The SWF importer is no longer the runtime foundation.
+
+The audit now distinguishes the pre-split and post-split package families, the five observed package magics, and the corrected 129-identifier classification.
+
+It records the actual planet-* dependency lock-in and a migration route through quarantined compatibility readers.
+
+4. The CUA system becomes a much larger undertaking.
+
+The revised acceptance specification includes persistent System-1 agents, privileged host-operation brokers, air-gapped management, thousands of worker targets, cellular learning, and a 24-hour continuous simulation.
+
+It also uses the realtime simulation transcript accurately: particularly its observations about scene persistence, physics, motion, audio, multiple actors, and the failures of generative simulations. Those failures become test requirements rather than assumed capabilities.
+
+5. The agent API becomes an independently provisioned system.
+
+Agents can request small API templates, windows, packages, dependencies, and training work without mounting the entire desktop. The health ratchet automatically generates convention proposals, while actual rule changes remain ticketed and authorized.
+
+Decisions deliberately left open
+I preserved the unanswered technical details rather than inventing them. These include the exact package identifier grammar, key custody and rotation, receipt schema, MongoDB replication, stream cryptographic profile, Qt XML grammar, kernel capability catalogue, and exact performance budgets.
+
+The cryptographic proposal separates BLAKE3 content identity, authenticated encryption, and Debian-server signing. They are not treated as interchangeable mechanisms.
+
+One important distinction: these five files are local deliverables, not commits to your GitHub repositories. The next implementation stage should begin by recording the Restore superseding decisions and opening the first ticketed OpenLock generation work.
+
+
+SECURE-SHELL-RESTORE-ARCHITECTURE.md
+Document
+
+SECURE-SHELL-RESTORE-IMPLEMENTATION-PLAN.md
+Document
+
+SECURE-SHELL-RESTORE-FORMAT-IMPORT-AUDIT.md
+Document
+2 more
+ask me
+One important naming decision is still open:
+
+What should a Restore package’s canonical identity look like?
+
+Should it follow a structure like:
+
+package-name@revision+blake3:<content-hash>
+
+That would give each package a human-readable name, an independently versioned revision, and an immutable content-hash pin. Or do you envision a different grammar?
+
+Yeah that looks right
+Good. I’ll use this as the proposed canonical package identity:
+
+package-name@revision+blake3:<content-hash>
+
+Next question: How should revision work?
+
+Would you prefer a monotonically increasing integer (@1, @2, @3), or semantic versions (@1.2.0)? My recommendation is monotonically increasing integers for package identity, with API and compatibility versions tracked separately.
+
+Yeah that sounds good
+That establishes the identity rule:
+
+package-name@<monotonic-integer-revision>+blake3:<content-hash>
+
+Next question: What exactly should the BLAKE3 hash cover?
+
+My recommendation is the complete canonical package content: manifest, declared dependencies, schemas, and payload bytes after deterministic serialization, but not transport framing, encryption, or the Debian signature envelope. That keeps package identity stable regardless of how it is encrypted or streamed.
+
+Does that match what you intend?
+
+Yeah that was the point was to upgrade to blake3 because it was something that only was discovered by working on the swf importer. the swf importer now has a health gate check but it became really goddamn slow every time because the project would slowly devolve into sratch python scripts for tests and verifying the tree was stable, instead of doing assigned work by a trained cua driver with websearches to find missing gaps
+That clarifies the real lesson from the SWF importer: the health gate must not become a substitute for actually doing the work.
+
+BLAKE3 is part of the response to the package-integrity and verification problem, but it doesn't fix a broken development workflow by itself. Restore needs a trained, persistent Axis CUA driver that takes an assigned ticket, researches missing requirements, performs the work, runs repository-owned checks, and produces auditable evidence. Scratch Python scripts and repeated improvised tree scans should not become the project’s default means of proving progress.
+
+I would make reusable verification tools part of the driver’s versioned capabilities, not disposable artifacts generated every time a check fails.
+
+Next question: Should normal health checks be incremental—checking changed components and their dependency closure—while full-tree audits and exhaustive migration checks happen at release gates and scheduled 24-hour runs?
+
+Yes, continue
