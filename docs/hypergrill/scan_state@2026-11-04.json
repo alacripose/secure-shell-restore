@@ -1,20 +1,20 @@
 {
-  "files": 79828,
+  "files": 81685,
   "seconds": 129.2,
-  "refs": 4783,
+  "refs": 5165,
   "omitted": 0,
   "digests": 900,
   "absent": [],
   "topics": {
     "civilians": 219,
-    "health": 270,
-    "policy": 2687,
-    "ledger": 1896,
-    "witness": 543,
-    "cadence": 565,
+    "health": 280,
+    "policy": 2815,
+    "ledger": 2148,
+    "witness": 549,
+    "cadence": 577,
     "mount": 61,
-    "client": 1284,
-    "format": 219
+    "client": 1349,
+    "format": 224
   },
   "formats": {
     "secure-shell.agent-api/1": 2,
@@ -123,7 +123,7 @@
     "shploingus.api-field-values/1": 3,
     "shploingus.ballot/1": 3,
     "shploingus.cellframe/0": 5,
-    "shploingus.cells/0": 6,
+    "shploingus.cells/0": 8,
     "shploingus.chain-event/1": 3,
     "shploingus.chain/1": 3,
     "shploingus.compendium/1": 4,
