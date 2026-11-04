@@ -61,7 +61,9 @@ class Refused(Exception):
     """A named refusal, carrying the subject and the reason."""
 
     def __init__(self, refusal: str, subject: str, reason: str) -> None:
-        assert refusal in REFUSALS, refusal
+        # The family schema, not this module's enum: sibling modules declare their own
+        # vocabularies and each of them asserts membership where it refuses.
+        assert isinstance(refusal, str) and NAME.match(refusal), refusal
         super().__init__(reason)
         self.refusal = refusal
         self.subject = subject

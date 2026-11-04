@@ -39,6 +39,10 @@ jobs:
       # foreign-revision refuse by name).
       - name: Package identity contract
         run: python tests/packages/run_cases.py
+      # The declared package object: schema ids, the manifest vocabulary and the chunk
+      # domains. It also asserts that re-signing and re-chunking do not move identity.
+      - name: Canonical manifest contract
+        run: python tests/packages/run_cases_canonical.py
       - name: Re-audit the 500 slots
         run: python tools/hypergrill_reaudit.py --strict
       # hg_check10 pins refs into the family checkouts (testport1, secure-shell, shploingus-clean).
