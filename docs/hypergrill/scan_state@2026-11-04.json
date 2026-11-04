@@ -1,20 +1,20 @@
 {
-  "files": 89180,
-  "seconds": 124.1,
+  "files": 90398,
+  "seconds": 114.6,
   "refs": 6000,
-  "omitted": 626,
+  "omitted": 1347,
   "digests": 900,
   "absent": [],
   "topics": {
-    "civilians": 172,
-    "health": 246,
-    "policy": 2867,
-    "ledger": 2831,
-    "witness": 531,
-    "cadence": 516,
-    "mount": 61,
-    "client": 1491,
-    "format": 200
+    "civilians": 167,
+    "health": 241,
+    "policy": 2839,
+    "ledger": 3163,
+    "witness": 528,
+    "cadence": 501,
+    "mount": 59,
+    "client": 1188,
+    "format": 196
   },
   "formats": {
     "secure-shell.handoff/1": 12,
