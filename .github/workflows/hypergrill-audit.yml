@@ -33,8 +33,8 @@ jobs:
         run: python .cache/hg_ci_gate.py
       - name: Ingested-source register
         run: python .cache/hg_check9.py
-      - name: Hypergrill counts and section 9.1
-        run: python .cache/hg_check7.py
+      # hg_check7 asserts paths on the owner's machine and in the family checkouts. A runner has
+      # neither, so it is a local check, like hg_check10. Its absence here is named, not silent.
       - name: Resolver contract
         run: python tools/hypergrill_resolver.py self-check
       - name: Handoff ratchet — enumerated refusals and contract
