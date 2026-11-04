@@ -1,6 +1,6 @@
 # TICKET-0001 — record round v2.4, publish the record
 
-**Status:** `review`
+**Status:** `complete`
 **Opened:** 2026-11-04
 **Branch:** `main` (first unit; the branch convention starts with TICKET-0002)
 
@@ -60,7 +60,30 @@ refused for credentials; the visibility change is refused; or a file in the tree
 - [x] Ask the five questions and record the answers verbatim
 - [x] Write the failure ledger
 - [x] Record the publication directive in the round
-- [ ] Rescan so every digest matches the committed files
-- [ ] Run the six checks and record their exit statuses
-- [ ] Create the repository, make it public, push `main`
-- [ ] Close the ticket with the receipt
+- [x] Rescan so every digest matches the committed files
+- [x] Run the six checks and record their exit statuses
+- [x] Create the repository, make it public, push `main`
+- [x] Close the ticket with the receipt
+
+## Receipt
+
+| Field | Value |
+|---|---|
+| Branch | `main` |
+| Commits | `3c3540a` (record, ledger, first publish attempt), `321558a` (atomic scan output, cache scope, health-record rename) |
+| Push | `git push -u origin main` exit 0 — `* [new branch] main -> main` |
+| Repository | `alacripose/secure-shell-restore`, public on owner directive "Publish publially." |
+| Scan | 79,828 files, 4,783 references, 900 digests, 0 omitted, 129.2 s |
+| `hg_check7` | RESULT: PASS |
+| `hg_check8` | 48 checks, 0 failed |
+| `hg_check9` | 44 checks, 0 failed |
+| `hg_check10` | 47 checks, 0 failed |
+| `hg_check11` | 21 checks, 0 failed |
+| `hypergrill_resolver.py self-check` | RESULT: PASS |
+| `hypergrill_reaudit.py --strict` | exit 0 |
+| `normalize_lf.py` | exit 0, no CR remains |
+
+Refusals this unit recorded rather than cleared: `AF-10` (a killed scan truncated the inventory in
+place), `AF-11` (scratch committed into a public tree), `AF-12` (one five-minute command doing four
+steps, cancelled mid-sequence). None of the three is closed by this receipt; each names the change that
+prevents its repetition.
