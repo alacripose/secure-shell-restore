@@ -16,6 +16,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import sys
 import tempfile
 from pathlib import Path
@@ -33,6 +34,7 @@ REFUSALS = {
     "handoff-self-verified": "the verifier is the author; an agent may not verify its own handoff",
     "handoff-receipt-unreadable": "the store, the close or a receipt could not be read against the schema",
     "handoff-not-held": "the receipt does not carry result 'held'",
+    "handoff-author-mismatch": "every receipt for this unit names a different author than the closing one",
 }
 
 CHECKS = (
@@ -49,14 +51,6 @@ def emit(payload: dict) -> None:
 def refuse(code: str, subject: str, reason: str) -> int:
     emit({"schema": SCHEMA, "state": "refused", "refusal": code, "subject": subject, "reason": reason})
     return 1
-
-
-def permit(unit: str, driver: str, receipt: dict) -> int:
-    digest = hashlib.sha256(json.dumps(receipt, sort_keys=True).encode("utf-8")).hexdigest()[:16]
-    emit({"schema": SCHEMA, "state": "permitted", "unit": unit, "driver_ticket": driver,
-          "author": receipt["author"], "verifier": receipt["verifier"],
-          "receipt_digest": digest})
-    return 0
 
 
 def read_json(path: Path) -> tuple[dict | None, str]:
@@ -91,6 +85,10 @@ def read_receipts(path: Path) -> tuple[list[dict], str]:
             return [], f"{path}:{number}: missing {', '.join(missing)}"
         if record.get("schema") != SCHEMA:
             return [], f"{path}:{number}: schema is not {SCHEMA}"
+        if not re.match(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}", str(record["at"])):
+            return [], f"{path}:{number}: at is not an ISO date"
+        if ":" not in str(record["evidence"]) and "/" not in str(record["evidence"]):
+            return [], f"{path}:{number}: evidence is neither a path nor a path:line"
         receipts.append(record)
     return receipts, ""
 
@@ -107,12 +105,21 @@ def decide(close: dict, receipts: list[dict]) -> tuple[int, dict]:
     if not for_unit:
         return 1, {"refusal": "handoff-absent", "subject": unit,
                    "reason": "no receipt for this unit in the store"}
-    for_driver = [r for r in for_unit if str(r.get("driver_ticket", "")).strip() == driver]
+    # A receipt written by somebody else about this unit's id is not evidence about this author's
+    # work. Without this, a receipt from any other author would satisfy the second-identity rule.
+    same_author = [r for r in for_unit
+                   if str(r.get("author", "")).strip().casefold() == author.casefold()]
+    if not same_author:
+        others = sorted({str(r.get("author", "")).strip() for r in for_unit})
+        return 1, {"refusal": "handoff-author-mismatch", "subject": unit,
+                   "reason": "receipts name %s, not %s" % (", ".join(others) or "nobody", author)}
+    for_driver = [r for r in same_author if str(r.get("driver_ticket", "")).strip() == driver]
     if not for_driver:
         named = sorted({str(r.get("driver_ticket", "")).strip() for r in for_unit})
         return 1, {"refusal": "handoff-driver-unnamed", "subject": unit,
                    "reason": f"receipts name {', '.join(named) or 'nothing'}, not {driver}"}
-    second = [r for r in for_driver if str(r.get("verifier", "")).strip() != author]
+    second = [r for r in for_driver
+              if str(r.get("verifier", "")).strip().casefold() != author.casefold()]
     if not second:
         return 1, {"refusal": "handoff-self-verified", "subject": unit,
                    "reason": f"the only verifier is the author ({author})"}
@@ -176,6 +183,10 @@ def self_check() -> int:
                 [receipt(driver_ticket="TICKET-0999")], 1, "handoff-driver-unnamed"),
             "a verifier that did not hold is refused": (
                 [receipt(result="refused")], 1, "handoff-not-held"),
+            "a receipt from another author is refused": (
+                [receipt(author="agent:other")], 1, "handoff-author-mismatch"),
+            "a receipt without an ISO date is refused": (
+                [receipt(at="later")], 1, "handoff-receipt-unreadable"),
             "an unreadable receipt line is refused": (
                 [receipt(evidence="")], 1, "handoff-receipt-unreadable"),
         }
