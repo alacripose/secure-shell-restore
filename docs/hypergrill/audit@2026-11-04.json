@@ -1,0 +1,6182 @@
+{
+  "counts": {
+    "absent-on-disk": 1,
+    "contradicted": 0,
+    "no-probe": 119,
+    "outside_spine": 47,
+    "refused": 0,
+    "superseded": 6,
+    "supported": 7,
+    "tension": 0,
+    "unasked": 367
+  },
+  "findings": [
+    {
+      "id": "Q060",
+      "note": "Owner ruling 2026-11-04: add the deprecation-window field now. No file carries it yet, so the gap stands until the field lands.",
+      "recorded": true,
+      "refs": [
+        "testport1/crates/planet-package/src/frame.rs:3",
+        "secure-shell/server/ledger.mjs:211",
+        "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:208"
+      ],
+      "slot": 60,
+      "verdict": "absent-on-disk"
+    },
+    {
+      "id": "Q063",
+      "note": "Owner ruling 2026-11-04: full 64 hex for both hashes. The 32-hex format id is pre-migration.",
+      "recorded": true,
+      "refs": [
+        "testport1/crates/planet-package/src/format_id.rs:19",
+        "testport1/crates/planet-package/src/format_id.rs:128",
+        "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:208"
+      ],
+      "slot": 63,
+      "verdict": "superseded"
+    },
+    {
+      "id": "Q064",
+      "note": "Owner ruling 2026-11-04: the ruled manifest shape is the package format; V4PKG001 is a legacy input that is read and converted.",
+      "recorded": true,
+      "refs": [
+        "testport1/crates/planet-package/src/format_id.rs:100",
+        "testport1/crates/planet-package/src/lib.rs:1",
+        "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:208"
+      ],
+      "slot": 64,
+      "verdict": "superseded"
+    },
+    {
+      "id": "Q068",
+      "note": "Owner ruling 2026-11-04: the manifest side is the format, so the JSON-on-disk ruling stands and the binary frame is a carried legacy input.",
+      "recorded": true,
+      "refs": [
+        "testport1/crates/planet-package/src/lib.rs:3",
+        "testport1/crates/planet-package/src/frame.rs:3",
+        "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:208"
+      ],
+      "slot": 68,
+      "verdict": "superseded"
+    },
+    {
+      "id": "Q070",
+      "note": "Owner ruling 2026-11-04: the Merkle payload walk is the format; the frame's single digest is the legacy input's form.",
+      "recorded": true,
+      "refs": [
+        "testport1/crates/planet-package/src/frame.rs:3",
+        "testport1/crates/planet-package/src/lib.rs:1",
+        "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:208"
+      ],
+      "slot": 70,
+      "verdict": "superseded"
+    },
+    {
+      "id": "Q071",
+      "note": "Owner ruling 2026-11-04: per-file hashes are part of the format the conversion produces.",
+      "recorded": true,
+      "refs": [
+        "testport1/crates/planet-package/src/frame.rs:3",
+        "testport1/crates/planet-package/src/format_id.rs:54",
+        "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:208"
+      ],
+      "slot": 71,
+      "verdict": "superseded"
+    },
+    {
+      "id": "Q074",
+      "note": "Owner ruling 2026-11-04: add the grade to the preimage, so a grade change is a new id.",
+      "recorded": true,
+      "refs": [
+        "testport1/crates/planet-package/src/format_id.rs:110",
+        "testport1/crates/planet-package/src/format_id.rs:104",
+        "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:208"
+      ],
+      "slot": 74,
+      "verdict": "superseded"
+    }
+  ],
+  "generated_at": "2026-11-04T14:22:19+00:00",
+  "outside_spine": [
+    {
+      "id": "N001",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N003",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N004",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N005",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N006",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N007",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N008",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N009",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N010",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N012",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N013",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N014",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N015",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N016",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N017",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N018",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N019",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N020",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N021",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N022",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N023",
+      "note": "The proof reader recomputes the digest and refuses a mismatch rather than tolerating one.",
+      "refs": [
+        "shploingus-clean/crates/voxel-model/src/proof.rs:75"
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "N024",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N025",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N026",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N033",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N034",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N035",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N036",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N037",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N038",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N039",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N040",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N041",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N042",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N043",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N044",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N045",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N046",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N047",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N048",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N049",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N050",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N051",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N052",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N053",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N054",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    },
+    {
+      "id": "N055",
+      "note": "opened outside the spine; no probe on disk",
+      "verdict": "no-probe"
+    }
+  ],
+  "recorded_entries": 180,
+  "recorded_spine": 133,
+  "refusals": [],
+  "slots": {
+    "Q001": {
+      "id": "Q001",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 1,
+      "verdict": "no-probe"
+    },
+    "Q002": {
+      "id": "Q002",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 2,
+      "verdict": "no-probe"
+    },
+    "Q003": {
+      "id": "Q003",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 3,
+      "verdict": "no-probe"
+    },
+    "Q004": {
+      "id": "Q004",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 4,
+      "verdict": "no-probe"
+    },
+    "Q005": {
+      "id": "Q005",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 5,
+      "verdict": "no-probe"
+    },
+    "Q006": {
+      "id": "Q006",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 6,
+      "verdict": "no-probe"
+    },
+    "Q007": {
+      "id": "Q007",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 7,
+      "verdict": "no-probe"
+    },
+    "Q008": {
+      "id": "Q008",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 8,
+      "verdict": "no-probe"
+    },
+    "Q009": {
+      "id": "Q009",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 9,
+      "verdict": "no-probe"
+    },
+    "Q010": {
+      "id": "Q010",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 10,
+      "verdict": "no-probe"
+    },
+    "Q011": {
+      "id": "Q011",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 11,
+      "verdict": "no-probe"
+    },
+    "Q012": {
+      "id": "Q012",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 12,
+      "verdict": "no-probe"
+    },
+    "Q013": {
+      "id": "Q013",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 13,
+      "verdict": "no-probe"
+    },
+    "Q014": {
+      "id": "Q014",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 14,
+      "verdict": "no-probe"
+    },
+    "Q015": {
+      "id": "Q015",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 15,
+      "verdict": "no-probe"
+    },
+    "Q016": {
+      "id": "Q016",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 16,
+      "verdict": "no-probe"
+    },
+    "Q017": {
+      "id": "Q017",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 17,
+      "verdict": "no-probe"
+    },
+    "Q018": {
+      "id": "Q018",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 18,
+      "verdict": "no-probe"
+    },
+    "Q019": {
+      "id": "Q019",
+      "note": "Five plan documents exist beside the grilling record.",
+      "recorded": true,
+      "refs": [
+        "docs/ (glob SECURE-SHELL-RESTORE@1.*.md): 5 plan documents"
+      ],
+      "slot": 19,
+      "verdict": "supported"
+    },
+    "Q020": {
+      "id": "Q020",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 20,
+      "verdict": "no-probe"
+    },
+    "Q021": {
+      "id": "Q021",
+      "note": "Package directory names follow the grammar the ruling states.",
+      "recorded": true,
+      "refs": [
+        "secure-shell/packages/: 2 names, 0 outside [a-z0-9-]"
+      ],
+      "slot": 21,
+      "verdict": "supported"
+    },
+    "Q022": {
+      "id": "Q022",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 22,
+      "verdict": "no-probe"
+    },
+    "Q023": {
+      "id": "Q023",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 23,
+      "verdict": "no-probe"
+    },
+    "Q024": {
+      "id": "Q024",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 24,
+      "verdict": "no-probe"
+    },
+    "Q025": {
+      "id": "Q025",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 25,
+      "verdict": "no-probe"
+    },
+    "Q026": {
+      "id": "Q026",
+      "note": "rename lineage: no store on disk",
+      "recorded": true,
+      "refs": [],
+      "slot": 26,
+      "verdict": "no-probe"
+    },
+    "Q027": {
+      "id": "Q027",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 27,
+      "verdict": "no-probe"
+    },
+    "Q028": {
+      "id": "Q028",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 28,
+      "verdict": "no-probe"
+    },
+    "Q029": {
+      "id": "Q029",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 29,
+      "verdict": "no-probe"
+    },
+    "Q030": {
+      "id": "Q030",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 30,
+      "verdict": "no-probe"
+    },
+    "Q031": {
+      "id": "Q031",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 31,
+      "verdict": "no-probe"
+    },
+    "Q032": {
+      "id": "Q032",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 32,
+      "verdict": "no-probe"
+    },
+    "Q033": {
+      "id": "Q033",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 33,
+      "verdict": "no-probe"
+    },
+    "Q034": {
+      "id": "Q034",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 34,
+      "verdict": "no-probe"
+    },
+    "Q035": {
+      "id": "Q035",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 35,
+      "verdict": "no-probe"
+    },
+    "Q036": {
+      "id": "Q036",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 36,
+      "verdict": "no-probe"
+    },
+    "Q037": {
+      "id": "Q037",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 37,
+      "verdict": "no-probe"
+    },
+    "Q038": {
+      "id": "Q038",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 38,
+      "verdict": "no-probe"
+    },
+    "Q039": {
+      "id": "Q039",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 39,
+      "verdict": "no-probe"
+    },
+    "Q040": {
+      "id": "Q040",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 40,
+      "verdict": "no-probe"
+    },
+    "Q041": {
+      "id": "Q041",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 41,
+      "verdict": "no-probe"
+    },
+    "Q042": {
+      "id": "Q042",
+      "note": "revision reuse: no store on disk",
+      "recorded": true,
+      "refs": [],
+      "slot": 42,
+      "verdict": "no-probe"
+    },
+    "Q043": {
+      "id": "Q043",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 43,
+      "verdict": "no-probe"
+    },
+    "Q044": {
+      "id": "Q044",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 44,
+      "verdict": "no-probe"
+    },
+    "Q045": {
+      "id": "Q045",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 45,
+      "verdict": "no-probe"
+    },
+    "Q046": {
+      "id": "Q046",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 46,
+      "verdict": "no-probe"
+    },
+    "Q047": {
+      "id": "Q047",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 47,
+      "verdict": "no-probe"
+    },
+    "Q048": {
+      "id": "Q048",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 48,
+      "verdict": "no-probe"
+    },
+    "Q049": {
+      "id": "Q049",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 49,
+      "verdict": "no-probe"
+    },
+    "Q050": {
+      "id": "Q050",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 50,
+      "verdict": "no-probe"
+    },
+    "Q051": {
+      "id": "Q051",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 51,
+      "verdict": "no-probe"
+    },
+    "Q052": {
+      "id": "Q052",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 52,
+      "verdict": "no-probe"
+    },
+    "Q053": {
+      "id": "Q053",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 53,
+      "verdict": "no-probe"
+    },
+    "Q054": {
+      "id": "Q054",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 54,
+      "verdict": "no-probe"
+    },
+    "Q055": {
+      "id": "Q055",
+      "note": "signature envelope binding name, revision and hash: no signer in this tree binds all three",
+      "recorded": true,
+      "refs": [],
+      "slot": 55,
+      "verdict": "no-probe"
+    },
+    "Q056": {
+      "id": "Q056",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 56,
+      "verdict": "no-probe"
+    },
+    "Q057": {
+      "id": "Q057",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 57,
+      "verdict": "no-probe"
+    },
+    "Q058": {
+      "id": "Q058",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 58,
+      "verdict": "no-probe"
+    },
+    "Q059": {
+      "id": "Q059",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 59,
+      "verdict": "no-probe"
+    },
+    "Q060": {
+      "id": "Q060",
+      "note": "Owner ruling 2026-11-04: add the deprecation-window field now. No file carries it yet, so the gap stands until the field lands.",
+      "recorded": true,
+      "refs": [
+        "testport1/crates/planet-package/src/frame.rs:3",
+        "secure-shell/server/ledger.mjs:211",
+        "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:208"
+      ],
+      "slot": 60,
+      "verdict": "absent-on-disk"
+    },
+    "Q061": {
+      "id": "Q061",
+      "note": "Both canonical forms hash the bytes the reader holds, and the frame puts schema and length inside the preimage so a different layout cannot match.",
+      "recorded": true,
+      "refs": [
+        "secure-shell/server/ledger.mjs:211",
+        "testport1/crates/planet-package/src/frame.rs:4"
+      ],
+      "slot": 61,
+      "verdict": "supported"
+    },
+    "Q062": {
+      "id": "Q062",
+      "note": "dependency pinning: no resolver on disk",
+      "recorded": true,
+      "refs": [],
+      "slot": 62,
+      "verdict": "no-probe"
+    },
+    "Q063": {
+      "id": "Q063",
+      "note": "Owner ruling 2026-11-04: full 64 hex for both hashes. The 32-hex format id is pre-migration.",
+      "recorded": true,
+      "refs": [
+        "testport1/crates/planet-package/src/format_id.rs:19",
+        "testport1/crates/planet-package/src/format_id.rs:128",
+        "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:208"
+      ],
+      "slot": 63,
+      "verdict": "superseded"
+    },
+    "Q064": {
+      "id": "Q064",
+      "note": "Owner ruling 2026-11-04: the ruled manifest shape is the package format; V4PKG001 is a legacy input that is read and converted.",
+      "recorded": true,
+      "refs": [
+        "testport1/crates/planet-package/src/format_id.rs:100",
+        "testport1/crates/planet-package/src/lib.rs:1",
+        "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:208"
+      ],
+      "slot": 64,
+      "verdict": "superseded"
+    },
+    "Q065": {
+      "id": "Q065",
+      "note": "The frame digest begins with a fixed domain tag, as the ruling requires.",
+      "recorded": true,
+      "refs": [
+        "testport1/crates/planet-package/src/frame.rs:13",
+        "testport1/crates/planet-package/src/lib.rs:4"
+      ],
+      "slot": 65,
+      "verdict": "supported"
+    },
+    "Q066": {
+      "id": "Q066",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 66,
+      "verdict": "no-probe"
+    },
+    "Q067": {
+      "id": "Q067",
+      "note": "key ordering: no manifest object on disk to order",
+      "recorded": true,
+      "refs": [],
+      "slot": 67,
+      "verdict": "no-probe"
+    },
+    "Q068": {
+      "id": "Q068",
+      "note": "Owner ruling 2026-11-04: the manifest side is the format, so the JSON-on-disk ruling stands and the binary frame is a carried legacy input.",
+      "recorded": true,
+      "refs": [
+        "testport1/crates/planet-package/src/lib.rs:3",
+        "testport1/crates/planet-package/src/frame.rs:3",
+        "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:208"
+      ],
+      "slot": 68,
+      "verdict": "superseded"
+    },
+    "Q069": {
+      "id": "Q069",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 69,
+      "verdict": "no-probe"
+    },
+    "Q070": {
+      "id": "Q070",
+      "note": "Owner ruling 2026-11-04: the Merkle payload walk is the format; the frame's single digest is the legacy input's form.",
+      "recorded": true,
+      "refs": [
+        "testport1/crates/planet-package/src/frame.rs:3",
+        "testport1/crates/planet-package/src/lib.rs:1",
+        "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:208"
+      ],
+      "slot": 70,
+      "verdict": "superseded"
+    },
+    "Q071": {
+      "id": "Q071",
+      "note": "Owner ruling 2026-11-04: per-file hashes are part of the format the conversion produces.",
+      "recorded": true,
+      "refs": [
+        "testport1/crates/planet-package/src/frame.rs:3",
+        "testport1/crates/planet-package/src/format_id.rs:54",
+        "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:208"
+      ],
+      "slot": 71,
+      "verdict": "superseded"
+    },
+    "Q072": {
+      "id": "Q072",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 72,
+      "verdict": "no-probe"
+    },
+    "Q073": {
+      "id": "Q073",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 73,
+      "verdict": "no-probe"
+    },
+    "Q074": {
+      "id": "Q074",
+      "note": "Owner ruling 2026-11-04: add the grade to the preimage, so a grade change is a new id.",
+      "recorded": true,
+      "refs": [
+        "testport1/crates/planet-package/src/format_id.rs:110",
+        "testport1/crates/planet-package/src/format_id.rs:104",
+        "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:208"
+      ],
+      "slot": 74,
+      "verdict": "superseded"
+    },
+    "Q075": {
+      "id": "Q075",
+      "note": "receipt domain tag: the mount receipt is not written by any file read here",
+      "recorded": true,
+      "refs": [],
+      "slot": 75,
+      "verdict": "no-probe"
+    },
+    "Q076": {
+      "id": "Q076",
+      "note": "The preimage carries the reader version and the schema number, so a layout change is a new id.",
+      "recorded": true,
+      "refs": [
+        "testport1/crates/planet-package/src/format_id.rs:47",
+        "testport1/crates/planet-package/src/frame.rs:12"
+      ],
+      "slot": 76,
+      "verdict": "supported"
+    },
+    "Q077": {
+      "id": "Q077",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 77,
+      "verdict": "no-probe"
+    },
+    "Q078": {
+      "id": "Q078",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 78,
+      "verdict": "no-probe"
+    },
+    "Q079": {
+      "id": "Q079",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 79,
+      "verdict": "no-probe"
+    },
+    "Q080": {
+      "id": "Q080",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 80,
+      "verdict": "no-probe"
+    },
+    "Q081": {
+      "id": "Q081",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 81,
+      "verdict": "no-probe"
+    },
+    "Q082": {
+      "id": "Q082",
+      "note": "The ledger signs with Ed25519, matching the scheme the ruling names.",
+      "recorded": true,
+      "refs": [
+        "secure-shell/server/ledger.mjs:504"
+      ],
+      "slot": 82,
+      "verdict": "supported"
+    },
+    "Q083": {
+      "id": "Q083",
+      "note": "envelope coverage: no envelope reader on disk",
+      "recorded": true,
+      "refs": [],
+      "slot": 83,
+      "verdict": "no-probe"
+    },
+    "Q084": {
+      "id": "Q084",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 84,
+      "verdict": "no-probe"
+    },
+    "Q085": {
+      "id": "Q085",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 85,
+      "verdict": "no-probe"
+    },
+    "Q086": {
+      "id": "Q086",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 86,
+      "verdict": "no-probe"
+    },
+    "Q087": {
+      "id": "Q087",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 87,
+      "verdict": "no-probe"
+    },
+    "Q088": {
+      "id": "Q088",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 88,
+      "verdict": "no-probe"
+    },
+    "Q089": {
+      "id": "Q089",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 89,
+      "verdict": "no-probe"
+    },
+    "Q090": {
+      "id": "Q090",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 90,
+      "verdict": "no-probe"
+    },
+    "Q091": {
+      "id": "Q091",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 91,
+      "verdict": "no-probe"
+    },
+    "Q092": {
+      "id": "Q092",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 92,
+      "verdict": "no-probe"
+    },
+    "Q093": {
+      "id": "Q093",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 93,
+      "verdict": "no-probe"
+    },
+    "Q094": {
+      "absent_sources": [],
+      "block": "Q077-Q100 Remaining preimage detail",
+      "id": "Q094",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 94,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/crates/planet-package/src/frame.rs",
+        "shploingus-clean/crates/voxel-package/src/signing.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q095": {
+      "absent_sources": [],
+      "block": "Q077-Q100 Remaining preimage detail",
+      "id": "Q095",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 95,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/crates/planet-package/src/frame.rs",
+        "shploingus-clean/crates/voxel-package/src/signing.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q096": {
+      "absent_sources": [],
+      "block": "Q077-Q100 Remaining preimage detail",
+      "id": "Q096",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 96,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/crates/planet-package/src/frame.rs",
+        "shploingus-clean/crates/voxel-package/src/signing.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q097": {
+      "absent_sources": [],
+      "block": "Q077-Q100 Remaining preimage detail",
+      "id": "Q097",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 97,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/crates/planet-package/src/frame.rs",
+        "shploingus-clean/crates/voxel-package/src/signing.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q098": {
+      "absent_sources": [],
+      "block": "Q077-Q100 Remaining preimage detail",
+      "id": "Q098",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 98,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/crates/planet-package/src/frame.rs",
+        "shploingus-clean/crates/voxel-package/src/signing.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q099": {
+      "absent_sources": [],
+      "block": "Q077-Q100 Remaining preimage detail",
+      "id": "Q099",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 99,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/crates/planet-package/src/frame.rs",
+        "shploingus-clean/crates/voxel-package/src/signing.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q100": {
+      "absent_sources": [],
+      "block": "Q077-Q100 Remaining preimage detail",
+      "id": "Q100",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 100,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/crates/planet-package/src/frame.rs",
+        "shploingus-clean/crates/voxel-package/src/signing.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q101": {
+      "id": "Q101",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 101,
+      "verdict": "no-probe"
+    },
+    "Q102": {
+      "id": "Q102",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 102,
+      "verdict": "no-probe"
+    },
+    "Q103": {
+      "id": "Q103",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 103,
+      "verdict": "no-probe"
+    },
+    "Q104": {
+      "id": "Q104",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 104,
+      "verdict": "no-probe"
+    },
+    "Q105": {
+      "id": "Q105",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 105,
+      "verdict": "no-probe"
+    },
+    "Q106": {
+      "id": "Q106",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 106,
+      "verdict": "no-probe"
+    },
+    "Q107": {
+      "id": "Q107",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 107,
+      "verdict": "no-probe"
+    },
+    "Q108": {
+      "id": "Q108",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 108,
+      "verdict": "no-probe"
+    },
+    "Q109": {
+      "id": "Q109",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 109,
+      "verdict": "no-probe"
+    },
+    "Q110": {
+      "id": "Q110",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 110,
+      "verdict": "no-probe"
+    },
+    "Q111": {
+      "id": "Q111",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 111,
+      "verdict": "no-probe"
+    },
+    "Q112": {
+      "id": "Q112",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 112,
+      "verdict": "no-probe"
+    },
+    "Q113": {
+      "id": "Q113",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 113,
+      "verdict": "no-probe"
+    },
+    "Q114": {
+      "id": "Q114",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 114,
+      "verdict": "no-probe"
+    },
+    "Q115": {
+      "id": "Q115",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 115,
+      "verdict": "no-probe"
+    },
+    "Q116": {
+      "id": "Q116",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 116,
+      "verdict": "no-probe"
+    },
+    "Q117": {
+      "id": "Q117",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 117,
+      "verdict": "no-probe"
+    },
+    "Q118": {
+      "id": "Q118",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 118,
+      "verdict": "no-probe"
+    },
+    "Q119": {
+      "id": "Q119",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 119,
+      "verdict": "no-probe"
+    },
+    "Q120": {
+      "id": "Q120",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 120,
+      "verdict": "no-probe"
+    },
+    "Q121": {
+      "id": "Q121",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 121,
+      "verdict": "no-probe"
+    },
+    "Q122": {
+      "id": "Q122",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 122,
+      "verdict": "no-probe"
+    },
+    "Q123": {
+      "id": "Q123",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 123,
+      "verdict": "no-probe"
+    },
+    "Q124": {
+      "id": "Q124",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 124,
+      "verdict": "no-probe"
+    },
+    "Q125": {
+      "id": "Q125",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 125,
+      "verdict": "no-probe"
+    },
+    "Q126": {
+      "id": "Q126",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 126,
+      "verdict": "no-probe"
+    },
+    "Q127": {
+      "id": "Q127",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 127,
+      "verdict": "no-probe"
+    },
+    "Q128": {
+      "id": "Q128",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 128,
+      "verdict": "no-probe"
+    },
+    "Q129": {
+      "id": "Q129",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 129,
+      "verdict": "no-probe"
+    },
+    "Q130": {
+      "id": "Q130",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 130,
+      "verdict": "no-probe"
+    },
+    "Q131": {
+      "id": "Q131",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 131,
+      "verdict": "no-probe"
+    },
+    "Q132": {
+      "id": "Q132",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 132,
+      "verdict": "no-probe"
+    },
+    "Q133": {
+      "id": "Q133",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 133,
+      "verdict": "no-probe"
+    },
+    "Q134": {
+      "id": "Q134",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 134,
+      "verdict": "no-probe"
+    },
+    "Q135": {
+      "id": "Q135",
+      "note": "Both documents keep absence as a reported state rather than a passing receipt.",
+      "recorded": true,
+      "refs": [
+        "docs/SECURE-SHELL-RESTORE@1.CUA-CIVILIAN-ACCEPTANCE.md:69",
+        "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:321"
+      ],
+      "slot": 135,
+      "verdict": "supported"
+    },
+    "Q136": {
+      "id": "Q136",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 136,
+      "verdict": "no-probe"
+    },
+    "Q137": {
+      "id": "Q137",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 137,
+      "verdict": "no-probe"
+    },
+    "Q138": {
+      "id": "Q138",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 138,
+      "verdict": "no-probe"
+    },
+    "Q139": {
+      "id": "Q139",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 139,
+      "verdict": "no-probe"
+    },
+    "Q140": {
+      "id": "Q140",
+      "note": "no file on disk settles this ruling",
+      "recorded": true,
+      "refs": [],
+      "slot": 140,
+      "verdict": "no-probe"
+    },
+    "Q141": {
+      "absent_sources": [],
+      "block": "Q141-Q160 MongoDB schema and authority",
+      "id": "Q141",
+      "klass": "code, measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 141,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q142": {
+      "absent_sources": [],
+      "block": "Q141-Q160 MongoDB schema and authority",
+      "id": "Q142",
+      "klass": "code, measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 142,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q143": {
+      "absent_sources": [],
+      "block": "Q141-Q160 MongoDB schema and authority",
+      "id": "Q143",
+      "klass": "code, measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 143,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q144": {
+      "absent_sources": [],
+      "block": "Q141-Q160 MongoDB schema and authority",
+      "id": "Q144",
+      "klass": "code, measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 144,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q145": {
+      "absent_sources": [],
+      "block": "Q141-Q160 MongoDB schema and authority",
+      "id": "Q145",
+      "klass": "code, measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 145,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q146": {
+      "absent_sources": [],
+      "block": "Q141-Q160 MongoDB schema and authority",
+      "id": "Q146",
+      "klass": "code, measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 146,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q147": {
+      "absent_sources": [],
+      "block": "Q141-Q160 MongoDB schema and authority",
+      "id": "Q147",
+      "klass": "code, measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 147,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q148": {
+      "absent_sources": [],
+      "block": "Q141-Q160 MongoDB schema and authority",
+      "id": "Q148",
+      "klass": "code, measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 148,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q149": {
+      "absent_sources": [],
+      "block": "Q141-Q160 MongoDB schema and authority",
+      "id": "Q149",
+      "klass": "code, measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 149,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q150": {
+      "absent_sources": [],
+      "block": "Q141-Q160 MongoDB schema and authority",
+      "id": "Q150",
+      "klass": "code, measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 150,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q151": {
+      "absent_sources": [],
+      "block": "Q141-Q160 MongoDB schema and authority",
+      "id": "Q151",
+      "klass": "code, measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 151,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q152": {
+      "absent_sources": [],
+      "block": "Q141-Q160 MongoDB schema and authority",
+      "id": "Q152",
+      "klass": "code, measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 152,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q153": {
+      "absent_sources": [],
+      "block": "Q141-Q160 MongoDB schema and authority",
+      "id": "Q153",
+      "klass": "code, measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 153,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q154": {
+      "absent_sources": [],
+      "block": "Q141-Q160 MongoDB schema and authority",
+      "id": "Q154",
+      "klass": "code, measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 154,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q155": {
+      "absent_sources": [],
+      "block": "Q141-Q160 MongoDB schema and authority",
+      "id": "Q155",
+      "klass": "code, measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 155,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q156": {
+      "absent_sources": [],
+      "block": "Q141-Q160 MongoDB schema and authority",
+      "id": "Q156",
+      "klass": "code, measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 156,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q157": {
+      "absent_sources": [],
+      "block": "Q141-Q160 MongoDB schema and authority",
+      "id": "Q157",
+      "klass": "code, measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 157,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q158": {
+      "absent_sources": [],
+      "block": "Q141-Q160 MongoDB schema and authority",
+      "id": "Q158",
+      "klass": "code, measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 158,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q159": {
+      "absent_sources": [],
+      "block": "Q141-Q160 MongoDB schema and authority",
+      "id": "Q159",
+      "klass": "code, measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 159,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q160": {
+      "absent_sources": [],
+      "block": "Q141-Q160 MongoDB schema and authority",
+      "id": "Q160",
+      "klass": "code, measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 160,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q161": {
+      "absent_sources": [],
+      "block": "Q161-Q180 Store security, backups, retention",
+      "id": "Q161",
+      "klass": "owner, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 161,
+      "sources": [
+        "secure-shell/server/ledger.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q162": {
+      "absent_sources": [],
+      "block": "Q161-Q180 Store security, backups, retention",
+      "id": "Q162",
+      "klass": "owner, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 162,
+      "sources": [
+        "secure-shell/server/ledger.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q163": {
+      "absent_sources": [],
+      "block": "Q161-Q180 Store security, backups, retention",
+      "id": "Q163",
+      "klass": "owner, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 163,
+      "sources": [
+        "secure-shell/server/ledger.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q164": {
+      "absent_sources": [],
+      "block": "Q161-Q180 Store security, backups, retention",
+      "id": "Q164",
+      "klass": "owner, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 164,
+      "sources": [
+        "secure-shell/server/ledger.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q165": {
+      "absent_sources": [],
+      "block": "Q161-Q180 Store security, backups, retention",
+      "id": "Q165",
+      "klass": "owner, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 165,
+      "sources": [
+        "secure-shell/server/ledger.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q166": {
+      "absent_sources": [],
+      "block": "Q161-Q180 Store security, backups, retention",
+      "id": "Q166",
+      "klass": "owner, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 166,
+      "sources": [
+        "secure-shell/server/ledger.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q167": {
+      "absent_sources": [],
+      "block": "Q161-Q180 Store security, backups, retention",
+      "id": "Q167",
+      "klass": "owner, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 167,
+      "sources": [
+        "secure-shell/server/ledger.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q168": {
+      "absent_sources": [],
+      "block": "Q161-Q180 Store security, backups, retention",
+      "id": "Q168",
+      "klass": "owner, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 168,
+      "sources": [
+        "secure-shell/server/ledger.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q169": {
+      "absent_sources": [],
+      "block": "Q161-Q180 Store security, backups, retention",
+      "id": "Q169",
+      "klass": "owner, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 169,
+      "sources": [
+        "secure-shell/server/ledger.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q170": {
+      "absent_sources": [],
+      "block": "Q161-Q180 Store security, backups, retention",
+      "id": "Q170",
+      "klass": "owner, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 170,
+      "sources": [
+        "secure-shell/server/ledger.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q171": {
+      "absent_sources": [],
+      "block": "Q161-Q180 Store security, backups, retention",
+      "id": "Q171",
+      "klass": "owner, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 171,
+      "sources": [
+        "secure-shell/server/ledger.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q172": {
+      "absent_sources": [],
+      "block": "Q161-Q180 Store security, backups, retention",
+      "id": "Q172",
+      "klass": "owner, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 172,
+      "sources": [
+        "secure-shell/server/ledger.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q173": {
+      "absent_sources": [],
+      "block": "Q161-Q180 Store security, backups, retention",
+      "id": "Q173",
+      "klass": "owner, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 173,
+      "sources": [
+        "secure-shell/server/ledger.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q174": {
+      "absent_sources": [],
+      "block": "Q161-Q180 Store security, backups, retention",
+      "id": "Q174",
+      "klass": "owner, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 174,
+      "sources": [
+        "secure-shell/server/ledger.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q175": {
+      "absent_sources": [],
+      "block": "Q161-Q180 Store security, backups, retention",
+      "id": "Q175",
+      "klass": "owner, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 175,
+      "sources": [
+        "secure-shell/server/ledger.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q176": {
+      "absent_sources": [],
+      "block": "Q161-Q180 Store security, backups, retention",
+      "id": "Q176",
+      "klass": "owner, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 176,
+      "sources": [
+        "secure-shell/server/ledger.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q177": {
+      "absent_sources": [],
+      "block": "Q161-Q180 Store security, backups, retention",
+      "id": "Q177",
+      "klass": "owner, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 177,
+      "sources": [
+        "secure-shell/server/ledger.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q178": {
+      "absent_sources": [],
+      "block": "Q161-Q180 Store security, backups, retention",
+      "id": "Q178",
+      "klass": "owner, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 178,
+      "sources": [
+        "secure-shell/server/ledger.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q179": {
+      "absent_sources": [],
+      "block": "Q161-Q180 Store security, backups, retention",
+      "id": "Q179",
+      "klass": "owner, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 179,
+      "sources": [
+        "secure-shell/server/ledger.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q180": {
+      "absent_sources": [],
+      "block": "Q161-Q180 Store security, backups, retention",
+      "id": "Q180",
+      "klass": "owner, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 180,
+      "sources": [
+        "secure-shell/server/ledger.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q181": {
+      "absent_sources": [],
+      "block": "Q181-Q200 Restore procedure",
+      "id": "Q181",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 181,
+      "sources": [
+        "secure-shell/docs/FIRST-TEN-HOURS.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q182": {
+      "absent_sources": [],
+      "block": "Q181-Q200 Restore procedure",
+      "id": "Q182",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 182,
+      "sources": [
+        "secure-shell/docs/FIRST-TEN-HOURS.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q183": {
+      "absent_sources": [],
+      "block": "Q181-Q200 Restore procedure",
+      "id": "Q183",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 183,
+      "sources": [
+        "secure-shell/docs/FIRST-TEN-HOURS.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q184": {
+      "absent_sources": [],
+      "block": "Q181-Q200 Restore procedure",
+      "id": "Q184",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 184,
+      "sources": [
+        "secure-shell/docs/FIRST-TEN-HOURS.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q185": {
+      "absent_sources": [],
+      "block": "Q181-Q200 Restore procedure",
+      "id": "Q185",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 185,
+      "sources": [
+        "secure-shell/docs/FIRST-TEN-HOURS.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q186": {
+      "absent_sources": [],
+      "block": "Q181-Q200 Restore procedure",
+      "id": "Q186",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 186,
+      "sources": [
+        "secure-shell/docs/FIRST-TEN-HOURS.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q187": {
+      "absent_sources": [],
+      "block": "Q181-Q200 Restore procedure",
+      "id": "Q187",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 187,
+      "sources": [
+        "secure-shell/docs/FIRST-TEN-HOURS.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q188": {
+      "absent_sources": [],
+      "block": "Q181-Q200 Restore procedure",
+      "id": "Q188",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 188,
+      "sources": [
+        "secure-shell/docs/FIRST-TEN-HOURS.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q189": {
+      "absent_sources": [],
+      "block": "Q181-Q200 Restore procedure",
+      "id": "Q189",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 189,
+      "sources": [
+        "secure-shell/docs/FIRST-TEN-HOURS.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q190": {
+      "absent_sources": [],
+      "block": "Q181-Q200 Restore procedure",
+      "id": "Q190",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 190,
+      "sources": [
+        "secure-shell/docs/FIRST-TEN-HOURS.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q191": {
+      "absent_sources": [],
+      "block": "Q181-Q200 Restore procedure",
+      "id": "Q191",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 191,
+      "sources": [
+        "secure-shell/docs/FIRST-TEN-HOURS.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q192": {
+      "absent_sources": [],
+      "block": "Q181-Q200 Restore procedure",
+      "id": "Q192",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 192,
+      "sources": [
+        "secure-shell/docs/FIRST-TEN-HOURS.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q193": {
+      "absent_sources": [],
+      "block": "Q181-Q200 Restore procedure",
+      "id": "Q193",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 193,
+      "sources": [
+        "secure-shell/docs/FIRST-TEN-HOURS.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q194": {
+      "absent_sources": [],
+      "block": "Q181-Q200 Restore procedure",
+      "id": "Q194",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 194,
+      "sources": [
+        "secure-shell/docs/FIRST-TEN-HOURS.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q195": {
+      "absent_sources": [],
+      "block": "Q181-Q200 Restore procedure",
+      "id": "Q195",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 195,
+      "sources": [
+        "secure-shell/docs/FIRST-TEN-HOURS.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q196": {
+      "absent_sources": [],
+      "block": "Q181-Q200 Restore procedure",
+      "id": "Q196",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 196,
+      "sources": [
+        "secure-shell/docs/FIRST-TEN-HOURS.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q197": {
+      "absent_sources": [],
+      "block": "Q181-Q200 Restore procedure",
+      "id": "Q197",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 197,
+      "sources": [
+        "secure-shell/docs/FIRST-TEN-HOURS.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q198": {
+      "absent_sources": [],
+      "block": "Q181-Q200 Restore procedure",
+      "id": "Q198",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 198,
+      "sources": [
+        "secure-shell/docs/FIRST-TEN-HOURS.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q199": {
+      "absent_sources": [],
+      "block": "Q181-Q200 Restore procedure",
+      "id": "Q199",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 199,
+      "sources": [
+        "secure-shell/docs/FIRST-TEN-HOURS.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q200": {
+      "absent_sources": [],
+      "block": "Q181-Q200 Restore procedure",
+      "id": "Q200",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 200,
+      "sources": [
+        "secure-shell/docs/FIRST-TEN-HOURS.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q201": {
+      "absent_sources": [],
+      "block": "Q201-Q220 Debian host and systemd",
+      "id": "Q201",
+      "klass": "code, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 201,
+      "sources": [
+        "secure-shell/deploy/secure-shell-axis.service"
+      ],
+      "verdict": "unasked"
+    },
+    "Q202": {
+      "absent_sources": [],
+      "block": "Q201-Q220 Debian host and systemd",
+      "id": "Q202",
+      "klass": "code, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 202,
+      "sources": [
+        "secure-shell/deploy/secure-shell-axis.service"
+      ],
+      "verdict": "unasked"
+    },
+    "Q203": {
+      "absent_sources": [],
+      "block": "Q201-Q220 Debian host and systemd",
+      "id": "Q203",
+      "klass": "code, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 203,
+      "sources": [
+        "secure-shell/deploy/secure-shell-axis.service"
+      ],
+      "verdict": "unasked"
+    },
+    "Q204": {
+      "absent_sources": [],
+      "block": "Q201-Q220 Debian host and systemd",
+      "id": "Q204",
+      "klass": "code, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 204,
+      "sources": [
+        "secure-shell/deploy/secure-shell-axis.service"
+      ],
+      "verdict": "unasked"
+    },
+    "Q205": {
+      "absent_sources": [],
+      "block": "Q201-Q220 Debian host and systemd",
+      "id": "Q205",
+      "klass": "code, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 205,
+      "sources": [
+        "secure-shell/deploy/secure-shell-axis.service"
+      ],
+      "verdict": "unasked"
+    },
+    "Q206": {
+      "absent_sources": [],
+      "block": "Q201-Q220 Debian host and systemd",
+      "id": "Q206",
+      "klass": "code, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 206,
+      "sources": [
+        "secure-shell/deploy/secure-shell-axis.service"
+      ],
+      "verdict": "unasked"
+    },
+    "Q207": {
+      "absent_sources": [],
+      "block": "Q201-Q220 Debian host and systemd",
+      "id": "Q207",
+      "klass": "code, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 207,
+      "sources": [
+        "secure-shell/deploy/secure-shell-axis.service"
+      ],
+      "verdict": "unasked"
+    },
+    "Q208": {
+      "absent_sources": [],
+      "block": "Q201-Q220 Debian host and systemd",
+      "id": "Q208",
+      "klass": "code, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 208,
+      "sources": [
+        "secure-shell/deploy/secure-shell-axis.service"
+      ],
+      "verdict": "unasked"
+    },
+    "Q209": {
+      "absent_sources": [],
+      "block": "Q201-Q220 Debian host and systemd",
+      "id": "Q209",
+      "klass": "code, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 209,
+      "sources": [
+        "secure-shell/deploy/secure-shell-axis.service"
+      ],
+      "verdict": "unasked"
+    },
+    "Q210": {
+      "absent_sources": [],
+      "block": "Q201-Q220 Debian host and systemd",
+      "id": "Q210",
+      "klass": "code, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 210,
+      "sources": [
+        "secure-shell/deploy/secure-shell-axis.service"
+      ],
+      "verdict": "unasked"
+    },
+    "Q211": {
+      "absent_sources": [],
+      "block": "Q201-Q220 Debian host and systemd",
+      "id": "Q211",
+      "klass": "code, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 211,
+      "sources": [
+        "secure-shell/deploy/secure-shell-axis.service"
+      ],
+      "verdict": "unasked"
+    },
+    "Q212": {
+      "absent_sources": [],
+      "block": "Q201-Q220 Debian host and systemd",
+      "id": "Q212",
+      "klass": "code, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 212,
+      "sources": [
+        "secure-shell/deploy/secure-shell-axis.service"
+      ],
+      "verdict": "unasked"
+    },
+    "Q213": {
+      "absent_sources": [],
+      "block": "Q201-Q220 Debian host and systemd",
+      "id": "Q213",
+      "klass": "code, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 213,
+      "sources": [
+        "secure-shell/deploy/secure-shell-axis.service"
+      ],
+      "verdict": "unasked"
+    },
+    "Q214": {
+      "absent_sources": [],
+      "block": "Q201-Q220 Debian host and systemd",
+      "id": "Q214",
+      "klass": "code, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 214,
+      "sources": [
+        "secure-shell/deploy/secure-shell-axis.service"
+      ],
+      "verdict": "unasked"
+    },
+    "Q215": {
+      "absent_sources": [],
+      "block": "Q201-Q220 Debian host and systemd",
+      "id": "Q215",
+      "klass": "code, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 215,
+      "sources": [
+        "secure-shell/deploy/secure-shell-axis.service"
+      ],
+      "verdict": "unasked"
+    },
+    "Q216": {
+      "absent_sources": [],
+      "block": "Q201-Q220 Debian host and systemd",
+      "id": "Q216",
+      "klass": "code, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 216,
+      "sources": [
+        "secure-shell/deploy/secure-shell-axis.service"
+      ],
+      "verdict": "unasked"
+    },
+    "Q217": {
+      "absent_sources": [],
+      "block": "Q201-Q220 Debian host and systemd",
+      "id": "Q217",
+      "klass": "code, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 217,
+      "sources": [
+        "secure-shell/deploy/secure-shell-axis.service"
+      ],
+      "verdict": "unasked"
+    },
+    "Q218": {
+      "absent_sources": [],
+      "block": "Q201-Q220 Debian host and systemd",
+      "id": "Q218",
+      "klass": "code, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 218,
+      "sources": [
+        "secure-shell/deploy/secure-shell-axis.service"
+      ],
+      "verdict": "unasked"
+    },
+    "Q219": {
+      "absent_sources": [],
+      "block": "Q201-Q220 Debian host and systemd",
+      "id": "Q219",
+      "klass": "code, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 219,
+      "sources": [
+        "secure-shell/deploy/secure-shell-axis.service"
+      ],
+      "verdict": "unasked"
+    },
+    "Q220": {
+      "absent_sources": [],
+      "block": "Q201-Q220 Debian host and systemd",
+      "id": "Q220",
+      "klass": "code, external",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 220,
+      "sources": [
+        "secure-shell/deploy/secure-shell-axis.service"
+      ],
+      "verdict": "unasked"
+    },
+    "Q221": {
+      "absent_sources": [],
+      "block": "Q221-Q240 OpenLock generation",
+      "id": "Q221",
+      "klass": "code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 221,
+      "sources": [
+        "openlock/README.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q222": {
+      "absent_sources": [],
+      "block": "Q221-Q240 OpenLock generation",
+      "id": "Q222",
+      "klass": "code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 222,
+      "sources": [
+        "openlock/README.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q223": {
+      "absent_sources": [],
+      "block": "Q221-Q240 OpenLock generation",
+      "id": "Q223",
+      "klass": "code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 223,
+      "sources": [
+        "openlock/README.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q224": {
+      "absent_sources": [],
+      "block": "Q221-Q240 OpenLock generation",
+      "id": "Q224",
+      "klass": "code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 224,
+      "sources": [
+        "openlock/README.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q225": {
+      "absent_sources": [],
+      "block": "Q221-Q240 OpenLock generation",
+      "id": "Q225",
+      "klass": "code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 225,
+      "sources": [
+        "openlock/README.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q226": {
+      "absent_sources": [],
+      "block": "Q221-Q240 OpenLock generation",
+      "id": "Q226",
+      "klass": "code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 226,
+      "sources": [
+        "openlock/README.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q227": {
+      "absent_sources": [],
+      "block": "Q221-Q240 OpenLock generation",
+      "id": "Q227",
+      "klass": "code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 227,
+      "sources": [
+        "openlock/README.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q228": {
+      "absent_sources": [],
+      "block": "Q221-Q240 OpenLock generation",
+      "id": "Q228",
+      "klass": "code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 228,
+      "sources": [
+        "openlock/README.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q229": {
+      "absent_sources": [],
+      "block": "Q221-Q240 OpenLock generation",
+      "id": "Q229",
+      "klass": "code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 229,
+      "sources": [
+        "openlock/README.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q230": {
+      "absent_sources": [],
+      "block": "Q221-Q240 OpenLock generation",
+      "id": "Q230",
+      "klass": "code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 230,
+      "sources": [
+        "openlock/README.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q231": {
+      "absent_sources": [],
+      "block": "Q221-Q240 OpenLock generation",
+      "id": "Q231",
+      "klass": "code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 231,
+      "sources": [
+        "openlock/README.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q232": {
+      "absent_sources": [],
+      "block": "Q221-Q240 OpenLock generation",
+      "id": "Q232",
+      "klass": "code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 232,
+      "sources": [
+        "openlock/README.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q233": {
+      "absent_sources": [],
+      "block": "Q221-Q240 OpenLock generation",
+      "id": "Q233",
+      "klass": "code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 233,
+      "sources": [
+        "openlock/README.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q234": {
+      "absent_sources": [],
+      "block": "Q221-Q240 OpenLock generation",
+      "id": "Q234",
+      "klass": "code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 234,
+      "sources": [
+        "openlock/README.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q235": {
+      "absent_sources": [],
+      "block": "Q221-Q240 OpenLock generation",
+      "id": "Q235",
+      "klass": "code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 235,
+      "sources": [
+        "openlock/README.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q236": {
+      "absent_sources": [],
+      "block": "Q221-Q240 OpenLock generation",
+      "id": "Q236",
+      "klass": "code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 236,
+      "sources": [
+        "openlock/README.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q237": {
+      "absent_sources": [],
+      "block": "Q221-Q240 OpenLock generation",
+      "id": "Q237",
+      "klass": "code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 237,
+      "sources": [
+        "openlock/README.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q238": {
+      "absent_sources": [],
+      "block": "Q221-Q240 OpenLock generation",
+      "id": "Q238",
+      "klass": "code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 238,
+      "sources": [
+        "openlock/README.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q239": {
+      "absent_sources": [],
+      "block": "Q221-Q240 OpenLock generation",
+      "id": "Q239",
+      "klass": "code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 239,
+      "sources": [
+        "openlock/README.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q240": {
+      "absent_sources": [],
+      "block": "Q221-Q240 OpenLock generation",
+      "id": "Q240",
+      "klass": "code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 240,
+      "sources": [
+        "openlock/README.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q241": {
+      "absent_sources": [],
+      "block": "Q241-Q260 TUI taskbar and console",
+      "id": "Q241",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 241,
+      "sources": [
+        "dl-enclave/docs/CLIENT-UI.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q242": {
+      "absent_sources": [],
+      "block": "Q241-Q260 TUI taskbar and console",
+      "id": "Q242",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 242,
+      "sources": [
+        "dl-enclave/docs/CLIENT-UI.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q243": {
+      "absent_sources": [],
+      "block": "Q241-Q260 TUI taskbar and console",
+      "id": "Q243",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 243,
+      "sources": [
+        "dl-enclave/docs/CLIENT-UI.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q244": {
+      "absent_sources": [],
+      "block": "Q241-Q260 TUI taskbar and console",
+      "id": "Q244",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 244,
+      "sources": [
+        "dl-enclave/docs/CLIENT-UI.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q245": {
+      "absent_sources": [],
+      "block": "Q241-Q260 TUI taskbar and console",
+      "id": "Q245",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 245,
+      "sources": [
+        "dl-enclave/docs/CLIENT-UI.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q246": {
+      "absent_sources": [],
+      "block": "Q241-Q260 TUI taskbar and console",
+      "id": "Q246",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 246,
+      "sources": [
+        "dl-enclave/docs/CLIENT-UI.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q247": {
+      "absent_sources": [],
+      "block": "Q241-Q260 TUI taskbar and console",
+      "id": "Q247",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 247,
+      "sources": [
+        "dl-enclave/docs/CLIENT-UI.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q248": {
+      "absent_sources": [],
+      "block": "Q241-Q260 TUI taskbar and console",
+      "id": "Q248",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 248,
+      "sources": [
+        "dl-enclave/docs/CLIENT-UI.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q249": {
+      "absent_sources": [],
+      "block": "Q241-Q260 TUI taskbar and console",
+      "id": "Q249",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 249,
+      "sources": [
+        "dl-enclave/docs/CLIENT-UI.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q250": {
+      "absent_sources": [],
+      "block": "Q241-Q260 TUI taskbar and console",
+      "id": "Q250",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 250,
+      "sources": [
+        "dl-enclave/docs/CLIENT-UI.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q251": {
+      "absent_sources": [],
+      "block": "Q241-Q260 TUI taskbar and console",
+      "id": "Q251",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 251,
+      "sources": [
+        "dl-enclave/docs/CLIENT-UI.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q252": {
+      "absent_sources": [],
+      "block": "Q241-Q260 TUI taskbar and console",
+      "id": "Q252",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 252,
+      "sources": [
+        "dl-enclave/docs/CLIENT-UI.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q253": {
+      "absent_sources": [],
+      "block": "Q241-Q260 TUI taskbar and console",
+      "id": "Q253",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 253,
+      "sources": [
+        "dl-enclave/docs/CLIENT-UI.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q254": {
+      "absent_sources": [],
+      "block": "Q241-Q260 TUI taskbar and console",
+      "id": "Q254",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 254,
+      "sources": [
+        "dl-enclave/docs/CLIENT-UI.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q255": {
+      "absent_sources": [],
+      "block": "Q241-Q260 TUI taskbar and console",
+      "id": "Q255",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 255,
+      "sources": [
+        "dl-enclave/docs/CLIENT-UI.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q256": {
+      "absent_sources": [],
+      "block": "Q241-Q260 TUI taskbar and console",
+      "id": "Q256",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 256,
+      "sources": [
+        "dl-enclave/docs/CLIENT-UI.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q257": {
+      "absent_sources": [],
+      "block": "Q241-Q260 TUI taskbar and console",
+      "id": "Q257",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 257,
+      "sources": [
+        "dl-enclave/docs/CLIENT-UI.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q258": {
+      "absent_sources": [],
+      "block": "Q241-Q260 TUI taskbar and console",
+      "id": "Q258",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 258,
+      "sources": [
+        "dl-enclave/docs/CLIENT-UI.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q259": {
+      "absent_sources": [],
+      "block": "Q241-Q260 TUI taskbar and console",
+      "id": "Q259",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 259,
+      "sources": [
+        "dl-enclave/docs/CLIENT-UI.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q260": {
+      "absent_sources": [],
+      "block": "Q241-Q260 TUI taskbar and console",
+      "id": "Q260",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 260,
+      "sources": [
+        "dl-enclave/docs/CLIENT-UI.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q261": {
+      "absent_sources": [],
+      "block": "Q261-Q280 Qt client and QTXML reader",
+      "id": "Q261",
+      "klass": "external, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 261,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q262": {
+      "absent_sources": [],
+      "block": "Q261-Q280 Qt client and QTXML reader",
+      "id": "Q262",
+      "klass": "external, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 262,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q263": {
+      "absent_sources": [],
+      "block": "Q261-Q280 Qt client and QTXML reader",
+      "id": "Q263",
+      "klass": "external, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 263,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q264": {
+      "absent_sources": [],
+      "block": "Q261-Q280 Qt client and QTXML reader",
+      "id": "Q264",
+      "klass": "external, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 264,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q265": {
+      "absent_sources": [],
+      "block": "Q261-Q280 Qt client and QTXML reader",
+      "id": "Q265",
+      "klass": "external, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 265,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q266": {
+      "absent_sources": [],
+      "block": "Q261-Q280 Qt client and QTXML reader",
+      "id": "Q266",
+      "klass": "external, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 266,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q267": {
+      "absent_sources": [],
+      "block": "Q261-Q280 Qt client and QTXML reader",
+      "id": "Q267",
+      "klass": "external, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 267,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q268": {
+      "absent_sources": [],
+      "block": "Q261-Q280 Qt client and QTXML reader",
+      "id": "Q268",
+      "klass": "external, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 268,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q269": {
+      "absent_sources": [],
+      "block": "Q261-Q280 Qt client and QTXML reader",
+      "id": "Q269",
+      "klass": "external, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 269,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q270": {
+      "absent_sources": [],
+      "block": "Q261-Q280 Qt client and QTXML reader",
+      "id": "Q270",
+      "klass": "external, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 270,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q271": {
+      "absent_sources": [],
+      "block": "Q261-Q280 Qt client and QTXML reader",
+      "id": "Q271",
+      "klass": "external, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 271,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q272": {
+      "absent_sources": [],
+      "block": "Q261-Q280 Qt client and QTXML reader",
+      "id": "Q272",
+      "klass": "external, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 272,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q273": {
+      "absent_sources": [],
+      "block": "Q261-Q280 Qt client and QTXML reader",
+      "id": "Q273",
+      "klass": "external, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 273,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q274": {
+      "absent_sources": [],
+      "block": "Q261-Q280 Qt client and QTXML reader",
+      "id": "Q274",
+      "klass": "external, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 274,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q275": {
+      "absent_sources": [],
+      "block": "Q261-Q280 Qt client and QTXML reader",
+      "id": "Q275",
+      "klass": "external, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 275,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q276": {
+      "absent_sources": [],
+      "block": "Q261-Q280 Qt client and QTXML reader",
+      "id": "Q276",
+      "klass": "external, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 276,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q277": {
+      "absent_sources": [],
+      "block": "Q261-Q280 Qt client and QTXML reader",
+      "id": "Q277",
+      "klass": "external, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 277,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q278": {
+      "absent_sources": [],
+      "block": "Q261-Q280 Qt client and QTXML reader",
+      "id": "Q278",
+      "klass": "external, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 278,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q279": {
+      "absent_sources": [],
+      "block": "Q261-Q280 Qt client and QTXML reader",
+      "id": "Q279",
+      "klass": "external, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 279,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q280": {
+      "absent_sources": [],
+      "block": "Q261-Q280 Qt client and QTXML reader",
+      "id": "Q280",
+      "klass": "external, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 280,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q281": {
+      "absent_sources": [],
+      "block": "Q281-Q300 Motion, bitmaps, budgets",
+      "id": "Q281",
+      "klass": "measure, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 281,
+      "sources": [
+        "secure-shell/docs/MOTION.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q282": {
+      "absent_sources": [],
+      "block": "Q281-Q300 Motion, bitmaps, budgets",
+      "id": "Q282",
+      "klass": "measure, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 282,
+      "sources": [
+        "secure-shell/docs/MOTION.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q283": {
+      "absent_sources": [],
+      "block": "Q281-Q300 Motion, bitmaps, budgets",
+      "id": "Q283",
+      "klass": "measure, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 283,
+      "sources": [
+        "secure-shell/docs/MOTION.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q284": {
+      "absent_sources": [],
+      "block": "Q281-Q300 Motion, bitmaps, budgets",
+      "id": "Q284",
+      "klass": "measure, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 284,
+      "sources": [
+        "secure-shell/docs/MOTION.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q285": {
+      "absent_sources": [],
+      "block": "Q281-Q300 Motion, bitmaps, budgets",
+      "id": "Q285",
+      "klass": "measure, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 285,
+      "sources": [
+        "secure-shell/docs/MOTION.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q286": {
+      "absent_sources": [],
+      "block": "Q281-Q300 Motion, bitmaps, budgets",
+      "id": "Q286",
+      "klass": "measure, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 286,
+      "sources": [
+        "secure-shell/docs/MOTION.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q287": {
+      "absent_sources": [],
+      "block": "Q281-Q300 Motion, bitmaps, budgets",
+      "id": "Q287",
+      "klass": "measure, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 287,
+      "sources": [
+        "secure-shell/docs/MOTION.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q288": {
+      "absent_sources": [],
+      "block": "Q281-Q300 Motion, bitmaps, budgets",
+      "id": "Q288",
+      "klass": "measure, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 288,
+      "sources": [
+        "secure-shell/docs/MOTION.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q289": {
+      "absent_sources": [],
+      "block": "Q281-Q300 Motion, bitmaps, budgets",
+      "id": "Q289",
+      "klass": "measure, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 289,
+      "sources": [
+        "secure-shell/docs/MOTION.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q290": {
+      "absent_sources": [],
+      "block": "Q281-Q300 Motion, bitmaps, budgets",
+      "id": "Q290",
+      "klass": "measure, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 290,
+      "sources": [
+        "secure-shell/docs/MOTION.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q291": {
+      "absent_sources": [],
+      "block": "Q281-Q300 Motion, bitmaps, budgets",
+      "id": "Q291",
+      "klass": "measure, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 291,
+      "sources": [
+        "secure-shell/docs/MOTION.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q292": {
+      "absent_sources": [],
+      "block": "Q281-Q300 Motion, bitmaps, budgets",
+      "id": "Q292",
+      "klass": "measure, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 292,
+      "sources": [
+        "secure-shell/docs/MOTION.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q293": {
+      "absent_sources": [],
+      "block": "Q281-Q300 Motion, bitmaps, budgets",
+      "id": "Q293",
+      "klass": "measure, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 293,
+      "sources": [
+        "secure-shell/docs/MOTION.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q294": {
+      "absent_sources": [],
+      "block": "Q281-Q300 Motion, bitmaps, budgets",
+      "id": "Q294",
+      "klass": "measure, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 294,
+      "sources": [
+        "secure-shell/docs/MOTION.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q295": {
+      "absent_sources": [],
+      "block": "Q281-Q300 Motion, bitmaps, budgets",
+      "id": "Q295",
+      "klass": "measure, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 295,
+      "sources": [
+        "secure-shell/docs/MOTION.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q296": {
+      "absent_sources": [],
+      "block": "Q281-Q300 Motion, bitmaps, budgets",
+      "id": "Q296",
+      "klass": "measure, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 296,
+      "sources": [
+        "secure-shell/docs/MOTION.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q297": {
+      "absent_sources": [],
+      "block": "Q281-Q300 Motion, bitmaps, budgets",
+      "id": "Q297",
+      "klass": "measure, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 297,
+      "sources": [
+        "secure-shell/docs/MOTION.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q298": {
+      "absent_sources": [],
+      "block": "Q281-Q300 Motion, bitmaps, budgets",
+      "id": "Q298",
+      "klass": "measure, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 298,
+      "sources": [
+        "secure-shell/docs/MOTION.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q299": {
+      "absent_sources": [],
+      "block": "Q281-Q300 Motion, bitmaps, budgets",
+      "id": "Q299",
+      "klass": "measure, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 299,
+      "sources": [
+        "secure-shell/docs/MOTION.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q300": {
+      "absent_sources": [],
+      "block": "Q281-Q300 Motion, bitmaps, budgets",
+      "id": "Q300",
+      "klass": "measure, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 300,
+      "sources": [
+        "secure-shell/docs/MOTION.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q301": {
+      "absent_sources": [],
+      "block": "Q301-Q320 Legacy families and quarantine",
+      "id": "Q301",
+      "klass": "external, code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 301,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/docs/TICK-CADENCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q302": {
+      "absent_sources": [],
+      "block": "Q301-Q320 Legacy families and quarantine",
+      "id": "Q302",
+      "klass": "external, code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 302,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/docs/TICK-CADENCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q303": {
+      "absent_sources": [],
+      "block": "Q301-Q320 Legacy families and quarantine",
+      "id": "Q303",
+      "klass": "external, code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 303,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/docs/TICK-CADENCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q304": {
+      "absent_sources": [],
+      "block": "Q301-Q320 Legacy families and quarantine",
+      "id": "Q304",
+      "klass": "external, code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 304,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/docs/TICK-CADENCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q305": {
+      "absent_sources": [],
+      "block": "Q301-Q320 Legacy families and quarantine",
+      "id": "Q305",
+      "klass": "external, code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 305,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/docs/TICK-CADENCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q306": {
+      "absent_sources": [],
+      "block": "Q301-Q320 Legacy families and quarantine",
+      "id": "Q306",
+      "klass": "external, code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 306,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/docs/TICK-CADENCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q307": {
+      "absent_sources": [],
+      "block": "Q301-Q320 Legacy families and quarantine",
+      "id": "Q307",
+      "klass": "external, code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 307,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/docs/TICK-CADENCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q308": {
+      "absent_sources": [],
+      "block": "Q301-Q320 Legacy families and quarantine",
+      "id": "Q308",
+      "klass": "external, code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 308,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/docs/TICK-CADENCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q309": {
+      "absent_sources": [],
+      "block": "Q301-Q320 Legacy families and quarantine",
+      "id": "Q309",
+      "klass": "external, code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 309,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/docs/TICK-CADENCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q310": {
+      "absent_sources": [],
+      "block": "Q301-Q320 Legacy families and quarantine",
+      "id": "Q310",
+      "klass": "external, code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 310,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/docs/TICK-CADENCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q311": {
+      "absent_sources": [],
+      "block": "Q301-Q320 Legacy families and quarantine",
+      "id": "Q311",
+      "klass": "external, code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 311,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/docs/TICK-CADENCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q312": {
+      "absent_sources": [],
+      "block": "Q301-Q320 Legacy families and quarantine",
+      "id": "Q312",
+      "klass": "external, code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 312,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/docs/TICK-CADENCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q313": {
+      "absent_sources": [],
+      "block": "Q301-Q320 Legacy families and quarantine",
+      "id": "Q313",
+      "klass": "external, code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 313,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/docs/TICK-CADENCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q314": {
+      "absent_sources": [],
+      "block": "Q301-Q320 Legacy families and quarantine",
+      "id": "Q314",
+      "klass": "external, code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 314,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/docs/TICK-CADENCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q315": {
+      "absent_sources": [],
+      "block": "Q301-Q320 Legacy families and quarantine",
+      "id": "Q315",
+      "klass": "external, code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 315,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/docs/TICK-CADENCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q316": {
+      "absent_sources": [],
+      "block": "Q301-Q320 Legacy families and quarantine",
+      "id": "Q316",
+      "klass": "external, code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 316,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/docs/TICK-CADENCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q317": {
+      "absent_sources": [],
+      "block": "Q301-Q320 Legacy families and quarantine",
+      "id": "Q317",
+      "klass": "external, code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 317,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/docs/TICK-CADENCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q318": {
+      "absent_sources": [],
+      "block": "Q301-Q320 Legacy families and quarantine",
+      "id": "Q318",
+      "klass": "external, code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 318,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/docs/TICK-CADENCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q319": {
+      "absent_sources": [],
+      "block": "Q301-Q320 Legacy families and quarantine",
+      "id": "Q319",
+      "klass": "external, code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 319,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/docs/TICK-CADENCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q320": {
+      "absent_sources": [],
+      "block": "Q301-Q320 Legacy families and quarantine",
+      "id": "Q320",
+      "klass": "external, code",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 320,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs",
+        "testport1/docs/TICK-CADENCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q321": {
+      "absent_sources": [],
+      "block": "Q321-Q340 Migration and compatibility representation",
+      "id": "Q321",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 321,
+      "sources": [
+        "secure-shell/server/decl.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q322": {
+      "absent_sources": [],
+      "block": "Q321-Q340 Migration and compatibility representation",
+      "id": "Q322",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 322,
+      "sources": [
+        "secure-shell/server/decl.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q323": {
+      "absent_sources": [],
+      "block": "Q321-Q340 Migration and compatibility representation",
+      "id": "Q323",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 323,
+      "sources": [
+        "secure-shell/server/decl.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q324": {
+      "absent_sources": [],
+      "block": "Q321-Q340 Migration and compatibility representation",
+      "id": "Q324",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 324,
+      "sources": [
+        "secure-shell/server/decl.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q325": {
+      "absent_sources": [],
+      "block": "Q321-Q340 Migration and compatibility representation",
+      "id": "Q325",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 325,
+      "sources": [
+        "secure-shell/server/decl.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q326": {
+      "absent_sources": [],
+      "block": "Q321-Q340 Migration and compatibility representation",
+      "id": "Q326",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 326,
+      "sources": [
+        "secure-shell/server/decl.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q327": {
+      "absent_sources": [],
+      "block": "Q321-Q340 Migration and compatibility representation",
+      "id": "Q327",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 327,
+      "sources": [
+        "secure-shell/server/decl.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q328": {
+      "absent_sources": [],
+      "block": "Q321-Q340 Migration and compatibility representation",
+      "id": "Q328",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 328,
+      "sources": [
+        "secure-shell/server/decl.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q329": {
+      "absent_sources": [],
+      "block": "Q321-Q340 Migration and compatibility representation",
+      "id": "Q329",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 329,
+      "sources": [
+        "secure-shell/server/decl.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q330": {
+      "absent_sources": [],
+      "block": "Q321-Q340 Migration and compatibility representation",
+      "id": "Q330",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 330,
+      "sources": [
+        "secure-shell/server/decl.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q331": {
+      "absent_sources": [],
+      "block": "Q321-Q340 Migration and compatibility representation",
+      "id": "Q331",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 331,
+      "sources": [
+        "secure-shell/server/decl.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q332": {
+      "absent_sources": [],
+      "block": "Q321-Q340 Migration and compatibility representation",
+      "id": "Q332",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 332,
+      "sources": [
+        "secure-shell/server/decl.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q333": {
+      "absent_sources": [],
+      "block": "Q321-Q340 Migration and compatibility representation",
+      "id": "Q333",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 333,
+      "sources": [
+        "secure-shell/server/decl.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q334": {
+      "absent_sources": [],
+      "block": "Q321-Q340 Migration and compatibility representation",
+      "id": "Q334",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 334,
+      "sources": [
+        "secure-shell/server/decl.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q335": {
+      "absent_sources": [],
+      "block": "Q321-Q340 Migration and compatibility representation",
+      "id": "Q335",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 335,
+      "sources": [
+        "secure-shell/server/decl.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q336": {
+      "absent_sources": [],
+      "block": "Q321-Q340 Migration and compatibility representation",
+      "id": "Q336",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 336,
+      "sources": [
+        "secure-shell/server/decl.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q337": {
+      "absent_sources": [],
+      "block": "Q321-Q340 Migration and compatibility representation",
+      "id": "Q337",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 337,
+      "sources": [
+        "secure-shell/server/decl.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q338": {
+      "absent_sources": [],
+      "block": "Q321-Q340 Migration and compatibility representation",
+      "id": "Q338",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 338,
+      "sources": [
+        "secure-shell/server/decl.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q339": {
+      "absent_sources": [],
+      "block": "Q321-Q340 Migration and compatibility representation",
+      "id": "Q339",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 339,
+      "sources": [
+        "secure-shell/server/decl.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q340": {
+      "absent_sources": [],
+      "block": "Q321-Q340 Migration and compatibility representation",
+      "id": "Q340",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 340,
+      "sources": [
+        "secure-shell/server/decl.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q341": {
+      "absent_sources": [],
+      "block": "Q341-Q360 Text normalization and canonical serialization",
+      "id": "Q341",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 341,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q342": {
+      "absent_sources": [],
+      "block": "Q341-Q360 Text normalization and canonical serialization",
+      "id": "Q342",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 342,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q343": {
+      "absent_sources": [],
+      "block": "Q341-Q360 Text normalization and canonical serialization",
+      "id": "Q343",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 343,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q344": {
+      "absent_sources": [],
+      "block": "Q341-Q360 Text normalization and canonical serialization",
+      "id": "Q344",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 344,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q345": {
+      "absent_sources": [],
+      "block": "Q341-Q360 Text normalization and canonical serialization",
+      "id": "Q345",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 345,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q346": {
+      "absent_sources": [],
+      "block": "Q341-Q360 Text normalization and canonical serialization",
+      "id": "Q346",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 346,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q347": {
+      "absent_sources": [],
+      "block": "Q341-Q360 Text normalization and canonical serialization",
+      "id": "Q347",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 347,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q348": {
+      "absent_sources": [],
+      "block": "Q341-Q360 Text normalization and canonical serialization",
+      "id": "Q348",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 348,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q349": {
+      "absent_sources": [],
+      "block": "Q341-Q360 Text normalization and canonical serialization",
+      "id": "Q349",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 349,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q350": {
+      "absent_sources": [],
+      "block": "Q341-Q360 Text normalization and canonical serialization",
+      "id": "Q350",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 350,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q351": {
+      "absent_sources": [],
+      "block": "Q341-Q360 Text normalization and canonical serialization",
+      "id": "Q351",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 351,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q352": {
+      "absent_sources": [],
+      "block": "Q341-Q360 Text normalization and canonical serialization",
+      "id": "Q352",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 352,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q353": {
+      "absent_sources": [],
+      "block": "Q341-Q360 Text normalization and canonical serialization",
+      "id": "Q353",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 353,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q354": {
+      "absent_sources": [],
+      "block": "Q341-Q360 Text normalization and canonical serialization",
+      "id": "Q354",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 354,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q355": {
+      "absent_sources": [],
+      "block": "Q341-Q360 Text normalization and canonical serialization",
+      "id": "Q355",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 355,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q356": {
+      "absent_sources": [],
+      "block": "Q341-Q360 Text normalization and canonical serialization",
+      "id": "Q356",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 356,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q357": {
+      "absent_sources": [],
+      "block": "Q341-Q360 Text normalization and canonical serialization",
+      "id": "Q357",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 357,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q358": {
+      "absent_sources": [],
+      "block": "Q341-Q360 Text normalization and canonical serialization",
+      "id": "Q358",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 358,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q359": {
+      "absent_sources": [],
+      "block": "Q341-Q360 Text normalization and canonical serialization",
+      "id": "Q359",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 359,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q360": {
+      "absent_sources": [],
+      "block": "Q341-Q360 Text normalization and canonical serialization",
+      "id": "Q360",
+      "klass": "spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 360,
+      "sources": [
+        "testport1/crates/planet-package/src/format_id.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q361": {
+      "absent_sources": [],
+      "block": "Q361-Q380 CUA catalogue and recovery",
+      "id": "Q361",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 361,
+      "sources": [
+        "secure-shell/server/axis.mjs",
+        "secure-shell/server/axis-driver.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q362": {
+      "absent_sources": [],
+      "block": "Q361-Q380 CUA catalogue and recovery",
+      "id": "Q362",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 362,
+      "sources": [
+        "secure-shell/server/axis.mjs",
+        "secure-shell/server/axis-driver.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q363": {
+      "absent_sources": [],
+      "block": "Q361-Q380 CUA catalogue and recovery",
+      "id": "Q363",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 363,
+      "sources": [
+        "secure-shell/server/axis.mjs",
+        "secure-shell/server/axis-driver.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q364": {
+      "absent_sources": [],
+      "block": "Q361-Q380 CUA catalogue and recovery",
+      "id": "Q364",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 364,
+      "sources": [
+        "secure-shell/server/axis.mjs",
+        "secure-shell/server/axis-driver.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q365": {
+      "absent_sources": [],
+      "block": "Q361-Q380 CUA catalogue and recovery",
+      "id": "Q365",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 365,
+      "sources": [
+        "secure-shell/server/axis.mjs",
+        "secure-shell/server/axis-driver.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q366": {
+      "absent_sources": [],
+      "block": "Q361-Q380 CUA catalogue and recovery",
+      "id": "Q366",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 366,
+      "sources": [
+        "secure-shell/server/axis.mjs",
+        "secure-shell/server/axis-driver.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q367": {
+      "absent_sources": [],
+      "block": "Q361-Q380 CUA catalogue and recovery",
+      "id": "Q367",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 367,
+      "sources": [
+        "secure-shell/server/axis.mjs",
+        "secure-shell/server/axis-driver.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q368": {
+      "absent_sources": [],
+      "block": "Q361-Q380 CUA catalogue and recovery",
+      "id": "Q368",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 368,
+      "sources": [
+        "secure-shell/server/axis.mjs",
+        "secure-shell/server/axis-driver.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q369": {
+      "absent_sources": [],
+      "block": "Q361-Q380 CUA catalogue and recovery",
+      "id": "Q369",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 369,
+      "sources": [
+        "secure-shell/server/axis.mjs",
+        "secure-shell/server/axis-driver.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q370": {
+      "absent_sources": [],
+      "block": "Q361-Q380 CUA catalogue and recovery",
+      "id": "Q370",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 370,
+      "sources": [
+        "secure-shell/server/axis.mjs",
+        "secure-shell/server/axis-driver.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q371": {
+      "absent_sources": [],
+      "block": "Q361-Q380 CUA catalogue and recovery",
+      "id": "Q371",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 371,
+      "sources": [
+        "secure-shell/server/axis.mjs",
+        "secure-shell/server/axis-driver.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q372": {
+      "absent_sources": [],
+      "block": "Q361-Q380 CUA catalogue and recovery",
+      "id": "Q372",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 372,
+      "sources": [
+        "secure-shell/server/axis.mjs",
+        "secure-shell/server/axis-driver.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q373": {
+      "absent_sources": [],
+      "block": "Q361-Q380 CUA catalogue and recovery",
+      "id": "Q373",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 373,
+      "sources": [
+        "secure-shell/server/axis.mjs",
+        "secure-shell/server/axis-driver.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q374": {
+      "absent_sources": [],
+      "block": "Q361-Q380 CUA catalogue and recovery",
+      "id": "Q374",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 374,
+      "sources": [
+        "secure-shell/server/axis.mjs",
+        "secure-shell/server/axis-driver.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q375": {
+      "absent_sources": [],
+      "block": "Q361-Q380 CUA catalogue and recovery",
+      "id": "Q375",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 375,
+      "sources": [
+        "secure-shell/server/axis.mjs",
+        "secure-shell/server/axis-driver.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q376": {
+      "absent_sources": [],
+      "block": "Q361-Q380 CUA catalogue and recovery",
+      "id": "Q376",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 376,
+      "sources": [
+        "secure-shell/server/axis.mjs",
+        "secure-shell/server/axis-driver.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q377": {
+      "absent_sources": [],
+      "block": "Q361-Q380 CUA catalogue and recovery",
+      "id": "Q377",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 377,
+      "sources": [
+        "secure-shell/server/axis.mjs",
+        "secure-shell/server/axis-driver.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q378": {
+      "absent_sources": [],
+      "block": "Q361-Q380 CUA catalogue and recovery",
+      "id": "Q378",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 378,
+      "sources": [
+        "secure-shell/server/axis.mjs",
+        "secure-shell/server/axis-driver.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q379": {
+      "absent_sources": [],
+      "block": "Q361-Q380 CUA catalogue and recovery",
+      "id": "Q379",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 379,
+      "sources": [
+        "secure-shell/server/axis.mjs",
+        "secure-shell/server/axis-driver.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q380": {
+      "absent_sources": [],
+      "block": "Q361-Q380 CUA catalogue and recovery",
+      "id": "Q380",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 380,
+      "sources": [
+        "secure-shell/server/axis.mjs",
+        "secure-shell/server/axis-driver.mjs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q381": {
+      "absent_sources": [],
+      "block": "Q381-Q400 CUA scale and measurement",
+      "id": "Q381",
+      "klass": "measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 381,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q382": {
+      "absent_sources": [],
+      "block": "Q381-Q400 CUA scale and measurement",
+      "id": "Q382",
+      "klass": "measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 382,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q383": {
+      "absent_sources": [],
+      "block": "Q381-Q400 CUA scale and measurement",
+      "id": "Q383",
+      "klass": "measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 383,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q384": {
+      "absent_sources": [],
+      "block": "Q381-Q400 CUA scale and measurement",
+      "id": "Q384",
+      "klass": "measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 384,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q385": {
+      "absent_sources": [],
+      "block": "Q381-Q400 CUA scale and measurement",
+      "id": "Q385",
+      "klass": "measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 385,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q386": {
+      "absent_sources": [],
+      "block": "Q381-Q400 CUA scale and measurement",
+      "id": "Q386",
+      "klass": "measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 386,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q387": {
+      "absent_sources": [],
+      "block": "Q381-Q400 CUA scale and measurement",
+      "id": "Q387",
+      "klass": "measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 387,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q388": {
+      "absent_sources": [],
+      "block": "Q381-Q400 CUA scale and measurement",
+      "id": "Q388",
+      "klass": "measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 388,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q389": {
+      "absent_sources": [],
+      "block": "Q381-Q400 CUA scale and measurement",
+      "id": "Q389",
+      "klass": "measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 389,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q390": {
+      "absent_sources": [],
+      "block": "Q381-Q400 CUA scale and measurement",
+      "id": "Q390",
+      "klass": "measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 390,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q391": {
+      "absent_sources": [],
+      "block": "Q381-Q400 CUA scale and measurement",
+      "id": "Q391",
+      "klass": "measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 391,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q392": {
+      "absent_sources": [],
+      "block": "Q381-Q400 CUA scale and measurement",
+      "id": "Q392",
+      "klass": "measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 392,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q393": {
+      "absent_sources": [],
+      "block": "Q381-Q400 CUA scale and measurement",
+      "id": "Q393",
+      "klass": "measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 393,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q394": {
+      "absent_sources": [],
+      "block": "Q381-Q400 CUA scale and measurement",
+      "id": "Q394",
+      "klass": "measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 394,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q395": {
+      "absent_sources": [],
+      "block": "Q381-Q400 CUA scale and measurement",
+      "id": "Q395",
+      "klass": "measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 395,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q396": {
+      "absent_sources": [],
+      "block": "Q381-Q400 CUA scale and measurement",
+      "id": "Q396",
+      "klass": "measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 396,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q397": {
+      "absent_sources": [],
+      "block": "Q381-Q400 CUA scale and measurement",
+      "id": "Q397",
+      "klass": "measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 397,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q398": {
+      "absent_sources": [],
+      "block": "Q381-Q400 CUA scale and measurement",
+      "id": "Q398",
+      "klass": "measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 398,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q399": {
+      "absent_sources": [],
+      "block": "Q381-Q400 CUA scale and measurement",
+      "id": "Q399",
+      "klass": "measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 399,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q400": {
+      "absent_sources": [],
+      "block": "Q381-Q400 CUA scale and measurement",
+      "id": "Q400",
+      "klass": "measure",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 400,
+      "sources": [],
+      "verdict": "unasked"
+    },
+    "Q401": {
+      "absent_sources": [],
+      "block": "Q401-Q420 Kernel-level and air-gapped authorization",
+      "id": "Q401",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 401,
+      "sources": [
+        "ala_civ_bots_prototype/CHECKPOINT.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q402": {
+      "absent_sources": [],
+      "block": "Q401-Q420 Kernel-level and air-gapped authorization",
+      "id": "Q402",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 402,
+      "sources": [
+        "ala_civ_bots_prototype/CHECKPOINT.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q403": {
+      "absent_sources": [],
+      "block": "Q401-Q420 Kernel-level and air-gapped authorization",
+      "id": "Q403",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 403,
+      "sources": [
+        "ala_civ_bots_prototype/CHECKPOINT.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q404": {
+      "absent_sources": [],
+      "block": "Q401-Q420 Kernel-level and air-gapped authorization",
+      "id": "Q404",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 404,
+      "sources": [
+        "ala_civ_bots_prototype/CHECKPOINT.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q405": {
+      "absent_sources": [],
+      "block": "Q401-Q420 Kernel-level and air-gapped authorization",
+      "id": "Q405",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 405,
+      "sources": [
+        "ala_civ_bots_prototype/CHECKPOINT.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q406": {
+      "absent_sources": [],
+      "block": "Q401-Q420 Kernel-level and air-gapped authorization",
+      "id": "Q406",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 406,
+      "sources": [
+        "ala_civ_bots_prototype/CHECKPOINT.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q407": {
+      "absent_sources": [],
+      "block": "Q401-Q420 Kernel-level and air-gapped authorization",
+      "id": "Q407",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 407,
+      "sources": [
+        "ala_civ_bots_prototype/CHECKPOINT.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q408": {
+      "absent_sources": [],
+      "block": "Q401-Q420 Kernel-level and air-gapped authorization",
+      "id": "Q408",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 408,
+      "sources": [
+        "ala_civ_bots_prototype/CHECKPOINT.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q409": {
+      "absent_sources": [],
+      "block": "Q401-Q420 Kernel-level and air-gapped authorization",
+      "id": "Q409",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 409,
+      "sources": [
+        "ala_civ_bots_prototype/CHECKPOINT.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q410": {
+      "absent_sources": [],
+      "block": "Q401-Q420 Kernel-level and air-gapped authorization",
+      "id": "Q410",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 410,
+      "sources": [
+        "ala_civ_bots_prototype/CHECKPOINT.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q411": {
+      "absent_sources": [],
+      "block": "Q401-Q420 Kernel-level and air-gapped authorization",
+      "id": "Q411",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 411,
+      "sources": [
+        "ala_civ_bots_prototype/CHECKPOINT.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q412": {
+      "absent_sources": [],
+      "block": "Q401-Q420 Kernel-level and air-gapped authorization",
+      "id": "Q412",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 412,
+      "sources": [
+        "ala_civ_bots_prototype/CHECKPOINT.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q413": {
+      "absent_sources": [],
+      "block": "Q401-Q420 Kernel-level and air-gapped authorization",
+      "id": "Q413",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 413,
+      "sources": [
+        "ala_civ_bots_prototype/CHECKPOINT.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q414": {
+      "absent_sources": [],
+      "block": "Q401-Q420 Kernel-level and air-gapped authorization",
+      "id": "Q414",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 414,
+      "sources": [
+        "ala_civ_bots_prototype/CHECKPOINT.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q415": {
+      "absent_sources": [],
+      "block": "Q401-Q420 Kernel-level and air-gapped authorization",
+      "id": "Q415",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 415,
+      "sources": [
+        "ala_civ_bots_prototype/CHECKPOINT.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q416": {
+      "absent_sources": [],
+      "block": "Q401-Q420 Kernel-level and air-gapped authorization",
+      "id": "Q416",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 416,
+      "sources": [
+        "ala_civ_bots_prototype/CHECKPOINT.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q417": {
+      "absent_sources": [],
+      "block": "Q401-Q420 Kernel-level and air-gapped authorization",
+      "id": "Q417",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 417,
+      "sources": [
+        "ala_civ_bots_prototype/CHECKPOINT.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q418": {
+      "absent_sources": [],
+      "block": "Q401-Q420 Kernel-level and air-gapped authorization",
+      "id": "Q418",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 418,
+      "sources": [
+        "ala_civ_bots_prototype/CHECKPOINT.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q419": {
+      "absent_sources": [],
+      "block": "Q401-Q420 Kernel-level and air-gapped authorization",
+      "id": "Q419",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 419,
+      "sources": [
+        "ala_civ_bots_prototype/CHECKPOINT.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q420": {
+      "absent_sources": [],
+      "block": "Q401-Q420 Kernel-level and air-gapped authorization",
+      "id": "Q420",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 420,
+      "sources": [
+        "ala_civ_bots_prototype/CHECKPOINT.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q421": {
+      "absent_sources": [],
+      "block": "Q421-Q440 Civilian model",
+      "id": "Q421",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 421,
+      "sources": [
+        "shploingus-clean/crates/voxel-package/src/civilians.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q422": {
+      "absent_sources": [],
+      "block": "Q421-Q440 Civilian model",
+      "id": "Q422",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 422,
+      "sources": [
+        "shploingus-clean/crates/voxel-package/src/civilians.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q423": {
+      "absent_sources": [],
+      "block": "Q421-Q440 Civilian model",
+      "id": "Q423",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 423,
+      "sources": [
+        "shploingus-clean/crates/voxel-package/src/civilians.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q424": {
+      "absent_sources": [],
+      "block": "Q421-Q440 Civilian model",
+      "id": "Q424",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 424,
+      "sources": [
+        "shploingus-clean/crates/voxel-package/src/civilians.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q425": {
+      "absent_sources": [],
+      "block": "Q421-Q440 Civilian model",
+      "id": "Q425",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 425,
+      "sources": [
+        "shploingus-clean/crates/voxel-package/src/civilians.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q426": {
+      "absent_sources": [],
+      "block": "Q421-Q440 Civilian model",
+      "id": "Q426",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 426,
+      "sources": [
+        "shploingus-clean/crates/voxel-package/src/civilians.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q427": {
+      "absent_sources": [],
+      "block": "Q421-Q440 Civilian model",
+      "id": "Q427",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 427,
+      "sources": [
+        "shploingus-clean/crates/voxel-package/src/civilians.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q428": {
+      "absent_sources": [],
+      "block": "Q421-Q440 Civilian model",
+      "id": "Q428",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 428,
+      "sources": [
+        "shploingus-clean/crates/voxel-package/src/civilians.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q429": {
+      "absent_sources": [],
+      "block": "Q421-Q440 Civilian model",
+      "id": "Q429",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 429,
+      "sources": [
+        "shploingus-clean/crates/voxel-package/src/civilians.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q430": {
+      "absent_sources": [],
+      "block": "Q421-Q440 Civilian model",
+      "id": "Q430",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 430,
+      "sources": [
+        "shploingus-clean/crates/voxel-package/src/civilians.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q431": {
+      "absent_sources": [],
+      "block": "Q421-Q440 Civilian model",
+      "id": "Q431",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 431,
+      "sources": [
+        "shploingus-clean/crates/voxel-package/src/civilians.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q432": {
+      "absent_sources": [],
+      "block": "Q421-Q440 Civilian model",
+      "id": "Q432",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 432,
+      "sources": [
+        "shploingus-clean/crates/voxel-package/src/civilians.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q433": {
+      "absent_sources": [],
+      "block": "Q421-Q440 Civilian model",
+      "id": "Q433",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 433,
+      "sources": [
+        "shploingus-clean/crates/voxel-package/src/civilians.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q434": {
+      "absent_sources": [],
+      "block": "Q421-Q440 Civilian model",
+      "id": "Q434",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 434,
+      "sources": [
+        "shploingus-clean/crates/voxel-package/src/civilians.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q435": {
+      "absent_sources": [],
+      "block": "Q421-Q440 Civilian model",
+      "id": "Q435",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 435,
+      "sources": [
+        "shploingus-clean/crates/voxel-package/src/civilians.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q436": {
+      "absent_sources": [],
+      "block": "Q421-Q440 Civilian model",
+      "id": "Q436",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 436,
+      "sources": [
+        "shploingus-clean/crates/voxel-package/src/civilians.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q437": {
+      "absent_sources": [],
+      "block": "Q421-Q440 Civilian model",
+      "id": "Q437",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 437,
+      "sources": [
+        "shploingus-clean/crates/voxel-package/src/civilians.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q438": {
+      "absent_sources": [],
+      "block": "Q421-Q440 Civilian model",
+      "id": "Q438",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 438,
+      "sources": [
+        "shploingus-clean/crates/voxel-package/src/civilians.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q439": {
+      "absent_sources": [],
+      "block": "Q421-Q440 Civilian model",
+      "id": "Q439",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 439,
+      "sources": [
+        "shploingus-clean/crates/voxel-package/src/civilians.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q440": {
+      "absent_sources": [],
+      "block": "Q421-Q440 Civilian model",
+      "id": "Q440",
+      "klass": "owner, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 440,
+      "sources": [
+        "shploingus-clean/crates/voxel-package/src/civilians.rs"
+      ],
+      "verdict": "unasked"
+    },
+    "Q441": {
+      "absent_sources": [],
+      "block": "Q441-Q460 24-hour acceptance",
+      "id": "Q441",
+      "klass": "owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 441,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.CUA-CIVILIAN-ACCEPTANCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q442": {
+      "absent_sources": [],
+      "block": "Q441-Q460 24-hour acceptance",
+      "id": "Q442",
+      "klass": "owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 442,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.CUA-CIVILIAN-ACCEPTANCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q443": {
+      "absent_sources": [],
+      "block": "Q441-Q460 24-hour acceptance",
+      "id": "Q443",
+      "klass": "owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 443,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.CUA-CIVILIAN-ACCEPTANCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q444": {
+      "absent_sources": [],
+      "block": "Q441-Q460 24-hour acceptance",
+      "id": "Q444",
+      "klass": "owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 444,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.CUA-CIVILIAN-ACCEPTANCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q445": {
+      "absent_sources": [],
+      "block": "Q441-Q460 24-hour acceptance",
+      "id": "Q445",
+      "klass": "owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 445,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.CUA-CIVILIAN-ACCEPTANCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q446": {
+      "absent_sources": [],
+      "block": "Q441-Q460 24-hour acceptance",
+      "id": "Q446",
+      "klass": "owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 446,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.CUA-CIVILIAN-ACCEPTANCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q447": {
+      "absent_sources": [],
+      "block": "Q441-Q460 24-hour acceptance",
+      "id": "Q447",
+      "klass": "owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 447,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.CUA-CIVILIAN-ACCEPTANCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q448": {
+      "absent_sources": [],
+      "block": "Q441-Q460 24-hour acceptance",
+      "id": "Q448",
+      "klass": "owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 448,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.CUA-CIVILIAN-ACCEPTANCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q449": {
+      "absent_sources": [],
+      "block": "Q441-Q460 24-hour acceptance",
+      "id": "Q449",
+      "klass": "owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 449,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.CUA-CIVILIAN-ACCEPTANCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q450": {
+      "absent_sources": [],
+      "block": "Q441-Q460 24-hour acceptance",
+      "id": "Q450",
+      "klass": "owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 450,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.CUA-CIVILIAN-ACCEPTANCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q451": {
+      "absent_sources": [],
+      "block": "Q441-Q460 24-hour acceptance",
+      "id": "Q451",
+      "klass": "owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 451,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.CUA-CIVILIAN-ACCEPTANCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q452": {
+      "absent_sources": [],
+      "block": "Q441-Q460 24-hour acceptance",
+      "id": "Q452",
+      "klass": "owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 452,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.CUA-CIVILIAN-ACCEPTANCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q453": {
+      "absent_sources": [],
+      "block": "Q441-Q460 24-hour acceptance",
+      "id": "Q453",
+      "klass": "owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 453,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.CUA-CIVILIAN-ACCEPTANCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q454": {
+      "absent_sources": [],
+      "block": "Q441-Q460 24-hour acceptance",
+      "id": "Q454",
+      "klass": "owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 454,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.CUA-CIVILIAN-ACCEPTANCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q455": {
+      "absent_sources": [],
+      "block": "Q441-Q460 24-hour acceptance",
+      "id": "Q455",
+      "klass": "owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 455,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.CUA-CIVILIAN-ACCEPTANCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q456": {
+      "absent_sources": [],
+      "block": "Q441-Q460 24-hour acceptance",
+      "id": "Q456",
+      "klass": "owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 456,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.CUA-CIVILIAN-ACCEPTANCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q457": {
+      "absent_sources": [],
+      "block": "Q441-Q460 24-hour acceptance",
+      "id": "Q457",
+      "klass": "owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 457,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.CUA-CIVILIAN-ACCEPTANCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q458": {
+      "absent_sources": [],
+      "block": "Q441-Q460 24-hour acceptance",
+      "id": "Q458",
+      "klass": "owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 458,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.CUA-CIVILIAN-ACCEPTANCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q459": {
+      "absent_sources": [],
+      "block": "Q441-Q460 24-hour acceptance",
+      "id": "Q459",
+      "klass": "owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 459,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.CUA-CIVILIAN-ACCEPTANCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q460": {
+      "absent_sources": [],
+      "block": "Q441-Q460 24-hour acceptance",
+      "id": "Q460",
+      "klass": "owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 460,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.CUA-CIVILIAN-ACCEPTANCE.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q461": {
+      "absent_sources": [],
+      "block": "Q461-Q480 Agent API and templates",
+      "id": "Q461",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 461,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.AGENT-BOOTSTRAP-API.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q462": {
+      "absent_sources": [],
+      "block": "Q461-Q480 Agent API and templates",
+      "id": "Q462",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 462,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.AGENT-BOOTSTRAP-API.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q463": {
+      "absent_sources": [],
+      "block": "Q461-Q480 Agent API and templates",
+      "id": "Q463",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 463,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.AGENT-BOOTSTRAP-API.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q464": {
+      "absent_sources": [],
+      "block": "Q461-Q480 Agent API and templates",
+      "id": "Q464",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 464,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.AGENT-BOOTSTRAP-API.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q465": {
+      "absent_sources": [],
+      "block": "Q461-Q480 Agent API and templates",
+      "id": "Q465",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 465,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.AGENT-BOOTSTRAP-API.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q466": {
+      "absent_sources": [],
+      "block": "Q461-Q480 Agent API and templates",
+      "id": "Q466",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 466,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.AGENT-BOOTSTRAP-API.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q467": {
+      "absent_sources": [],
+      "block": "Q461-Q480 Agent API and templates",
+      "id": "Q467",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 467,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.AGENT-BOOTSTRAP-API.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q468": {
+      "absent_sources": [],
+      "block": "Q461-Q480 Agent API and templates",
+      "id": "Q468",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 468,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.AGENT-BOOTSTRAP-API.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q469": {
+      "absent_sources": [],
+      "block": "Q461-Q480 Agent API and templates",
+      "id": "Q469",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 469,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.AGENT-BOOTSTRAP-API.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q470": {
+      "absent_sources": [],
+      "block": "Q461-Q480 Agent API and templates",
+      "id": "Q470",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 470,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.AGENT-BOOTSTRAP-API.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q471": {
+      "absent_sources": [],
+      "block": "Q461-Q480 Agent API and templates",
+      "id": "Q471",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 471,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.AGENT-BOOTSTRAP-API.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q472": {
+      "absent_sources": [],
+      "block": "Q461-Q480 Agent API and templates",
+      "id": "Q472",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 472,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.AGENT-BOOTSTRAP-API.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q473": {
+      "absent_sources": [],
+      "block": "Q461-Q480 Agent API and templates",
+      "id": "Q473",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 473,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.AGENT-BOOTSTRAP-API.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q474": {
+      "absent_sources": [],
+      "block": "Q461-Q480 Agent API and templates",
+      "id": "Q474",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 474,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.AGENT-BOOTSTRAP-API.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q475": {
+      "absent_sources": [],
+      "block": "Q461-Q480 Agent API and templates",
+      "id": "Q475",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 475,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.AGENT-BOOTSTRAP-API.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q476": {
+      "absent_sources": [],
+      "block": "Q461-Q480 Agent API and templates",
+      "id": "Q476",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 476,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.AGENT-BOOTSTRAP-API.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q477": {
+      "absent_sources": [],
+      "block": "Q461-Q480 Agent API and templates",
+      "id": "Q477",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 477,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.AGENT-BOOTSTRAP-API.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q478": {
+      "absent_sources": [],
+      "block": "Q461-Q480 Agent API and templates",
+      "id": "Q478",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 478,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.AGENT-BOOTSTRAP-API.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q479": {
+      "absent_sources": [],
+      "block": "Q461-Q480 Agent API and templates",
+      "id": "Q479",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 479,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.AGENT-BOOTSTRAP-API.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q480": {
+      "absent_sources": [],
+      "block": "Q461-Q480 Agent API and templates",
+      "id": "Q480",
+      "klass": "code, spec",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 480,
+      "sources": [
+        "docs/SECURE-SHELL-RESTORE@1.AGENT-BOOTSTRAP-API.md"
+      ],
+      "verdict": "unasked"
+    },
+    "Q481": {
+      "absent_sources": [],
+      "block": "Q481-Q500 Workflow, health ratchet, evidence, release",
+      "id": "Q481",
+      "klass": "spec, owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 481,
+      "sources": [
+        "testport1/tools/health.py",
+        "testport1/.github/workflows/port-gate.yml"
+      ],
+      "verdict": "unasked"
+    },
+    "Q482": {
+      "absent_sources": [],
+      "block": "Q481-Q500 Workflow, health ratchet, evidence, release",
+      "id": "Q482",
+      "klass": "spec, owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 482,
+      "sources": [
+        "testport1/tools/health.py",
+        "testport1/.github/workflows/port-gate.yml"
+      ],
+      "verdict": "unasked"
+    },
+    "Q483": {
+      "absent_sources": [],
+      "block": "Q481-Q500 Workflow, health ratchet, evidence, release",
+      "id": "Q483",
+      "klass": "spec, owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 483,
+      "sources": [
+        "testport1/tools/health.py",
+        "testport1/.github/workflows/port-gate.yml"
+      ],
+      "verdict": "unasked"
+    },
+    "Q484": {
+      "absent_sources": [],
+      "block": "Q481-Q500 Workflow, health ratchet, evidence, release",
+      "id": "Q484",
+      "klass": "spec, owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 484,
+      "sources": [
+        "testport1/tools/health.py",
+        "testport1/.github/workflows/port-gate.yml"
+      ],
+      "verdict": "unasked"
+    },
+    "Q485": {
+      "absent_sources": [],
+      "block": "Q481-Q500 Workflow, health ratchet, evidence, release",
+      "id": "Q485",
+      "klass": "spec, owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 485,
+      "sources": [
+        "testport1/tools/health.py",
+        "testport1/.github/workflows/port-gate.yml"
+      ],
+      "verdict": "unasked"
+    },
+    "Q486": {
+      "absent_sources": [],
+      "block": "Q481-Q500 Workflow, health ratchet, evidence, release",
+      "id": "Q486",
+      "klass": "spec, owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 486,
+      "sources": [
+        "testport1/tools/health.py",
+        "testport1/.github/workflows/port-gate.yml"
+      ],
+      "verdict": "unasked"
+    },
+    "Q487": {
+      "absent_sources": [],
+      "block": "Q481-Q500 Workflow, health ratchet, evidence, release",
+      "id": "Q487",
+      "klass": "spec, owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 487,
+      "sources": [
+        "testport1/tools/health.py",
+        "testport1/.github/workflows/port-gate.yml"
+      ],
+      "verdict": "unasked"
+    },
+    "Q488": {
+      "absent_sources": [],
+      "block": "Q481-Q500 Workflow, health ratchet, evidence, release",
+      "id": "Q488",
+      "klass": "spec, owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 488,
+      "sources": [
+        "testport1/tools/health.py",
+        "testport1/.github/workflows/port-gate.yml"
+      ],
+      "verdict": "unasked"
+    },
+    "Q489": {
+      "absent_sources": [],
+      "block": "Q481-Q500 Workflow, health ratchet, evidence, release",
+      "id": "Q489",
+      "klass": "spec, owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 489,
+      "sources": [
+        "testport1/tools/health.py",
+        "testport1/.github/workflows/port-gate.yml"
+      ],
+      "verdict": "unasked"
+    },
+    "Q490": {
+      "absent_sources": [],
+      "block": "Q481-Q500 Workflow, health ratchet, evidence, release",
+      "id": "Q490",
+      "klass": "spec, owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 490,
+      "sources": [
+        "testport1/tools/health.py",
+        "testport1/.github/workflows/port-gate.yml"
+      ],
+      "verdict": "unasked"
+    },
+    "Q491": {
+      "absent_sources": [],
+      "block": "Q481-Q500 Workflow, health ratchet, evidence, release",
+      "id": "Q491",
+      "klass": "spec, owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 491,
+      "sources": [
+        "testport1/tools/health.py",
+        "testport1/.github/workflows/port-gate.yml"
+      ],
+      "verdict": "unasked"
+    },
+    "Q492": {
+      "absent_sources": [],
+      "block": "Q481-Q500 Workflow, health ratchet, evidence, release",
+      "id": "Q492",
+      "klass": "spec, owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 492,
+      "sources": [
+        "testport1/tools/health.py",
+        "testport1/.github/workflows/port-gate.yml"
+      ],
+      "verdict": "unasked"
+    },
+    "Q493": {
+      "absent_sources": [],
+      "block": "Q481-Q500 Workflow, health ratchet, evidence, release",
+      "id": "Q493",
+      "klass": "spec, owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 493,
+      "sources": [
+        "testport1/tools/health.py",
+        "testport1/.github/workflows/port-gate.yml"
+      ],
+      "verdict": "unasked"
+    },
+    "Q494": {
+      "absent_sources": [],
+      "block": "Q481-Q500 Workflow, health ratchet, evidence, release",
+      "id": "Q494",
+      "klass": "spec, owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 494,
+      "sources": [
+        "testport1/tools/health.py",
+        "testport1/.github/workflows/port-gate.yml"
+      ],
+      "verdict": "unasked"
+    },
+    "Q495": {
+      "absent_sources": [],
+      "block": "Q481-Q500 Workflow, health ratchet, evidence, release",
+      "id": "Q495",
+      "klass": "spec, owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 495,
+      "sources": [
+        "testport1/tools/health.py",
+        "testport1/.github/workflows/port-gate.yml"
+      ],
+      "verdict": "unasked"
+    },
+    "Q496": {
+      "absent_sources": [],
+      "block": "Q481-Q500 Workflow, health ratchet, evidence, release",
+      "id": "Q496",
+      "klass": "spec, owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 496,
+      "sources": [
+        "testport1/tools/health.py",
+        "testport1/.github/workflows/port-gate.yml"
+      ],
+      "verdict": "unasked"
+    },
+    "Q497": {
+      "absent_sources": [],
+      "block": "Q481-Q500 Workflow, health ratchet, evidence, release",
+      "id": "Q497",
+      "klass": "spec, owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 497,
+      "sources": [
+        "testport1/tools/health.py",
+        "testport1/.github/workflows/port-gate.yml"
+      ],
+      "verdict": "unasked"
+    },
+    "Q498": {
+      "absent_sources": [],
+      "block": "Q481-Q500 Workflow, health ratchet, evidence, release",
+      "id": "Q498",
+      "klass": "spec, owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 498,
+      "sources": [
+        "testport1/tools/health.py",
+        "testport1/.github/workflows/port-gate.yml"
+      ],
+      "verdict": "unasked"
+    },
+    "Q499": {
+      "absent_sources": [],
+      "block": "Q481-Q500 Workflow, health ratchet, evidence, release",
+      "id": "Q499",
+      "klass": "spec, owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 499,
+      "sources": [
+        "testport1/tools/health.py",
+        "testport1/.github/workflows/port-gate.yml"
+      ],
+      "verdict": "unasked"
+    },
+    "Q500": {
+      "absent_sources": [],
+      "block": "Q481-Q500 Workflow, health ratchet, evidence, release",
+      "id": "Q500",
+      "klass": "spec, owner",
+      "note": "no question text exists on disk for this slot; the block is named, the question is not",
+      "recorded": false,
+      "slot": 500,
+      "sources": [
+        "testport1/tools/health.py",
+        "testport1/.github/workflows/port-gate.yml"
+      ],
+      "verdict": "unasked"
+    }
+  },
+  "spine": 500,
+  "unasked_spine": 367
+}

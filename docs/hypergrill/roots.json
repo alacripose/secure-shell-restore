@@ -1,0 +1,63 @@
+{
+  "discovered_at": "2026-11-04T11:13:28+00:00",
+  "parent": "C:/Users/ala/Documents",
+  "roots": [
+    {
+      "name": "ala_civ_bots_prototype",
+      "path": "C:/Users/ala/Documents/ala_civ_bots_prototype",
+      "markers": [
+        "AGENTS.md"
+      ]
+    },
+    {
+      "name": "ala_package_designer",
+      "path": "C:/Users/ala/Documents/ala_package_designer",
+      "markers": []
+    },
+    {
+      "name": "dl-enclave",
+      "path": "C:/Users/ala/Documents/dl-enclave",
+      "markers": [
+        "AGENTS.md"
+      ]
+    },
+    {
+      "name": "openlock",
+      "path": "C:/Users/ala/Documents/openlock",
+      "markers": [
+        "AGENTS.md"
+      ]
+    },
+    {
+      "name": "secure-shell",
+      "path": "C:/Users/ala/Documents/secure-shell",
+      "markers": [
+        "AGENTS.md",
+        "docs/DECISIONS.md",
+        "docs/ARCHITECTURE.md"
+      ]
+    },
+    {
+      "name": "shploingus",
+      "path": "C:/Users/ala/Documents/shploingus",
+      "markers": []
+    },
+    {
+      "name": "shploingus-clean",
+      "path": "C:/Users/ala/Documents/shploingus-clean",
+      "markers": []
+    },
+    {
+      "name": "shploingus-game",
+      "path": "C:/Users/ala/Documents/shploingus-game",
+      "markers": []
+    },
+    {
+      "name": "testport1",
+      "path": "C:/Users/ala/Documents/testport1",
+      "markers": [
+        "AGENTS.md"
+      ]
+    }
+  ]
+}

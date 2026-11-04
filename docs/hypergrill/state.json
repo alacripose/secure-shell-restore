@@ -1,0 +1,2913 @@
+{
+  "questions": {
+    "N001": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N001",
+      "ruling": "One XML reader over a common intermediate",
+      "status": "resolved",
+      "text": ""
+    },
+    "N003": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N003",
+      "ruling": "Re-sign every package at each rotation",
+      "status": "resolved",
+      "text": ""
+    },
+    "N004": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N004",
+      "ruling": "Each export records its Mongo oplog position",
+      "status": "resolved",
+      "text": ""
+    },
+    "N005": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N005",
+      "ruling": "Nightly backup, weekly restore drill",
+      "status": "resolved",
+      "text": ""
+    },
+    "N006": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N006",
+      "ruling": "No default ceiling: declaration required; stream declared size; report space honestly; cut off bloat",
+      "status": "resolved",
+      "text": ""
+    },
+    "N007": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N007",
+      "ruling": "Hard ceiling raised to 64 GiB",
+      "status": "resolved",
+      "text": ""
+    },
+    "N008": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N008",
+      "ruling": "Miniaturization is transform, build mode and training objective, staged",
+      "status": "resolved",
+      "text": ""
+    },
+    "N009": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N009",
+      "ruling": "x86 reached after miniaturization",
+      "status": "resolved",
+      "text": ""
+    },
+    "N010": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N010",
+      "ruling": "Both mount-and-render witness and parity digest",
+      "status": "resolved",
+      "text": ""
+    },
+    "N012": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N012",
+      "ruling": "Motion is a required field on every surface",
+      "status": "resolved",
+      "text": ""
+    },
+    "N013": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N013",
+      "ruling": "Budgets differ per target class",
+      "status": "resolved",
+      "text": ""
+    },
+    "N014": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N014",
+      "ruling": "Device limits recorded honestly so settings can offer display options",
+      "status": "resolved",
+      "text": ""
+    },
+    "N015": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N015",
+      "ruling": "Worker count is user-settable behind a checkbox and warning",
+      "status": "resolved",
+      "text": ""
+    },
+    "N016": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N016",
+      "ruling": "Default 1,000, settable from 1 upward",
+      "status": "resolved",
+      "text": ""
+    },
+    "N017": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N017",
+      "ruling": "`declared-size-exceeded`; toast proofs are checked",
+      "status": "resolved",
+      "text": ""
+    },
+    "N018": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N018",
+      "ruling": "Space checked both preflight and mid-stream",
+      "status": "resolved",
+      "text": ""
+    },
+    "N019": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N019",
+      "ruling": "Size options presented as a chooser",
+      "status": "resolved",
+      "text": ""
+    },
+    "N020": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N020",
+      "ruling": "Any overrun above the declaration is a refusal",
+      "status": "resolved",
+      "text": ""
+    },
+    "N021": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N021",
+      "ruling": "64 GiB applies to every target class",
+      "status": "resolved",
+      "text": ""
+    },
+    "N022": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N022",
+      "ruling": "The owner's machine is x86; the first Restore is WSL Debian there",
+      "status": "resolved",
+      "text": ""
+    },
+    "N023": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N023",
+      "ruling": "Exact digest match, no tolerance",
+      "status": "resolved",
+      "text": ""
+    },
+    "N024": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N024",
+      "ruling": "A streamed settings package owns device reporting",
+      "status": "resolved",
+      "text": ""
+    },
+    "N025": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N025",
+      "ruling": "A lower frame floor degrades with a warning",
+      "status": "resolved",
+      "text": ""
+    },
+    "N026": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N026",
+      "ruling": "User attestation; worker count scales logarithmically",
+      "status": "resolved",
+      "text": ""
+    },
+    "N033": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N033",
+      "ruling": "OpenLock toast proofs are part of the proof chain",
+      "status": "resolved",
+      "text": ""
+    },
+    "N034": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N034",
+      "ruling": "WSL Debian on the owner's machine is the first target",
+      "status": "resolved",
+      "text": ""
+    },
+    "N035": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N035",
+      "ruling": "Logarithmic base 2, constant measured",
+      "status": "resolved",
+      "text": ""
+    },
+    "N036": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N036",
+      "ruling": "`grade` is an enumerated manifest field",
+      "status": "resolved",
+      "text": ""
+    },
+    "N037": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N037",
+      "ruling": "Grade set is open; OpenLock's grades are OpenLock's; Secure Shell has its own install-grade axis",
+      "status": "resolved",
+      "text": ""
+    },
+    "N038": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N038",
+      "ruling": "Reader protocol version shared with the client revision",
+      "status": "resolved",
+      "text": ""
+    },
+    "N039": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N039",
+      "ruling": "Store package is `secure-shell-store`",
+      "status": "resolved",
+      "text": ""
+    },
+    "N040": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N040",
+      "ruling": "A hotfix adds a name to the same lineage; the counter carries across",
+      "status": "resolved",
+      "text": ""
+    },
+    "N041": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N041",
+      "ruling": "A promoted prerelease takes a new stable number",
+      "status": "resolved",
+      "text": ""
+    },
+    "N042": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N042",
+      "ruling": "Grades are `install` and `os` for now, others by ruling; Secure Shell is never abbreviated",
+      "status": "resolved",
+      "text": ""
+    },
+    "N043": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N043",
+      "ruling": "A package cites a family revision at or below current",
+      "status": "resolved",
+      "text": ""
+    },
+    "N044": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N044",
+      "ruling": "An unknown grade is accepted with a warning",
+      "status": "resolved",
+      "text": ""
+    },
+    "N045": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N045",
+      "ruling": "A protocol change bumps the client revision",
+      "status": "resolved",
+      "text": ""
+    },
+    "N046": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N046",
+      "ruling": "A revision may carry identical payload; Q051 relaxes to \"bytes or metadata differ\"",
+      "status": "resolved",
+      "text": ""
+    },
+    "N047": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N047",
+      "ruling": "The revision leaves the BLAKE3 preimage",
+      "status": "resolved",
+      "text": ""
+    },
+    "N048": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N048",
+      "ruling": "Minimum display is \"Secure Shell\" plus the pinned hash",
+      "status": "resolved",
+      "text": ""
+    },
+    "N049": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N049",
+      "ruling": "`secure-shell-family` is graded `install`",
+      "status": "resolved",
+      "text": ""
+    },
+    "N050": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N050",
+      "ruling": "A warned mount stays degraded until it proves itself",
+      "status": "resolved",
+      "text": ""
+    },
+    "N051": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "N051",
+      "ruling": "A promoted prerelease's old number stays retired",
+      "status": "resolved",
+      "text": ""
+    },
+    "N052": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "verbatim: \"One successful mount plus a render witness\"",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md#8.2"
+        }
+      ],
+      "id": "N052",
+      "receipt_at": "2026-11-04T11:35:11+00:00",
+      "resolution": "A successful mount that renders and produces a client witness is enough to record the mount as healthy. The scheduled 24-hour run is not a precondition, and the grade is not withheld pending it.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "What evidence moves a degraded mount to healthy?"
+    },
+    "N053": {
+      "class": "code",
+      "evidence": [
+        {
+          "kind": "code",
+          "note": "STATES = ['mounted','already-mounted','stale-surface','surface-conflict','refused'] \u2014 a closed set, and no warnings field exists in FIELDS",
+          "ref": "secure-shell:tools/port/store.mjs:24"
+        },
+        {
+          "kind": "code",
+          "note": "a non-applied state must carry a refusal code; an applied state must carry '-'",
+          "ref": "secure-shell:tools/port/store.mjs:93"
+        },
+        {
+          "kind": "code",
+          "note": "state = REFUSAL_STATE[error.code] ?? 'refused' \u2014 outcome is the state field, the cause is the refusal field",
+          "ref": "secure-shell:tools/port/mount.mjs:308"
+        },
+        {
+          "kind": "doc",
+          "note": "served tier is computed on read and a carried tier is refused tier-not-derived",
+          "ref": "secure-shell:docs/DECISIONS.md:45"
+        }
+      ],
+      "id": "N053",
+      "receipt_at": "2026-11-04T11:11:14+00:00",
+      "resolution": "`degraded` is a receipt state of its own, not a warning field. The row carries a closed state set plus a separate refusal code, and no warnings field exists anywhere in the row shape. A warned mount adds `degraded` to STATES and names its cause in `refusal`, exactly as `stale-surface` and `surface-conflict` already do.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Is `degraded` a receipt status or a warning field?"
+    },
+    "N054": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the single canonical rule set",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:281"
+        },
+        {
+          "kind": "doc",
+          "note": "the hashed bytes are the canonical ones",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:281"
+        }
+      ],
+      "id": "N054",
+      "receipt_at": "2026-11-04T11:30:57+00:00",
+      "resolution": "The binary wire form is a projection of canonical JSON, not a second canonicalization. Canonical bytes are defined once, in JSON, and the wire encoding must round-trip to those bytes or be refused.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Is the binary wire form canonical or a projection?"
+    },
+    "N055": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "verbatim: the node cua driver is the operation layer for the civilian acceptance document",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md#8.5"
+        }
+      ],
+      "id": "N055",
+      "receipt_at": "2026-11-04T11:56:26+00:00",
+      "resolution": "The Node CUA driver is the operation layer for the civilian acceptance document. A Node process is therefore authorized as the operation layer, and a rule that treats a Node check as not a witness is refused as authority.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Given that `ala-civ-bots-prototype` runs Node CUA bots and the 1000-driver performance test ran on them, what authorization does a Node-driven CUA witness carry: may such a bot's own mount observation count as receipt evidence, and what must be refused?"
+    },
+    "Q001": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q001",
+      "ruling": "Lowercase `restore` in names",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q002": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q002",
+      "ruling": "`secure-shell-*` for everything",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q003": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q003",
+      "ruling": "Each document versioned independently",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q004": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q004",
+      "ruling": "Release manifest at `releases/index.json`",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q005": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q005",
+      "ruling": "Tags carry `name@rev` only",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q006": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q006",
+      "ruling": "Lowercase hex only",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q007": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q007",
+      "ruling": "Ceiling much higher; OS and a game; must learn miniaturization",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q008": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q008",
+      "ruling": "Ceiling enforced at admission, delivery and mount",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q009": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q009",
+      "ruling": "Signing key under `systemd-creds`",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q010": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q010",
+      "ruling": "Rotation per release",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q011": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q011",
+      "ruling": "Store-level key for spanning rows",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q012": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q012",
+      "ruling": "Replication deferred past Restore",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q013": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q013",
+      "ruling": "Ledger is both a Mongo collection and an export; Mongo authoritative",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q014": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q014",
+      "ruling": "All QTXML dialects; no motion is a refusal",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q015": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q015",
+      "ruling": "Frame floor plus bitmap memory cap",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q016": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q016",
+      "ruling": "Driver proposes capability catalogue entries, owner approves",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q017": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q017",
+      "ruling": "Design bound tens of billions; default 1,000",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q018": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q018",
+      "ruling": "MCP over stdio",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q019": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q019",
+      "ruling": "The five documents stay five",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q020": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q020",
+      "ruling": "Chat is the record, curation is the rule",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q021": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q021",
+      "ruling": "Names restricted to `[a-z0-9-]`",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q022": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q022",
+      "ruling": "All names follow the family naming schema",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q023": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q023",
+      "ruling": "`debian-store` is both a package and a role",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q024": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q024",
+      "ruling": "The streamer carries its own package identity",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q025": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q025",
+      "ruling": "`openlock` renamed at generation",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q026": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q026",
+      "ruling": "A rename is a deprecation plus a new lineage",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q027": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q027",
+      "ruling": "Aliases refused, like a token crosswalk",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q028": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q028",
+      "ruling": "Architecture is a manifest field",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q029": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q029",
+      "ruling": "A metadata-only package is still a package",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q030": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q030",
+      "ruling": "Release bundles have identity",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q031": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q031",
+      "ruling": "`restore` is both a streamable package and a grade",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q032": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q032",
+      "ruling": "Compatibility representations get package identities",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q033": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q033",
+      "ruling": "Generated templates use the package name grammar",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q034": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q034",
+      "ruling": "Reserved prefix `secure-shell-internal-`",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q035": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q035",
+      "ruling": "The Qt client ships as one package",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q036": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q036",
+      "ruling": "The naming schema applies to roles and services",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q037": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q037",
+      "ruling": "The family name is itself versioned",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q038": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q038",
+      "ruling": "Exact byte comparison, no case folding",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q039": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q039",
+      "ruling": "Name length bounded at 64 characters",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q040": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q040",
+      "ruling": "A name maps to exactly one lineage",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q041": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q041",
+      "ruling": "Revisions start at 1",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q042": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q042",
+      "ruling": "Revisions are never reused",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q043": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q043",
+      "ruling": "A withdrawn revision stays retired forever",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q044": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q044",
+      "ruling": "Revisions are monotonic per lineage",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q045": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q045",
+      "ruling": "A revision never decreases on rollback",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q046": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q046",
+      "ruling": "A hotfix is a new name",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q047": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q047",
+      "ruling": "Prereleases draw from a separate counter",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q048": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q048",
+      "ruling": "Revisions are decimal digits with no leading zeros",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q049": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q049",
+      "ruling": "The family ships as the package `secure-shell-family`",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q050": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q050",
+      "ruling": "A revision is never absent",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q051": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q051",
+      "ruling": "A revision requires a content or metadata change",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q052": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q052",
+      "ruling": "Two revisions may share identical content",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q053": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q053",
+      "ruling": "`latest` is derived at read time",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q054": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q054",
+      "ruling": "A withdrawn revision still resolves for the pin",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q055": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q055",
+      "ruling": "The signature binds name, revision and hash",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q056": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q056",
+      "ruling": "One published revision at a time",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q057": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q057",
+      "ruling": "Revision ceiling is 2^64",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q058": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q058",
+      "ruling": "Superseded by `N047`: the revision is not in the preimage",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q059": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q059",
+      "ruling": "A promoted prerelease keeps its content hash",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q060": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q060",
+      "ruling": "Each revision declares a deprecation window",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q061": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q061",
+      "ruling": "The hash covers canonical bytes, and the stored form must match",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q062": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q062",
+      "ruling": "The hash covers the package alone; dependencies are pinned separately",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q063": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q063",
+      "ruling": "Full 32-byte output, untruncated",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q064": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q064",
+      "ruling": "Preimage is the canonical manifest plus a payload walk",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q065": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q065",
+      "ruling": "Preimage begins with a fixed domain-separation tag",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q066": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q066",
+      "ruling": "Payload is referenced by its own hash",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q067": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q067",
+      "ruling": "Object keys sorted by byte order",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q068": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q068",
+      "ruling": "JSON on disk, binary on the wire",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q069": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q069",
+      "ruling": "Integers only, no floats",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q070": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q070",
+      "ruling": "Payload is a Merkle tree over files",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q071": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q071",
+      "ruling": "Per-file hashes are recorded",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q072": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q072",
+      "ruling": "Package name sits in the manifest header",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q073": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q073",
+      "ruling": "Family revision is in the preimage",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q074": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q074",
+      "ruling": "Grade is in the preimage",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q075": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q075",
+      "ruling": "Receipts use the same rules under a different domain tag",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q076": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "ruling recorded under the retired format",
+          "ref": "worksheet Appendix A"
+        }
+      ],
+      "id": "Q076",
+      "ruling": "The preimage layout is version-tagged",
+      "status": "resolved",
+      "text": ""
+    },
+    "Q077": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "tree over files, hashes recorded per file",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:281"
+        },
+        {
+          "kind": "doc",
+          "note": "digest width per leaf",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:281"
+        }
+      ],
+      "id": "Q077",
+      "receipt_at": "2026-11-04T11:30:55+00:00",
+      "resolution": "A per-file hash is BLAKE3 over the file bytes exactly. The path is the leaf's label in the Merkle tree, not part of the hashed content, so renaming a file changes the tree without pretending the bytes changed.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Is a per-file hash over bytes or bytes plus path?"
+    },
+    "Q078": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "metadata-only packages are legal",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:186"
+        },
+        {
+          "kind": "doc",
+          "note": "an empty payload still has a hash",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:281"
+        }
+      ],
+      "id": "Q078",
+      "receipt_at": "2026-11-04T11:30:55+00:00",
+      "resolution": "Empty files are legal leaves; an empty payload is legal and its root is the BLAKE3 of the empty input under the domain tag. A metadata-only package already establishes that a package may carry no content.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Are empty files and empty payloads legal?"
+    },
+    "Q079": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the determinism rule the walk follows",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:281"
+        },
+        {
+          "kind": "doc",
+          "note": "what is being ordered",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:281"
+        }
+      ],
+      "id": "Q079",
+      "receipt_at": "2026-11-04T11:30:55+00:00",
+      "resolution": "The walk is ordered by path byte order, not manifest order, because canonical serialization already sorts keys by byte order and the tree must be reproducible by a second writer.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Is the walk ordered by path bytes or manifest order?"
+    },
+    "Q080": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "files are the leaves",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:281"
+        },
+        {
+          "kind": "doc",
+          "note": "layout changes are versioned",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:281"
+        }
+      ],
+      "id": "Q080",
+      "receipt_at": "2026-11-04T11:30:55+00:00",
+      "resolution": "The walk covers files only. Directories are implied by the paths in the tree and are not leaves, so an empty directory is not representable, consistent with a payload that carries content rather than filesystem metadata.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Does the walk include directory entries?"
+    },
+    "Q081": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the signed statement's contents",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:277"
+        },
+        {
+          "kind": "doc",
+          "note": "the hash's scope, which embedding makes circular",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:281"
+        }
+      ],
+      "id": "Q081",
+      "receipt_at": "2026-11-04T11:30:54+00:00",
+      "resolution": "The signature is detached, never embedded. The signed statement binds name, revision and hash, and the hash covers the canonical package bytes; an embedded signature would sit inside the bytes it covers.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Detached or embedded signature?"
+    },
+    "Q082": {
+      "class": "external",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the scheme in use",
+          "ref": "C:/Users/ala/Documents/secure-shell/docs/LEDGER.md:124"
+        },
+        {
+          "kind": "doc",
+          "note": "the envelope shape being reused",
+          "ref": "C:/Users/ala/Documents/secure-shell/docs/LEDGER.md:119"
+        }
+      ],
+      "id": "Q082",
+      "receipt_at": "2026-11-04T11:30:56+00:00",
+      "resolution": "Ed25519, carried in the family's dl-enclave.sig/1 envelope. It is the scheme the existing store and checkpoints already use, so Restore reuses one signature scheme rather than introducing a second.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Which signature scheme?"
+    },
+    "Q083": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the payload root lives in the manifest",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:281"
+        },
+        {
+          "kind": "doc",
+          "note": "the manifest is the preimage's core",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:281"
+        }
+      ],
+      "id": "Q083",
+      "receipt_at": "2026-11-04T11:30:55+00:00",
+      "resolution": "The envelope covers the canonical manifest only. The payload root is a field of that manifest, so the payload is covered transitively and a payload substitution changes the verified bytes.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Does the envelope cover the manifest only or also the payload root?"
+    },
+    "Q084": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the signed field set",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:277"
+        },
+        {
+          "kind": "doc",
+          "note": "identity is stable across promotion",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:233"
+        }
+      ],
+      "id": "Q084",
+      "receipt_at": "2026-11-04T11:30:56+00:00",
+      "resolution": "No timestamp is inside the signed bytes. The signature binds name, revision and hash; a signed timestamp would make a re-sign change identity and contradict a promoted prerelease keeping its hash.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Is a timestamp inside the signed bytes?"
+    },
+    "Q085": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "re-signing creates coexisting signatures",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:143"
+        },
+        {
+          "kind": "doc",
+          "note": "each signature binds the same statement",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:229"
+        }
+      ],
+      "id": "Q085",
+      "receipt_at": "2026-11-04T11:30:56+00:00",
+      "resolution": "Multiple signatures are allowed and ordered. Rotation is per release and every stored package is re-signed at rotation, so a package can carry an outgoing and an incoming signature during a transition.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Are multiple signatures allowed?"
+    },
+    "Q086": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the existing envelope field",
+          "ref": "C:/Users/ala/Documents/secure-shell/docs/LEDGER.md:119"
+        },
+        {
+          "kind": "doc",
+          "note": "rotation makes key selection necessary",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:143"
+        }
+      ],
+      "id": "Q086",
+      "receipt_at": "2026-11-04T11:30:56+00:00",
+      "resolution": "The envelope carries a key identifier. The family's existing envelope already carries key-id, and per-release rotation makes discovery by trial unsafe.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Does the envelope carry a key identifier?"
+    },
+    "Q087": {
+      "class": "code",
+      "evidence": [
+        {
+          "kind": "code",
+          "note": "Ed25519 keys are generated on the first checkpoint, checkpoint.key (0600) and checkpoint.pub \u2014 one pair, no history",
+          "ref": "secure-shell:docs/LEDGER.md:124"
+        },
+        {
+          "kind": "code",
+          "note": "the dl-enclave.sig/1 envelope carries key-id, but nothing consults it",
+          "ref": "secure-shell:docs/LEDGER.md:119"
+        },
+        {
+          "kind": "code",
+          "note": "case-insensitive 'revok' has zero occurrences; no revocation, expiry or key_history representation exists",
+          "ref": "secure-shell (repo-wide grep)"
+        }
+      ],
+      "id": "Q087",
+      "receipt_at": "2026-11-04T11:11:15+00:00",
+      "resolution": "Revocation is not represented. The store holds one generated Ed25519 checkpoint key pair with no key history and no expiry, and the signature envelope's `key-id` is carried but never consulted. Replacing the key file retires nothing retroactively.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Is revocation represented in the store?"
+    },
+    "Q088": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "no key history, no expiry today",
+          "ref": "C:/Users/ala/Documents/secure-shell/docs/LEDGER.md:124"
+        },
+        {
+          "kind": "doc",
+          "note": "the statement a past key covers",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:277"
+        }
+      ],
+      "id": "Q088",
+      "receipt_at": "2026-11-04T11:30:57+00:00",
+      "resolution": "A key that signed while valid keeps verifying its own signatures. The store has no expiry representation today, and when Restore adds key history the check is trust-at-signing plus current revocation, not current validity.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Does an expired key still verify old signatures?"
+    },
+    "Q089": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "Q010 already fixed rotation per release; Q089 restates it",
+          "ref": "Q010"
+        }
+      ],
+      "id": "Q089",
+      "receipt_at": "2026-11-04T11:08:34+00:00",
+      "resolution": "duplicate of Q010",
+      "ruling": "",
+      "status": "folded",
+      "text": "One key per release or per package?"
+    },
+    "Q090": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the manifest is inside the hash",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:281"
+        },
+        {
+          "kind": "doc",
+          "note": "what the envelope binds",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:277"
+        }
+      ],
+      "id": "Q090",
+      "receipt_at": "2026-11-04T11:30:55+00:00",
+      "resolution": "Beside the manifest, not inside it. Same circularity as Q081: the manifest is what the hash covers, so a signature stored inside it would cover itself.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Is the signature stored inside or beside the manifest?"
+    },
+    "Q091": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the revision is outside identity",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:277"
+        },
+        {
+          "kind": "doc",
+          "note": "content identity is the package bytes",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:281"
+        }
+      ],
+      "id": "Q091",
+      "receipt_at": "2026-11-04T11:32:00+00:00",
+      "resolution": "No new revision. The revision is not part of the BLAKE3 preimage and the hash covers the package alone, so adding a signature changes neither identity nor content; the event is recorded in the ledger and the store's envelope set, not in the revision number.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "May a signature be added after publish without a revision?"
+    },
+    "Q092": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the versioned envelope carries its own schema",
+          "ref": "C:/Users/ala/Documents/secure-shell/docs/LEDGER.md:119"
+        },
+        {
+          "kind": "doc",
+          "note": "revision is bound inside, not the envelope's version",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:277"
+        }
+      ],
+      "id": "Q092",
+      "receipt_at": "2026-11-04T11:30:57+00:00",
+      "resolution": "The envelope schema is versioned separately from the package revision. The family already names the envelope dl-enclave.sig/1, which is its own version, and a package revision move does not renumber it.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Are signatures versioned independently?"
+    },
+    "Q093": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the workspace refusal rule",
+          "ref": "AGENTS.md:67"
+        },
+        {
+          "kind": "doc",
+          "note": "what is being verified",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:277"
+        }
+      ],
+      "id": "Q093",
+      "receipt_at": "2026-11-04T11:30:57+00:00",
+      "resolution": "A failed signature is a refusal, by name. The workspace rule is refuse-never-default, and the shell's security boundary refuses a package that cannot prove identity rather than mounting it with a warning.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Is a failed signature a refusal or a warning?"
+    },
+    "Q101": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the tag and its home",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:177"
+        },
+        {
+          "kind": "doc",
+          "note": "its relationship to receipts",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:23"
+        }
+      ],
+      "id": "Q101",
+      "receipt_at": "2026-11-04T11:39:27+00:00",
+      "resolution": "The stream tag is `secure-shell.stream/1`, carried in the frame header and versioned independently of package identity.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "What is the stream's version tag and where does it live?"
+    },
+    "Q102": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the explicit non-coupling rule",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:181"
+        }
+      ],
+      "id": "Q102",
+      "receipt_at": "2026-11-04T11:39:27+00:00",
+      "resolution": "No. A stream schema bump does not bump the mount receipt schema, and a receipt bump does not disturb the stream.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Does a stream schema bump bump the mount receipt schema?"
+    },
+    "Q103": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "order is a stated property",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:183"
+        },
+        {
+          "kind": "doc",
+          "note": "the refusal class available for a gap",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:219"
+        }
+      ],
+      "id": "Q103",
+      "receipt_at": "2026-11-04T11:39:27+00:00",
+      "resolution": "Chunks carry an explicit sequence and are applied in order. A gap, a duplicate or a reordering is a truncation-class refusal, never a silent resort.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Are chunks ordered by sequence, and what happens to a gap?"
+    },
+    "Q104": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "resume is stated as authenticated",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:183"
+        },
+        {
+          "kind": "doc",
+          "note": "unverified bytes are never adopted",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:216"
+        }
+      ],
+      "id": "Q104",
+      "receipt_at": "2026-11-04T11:39:28+00:00",
+      "resolution": "Resume is authenticated. The resuming side re-presents the package identity, and a resume without a verifiable signature is refused rather than trusted.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Is resume authenticated?"
+    },
+    "Q105": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the property is stated",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:183"
+        },
+        {
+          "kind": "code",
+          "note": "the family's existing rule",
+          "ref": "secure-shell:AGENTS.md:72"
+        }
+      ],
+      "id": "Q105",
+      "receipt_at": "2026-11-04T11:39:28+00:00",
+      "resolution": "Operation ids make delivery idempotent: a retried chunk or apply carrying the same operation id takes effect once, and the second arrival is acknowledged without a second effect.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Are operation ids idempotent, and what does a retry do?"
+    },
+    "Q106": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "detection is a stated property",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:183"
+        },
+        {
+          "kind": "doc",
+          "note": "the consequence",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:219"
+        }
+      ],
+      "id": "Q106",
+      "receipt_at": "2026-11-04T11:39:28+00:00",
+      "resolution": "Truncation is detected against the declared size and the digest, not against the transport closing. The refusal is `stream-truncated`.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "How is truncation detected?"
+    },
+    "Q107": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "explicit, not implied",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:183"
+        },
+        {
+          "kind": "doc",
+          "note": "the failure it prevents",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:219"
+        }
+      ],
+      "id": "Q107",
+      "receipt_at": "2026-11-04T11:39:28+00:00",
+      "resolution": "Finalization is explicit: the stream ends with a finalization record. An EOF without one is a truncation, not a short but acceptable stream.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Is finalization explicit or implied by EOF?"
+    },
+    "Q108": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the property is stated",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:183"
+        },
+        {
+          "kind": "doc",
+          "note": "what holds until the switch",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:184"
+        }
+      ],
+      "id": "Q108",
+      "receipt_at": "2026-11-04T11:39:28+00:00",
+      "resolution": "Adoption is atomic: the mounted surface switches in one step, so a partially applied revision is never visible.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Is adoption atomic?"
+    },
+    "Q109": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the full gate list",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:184"
+        }
+      ],
+      "id": "Q109",
+      "receipt_at": "2026-11-04T11:39:29+00:00",
+      "resolution": "Only after digest, signature, schema, compatibility and client-surface checks all pass, in that order.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "When may the client drop the previous admitted revision?"
+    },
+    "Q110": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "refusal, not conversion",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:185"
+        },
+        {
+          "kind": "code",
+          "note": "the behaviour already asserted in the family",
+          "ref": "secure-shell:tests/stream.test.mjs:48"
+        }
+      ],
+      "id": "Q110",
+      "receipt_at": "2026-11-04T11:39:29+00:00",
+      "resolution": "No conversion on read. The frame is refused by name with `found` and `supported`, which the family's own reader already does and its own test asserts.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Are older or newer frames converted on read?"
+    },
+    "Q111": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the streamer's own identity",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:170"
+        },
+        {
+          "kind": "doc",
+          "note": "the stream tag is separate from package identity",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:177"
+        }
+      ],
+      "id": "Q111",
+      "receipt_at": "2026-11-04T11:39:29+00:00",
+      "resolution": "Yes. The streamer is itself a package with its own identity, separate from the packages it carries, so a streamer revision never renumbers its payload packages.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Does the stream carry its own package identity?"
+    },
+    "Q112": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "what the stream carries",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:177"
+        }
+      ],
+      "id": "Q112",
+      "receipt_at": "2026-11-04T11:39:29+00:00",
+      "resolution": "The manifest travels inline in the canonical package bytes. The chunk manifest is the stream's own framing and is not a second copy of the package manifest.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Does the manifest travel inline or separately?"
+    },
+    "Q113": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "code",
+          "note": "the existing ceiling",
+          "ref": "secure-shell:server/ingest.mjs:44"
+        },
+        {
+          "kind": "doc",
+          "note": "boundedness is a stated property",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:183"
+        }
+      ],
+      "id": "Q113",
+      "receipt_at": "2026-11-04T11:39:29+00:00",
+      "resolution": "A chunk is bounded and the bound is declared per frame. The family's arrival frame already caps a payload at 1 MiB, and Restore adopts that ceiling rather than inventing a second number.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "What bounds a chunk?"
+    },
+    "Q114": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the subordination rule",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:23"
+        }
+      ],
+      "id": "Q114",
+      "receipt_at": "2026-11-04T11:39:29+00:00",
+      "resolution": "Yes, and it rides as a subordinate contract with its own version, so a stream change does not renumber receipts.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Does the receipt ride the stream?"
+    },
+    "Q115": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "what a receipt means",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:182"
+        },
+        {
+          "kind": "doc",
+          "note": "mount-and-render witness is the required proof",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:161"
+        }
+      ],
+      "id": "Q115",
+      "receipt_at": "2026-11-04T11:39:30+00:00",
+      "resolution": "The client. It is a witness that the surface mounted and rendered, not the server's assertion that bytes were sent.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Who produces the receipt?"
+    },
+    "Q116": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the refusal",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:220"
+        },
+        {
+          "kind": "doc",
+          "note": "the classification",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:220"
+        }
+      ],
+      "id": "Q116",
+      "receipt_at": "2026-11-04T11:39:30+00:00",
+      "resolution": "The mount is indeterminate, not successful: refusal `receipt-mismatch`, and the previous revision stays.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "What if the receipt names a different revision than the mount?"
+    },
+    "Q117": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the recorded failure this prevents",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.IMPLEMENTATION-PLAN.md:143"
+        },
+        {
+          "kind": "doc",
+          "note": "identity excludes framing",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:41"
+        }
+      ],
+      "id": "Q117",
+      "receipt_at": "2026-11-04T11:39:30+00:00",
+      "resolution": "No. Encryption is transport; the digest is over canonical content, and re-framing or re-encrypting the same content must not move it.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Does transport encryption affect package identity?"
+    },
+    "Q118": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "nothing partial becomes visible",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:183"
+        },
+        {
+          "kind": "doc",
+          "note": "a bad prefix is a truncation-class failure",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:183"
+        }
+      ],
+      "id": "Q118",
+      "receipt_at": "2026-11-04T11:39:30+00:00",
+      "resolution": "Yes. The digest covers the whole content, so a resumed assembly re-verifies the prefix before finalization and adopts nothing on trust.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Does a resumed stream re-verify the prefix?"
+    },
+    "Q119": {
+      "class": "code",
+      "evidence": [
+        {
+          "kind": "code",
+          "note": "the existing refusal",
+          "ref": "secure-shell:server/ingest.mjs:20"
+        },
+        {
+          "kind": "doc",
+          "note": "the same refusal in Restore's failure model",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:218"
+        }
+      ],
+      "id": "Q119",
+      "receipt_at": "2026-11-04T11:39:31+00:00",
+      "resolution": "`frame-schema`, carrying `found` and `supported`. The family's ingest reader already refuses that way.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "What refusal names an unsupported frame?"
+    },
+    "Q120": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the recorded rule",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:218"
+        },
+        {
+          "kind": "doc",
+          "note": "the mechanism that replaces negotiation",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:185"
+        }
+      ],
+      "id": "Q120",
+      "receipt_at": "2026-11-04T11:39:31+00:00",
+      "resolution": "No. The frame names its schema and the reader refuses what it does not support; there is no negotiation and no downgrade.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Is there capability negotiation?"
+    },
+    "Q121": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the receipt contract owns its version",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:177"
+        },
+        {
+          "kind": "code",
+          "note": "where the receipts already live",
+          "ref": "secure-shell:AGENTS.md:124"
+        }
+      ],
+      "id": "Q121",
+      "receipt_at": "2026-11-04T11:43:28+00:00",
+      "resolution": "The mount receipt is `surface.mount/2`. It keeps its own version and its own reader, and it lives in the family's existing mount store (`dl-enclave` `MountStore`).",
+      "ruling": "",
+      "status": "resolved",
+      "text": "What is the mount receipt's own schema tag?"
+    },
+    "Q122": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the non-coupling rule",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:181"
+        },
+        {
+          "kind": "doc",
+          "note": "the receipt's own axis",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:177"
+        }
+      ],
+      "id": "Q122",
+      "receipt_at": "2026-11-04T11:43:28+00:00",
+      "resolution": "No. A stream schema bump does not bump the mount receipt schema, and a receipt bump does not disturb the stream.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Does the receipt schema move with the stream schema?"
+    },
+    "Q123": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "closed, not open",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:285"
+        },
+        {
+          "kind": "doc",
+          "note": "the field that does not exist",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:285"
+        }
+      ],
+      "id": "Q123",
+      "receipt_at": "2026-11-04T11:43:29+00:00",
+      "resolution": "Closed. A receipt carries a closed state set plus a separate refusal code, and there is no warnings field.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Is the receipt state set closed or open?"
+    },
+    "Q124": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "degraded is a state",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:285"
+        },
+        {
+          "kind": "doc",
+          "note": "and carries a refusal code",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:285"
+        }
+      ],
+      "id": "Q124",
+      "receipt_at": "2026-11-04T11:43:29+00:00",
+      "resolution": "A state. `degraded` enters the state set and must name its cause in `refusal`; it is non-applied, so the applied-row and floor logic already exclude it.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Is `degraded` a state or a warning?"
+    },
+    "Q125": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the receipt's producer",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:170"
+        },
+        {
+          "kind": "doc",
+          "note": "the witness's producer",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:171"
+        }
+      ],
+      "id": "Q125",
+      "receipt_at": "2026-11-04T11:43:29+00:00",
+      "resolution": "The client. The mount row of the signing table assigns the adopted revision to a client receipt, and the witness row assigns rendering to the client.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Who produces a mount receipt?"
+    },
+    "Q126": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the separation",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:182"
+        },
+        {
+          "kind": "doc",
+          "note": "where authorization actually lives",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:169"
+        }
+      ],
+      "id": "Q126",
+      "receipt_at": "2026-11-04T11:43:29+00:00",
+      "resolution": "No. A receipt is evidence of adoption, not authorization to adopt; admission is a server-policy verdict recorded separately.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Is a receipt authorization to adopt?"
+    },
+    "Q127": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "code",
+          "note": "subject plus digest",
+          "ref": "secure-shell:docs/LEDGER.md:21"
+        },
+        {
+          "kind": "doc",
+          "note": "what a mismatch is called",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:220"
+        }
+      ],
+      "id": "Q127",
+      "receipt_at": "2026-11-04T11:43:30+00:00",
+      "resolution": "The revision actually adopted: the receipt identity is a subject and its digest, and a receipt naming a different revision than the mount is `receipt-mismatch`.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "What does a receipt bind?"
+    },
+    "Q128": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "code",
+          "note": "the row names the receipt",
+          "ref": "secure-shell:server/ledger.mjs:14"
+        },
+        {
+          "kind": "code",
+          "note": "the row is the record",
+          "ref": "secure-shell:AGENTS.md:203"
+        }
+      ],
+      "id": "Q128",
+      "receipt_at": "2026-11-04T11:43:30+00:00",
+      "resolution": "The ledger row is the durable record; the mount receipt is the subject that row names. The chain, its fsync and its append-only file are the durability, and the receipt is what the row points at.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Is the receipt the durable record, or is the ledger row?"
+    },
+    "Q129": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "code",
+          "note": "the refusal for an unseen check",
+          "ref": "secure-shell:AGENTS.md:53"
+        },
+        {
+          "kind": "code",
+          "note": "what does not count as a witness",
+          "ref": "secure-shell:AGENTS.md:45"
+        }
+      ],
+      "id": "Q129",
+      "receipt_at": "2026-11-04T11:43:30+00:00",
+      "resolution": "No. A check the client cannot see is `test-surface-unwitnessed`, and a check that runs only in Node, a headless browser or a separate witness page is not a witness.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Can a receipt be produced without rendering?"
+    },
+    "Q130": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the ruling that both are required",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:177"
+        },
+        {
+          "kind": "doc",
+          "note": "the rendering half",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:171"
+        }
+      ],
+      "id": "Q130",
+      "receipt_at": "2026-11-04T11:43:30+00:00",
+      "resolution": "No. Both are required: the mount-and-render witness and the parity digest. The digest proves the bytes arrived; the witness proves the surface rendered.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Is a parity digest alone sufficient as a witness?"
+    },
+    "Q131": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "a withdrawn revision still resolves",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:255"
+        },
+        {
+          "kind": "code",
+          "note": "rows are not rewritten",
+          "ref": "secure-shell:docs/LEDGER.md:98"
+        }
+      ],
+      "id": "Q131",
+      "receipt_at": "2026-11-04T11:43:30+00:00",
+      "resolution": "They remain, and the pin still resolves: a withdrawn revision stays retired forever but still resolves for the consumer that pinned it.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "What happens to receipts when a revision is withdrawn?"
+    },
+    "Q132": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "code",
+          "note": "the append-only invariant",
+          "ref": "secure-shell:docs/LEDGER.md:98"
+        },
+        {
+          "kind": "code",
+          "note": "how removal is recorded",
+          "ref": "secure-shell:docs/LEDGER.md:98"
+        }
+      ],
+      "id": "Q132",
+      "receipt_at": "2026-11-04T11:43:30+00:00",
+      "resolution": "No. Ledger rows are never deleted or edited; retention removes encrypted vault blobs and appends a `retention` entry naming what it removed.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Are receipts mutable?"
+    },
+    "Q133": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "code",
+          "note": "the record rule",
+          "ref": "secure-shell:AGENTS.md:203"
+        },
+        {
+          "kind": "code",
+          "note": "the negative form",
+          "ref": "secure-shell:AGENTS.md:203"
+        }
+      ],
+      "id": "Q133",
+      "receipt_at": "2026-11-04T11:43:31+00:00",
+      "resolution": "Yes, when it is a ledger entry: the ledger entry is the durable record of the witness, and a check that did not write an entry did not run.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Does a receipt count as completion evidence for a ticket?"
+    },
+    "Q134": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "code",
+          "note": "what a checkpoint does not do",
+          "ref": "secure-shell:docs/LEDGER.md:100"
+        },
+        {
+          "kind": "code",
+          "note": "the checkpoint contract in code",
+          "ref": "secure-shell:server/ledger.mjs:63"
+        }
+      ],
+      "id": "Q134",
+      "receipt_at": "2026-11-04T11:43:31+00:00",
+      "resolution": "Not individually. Authenticity comes from the chained ledger: a checkpoint signs a head that is in the chain, and a checkpoint does not prove the truth of the entries it covers.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Is the receipt itself signed?"
+    },
+    "Q135": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "the condition",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:224"
+        },
+        {
+          "kind": "doc",
+          "note": "how it is reported",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:224"
+        }
+      ],
+      "id": "Q135",
+      "receipt_at": "2026-11-04T11:43:31+00:00",
+      "resolution": "Absent is a reported state, never a passing receipt: a health check that never ran is reported as absent and never as a pass.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Does an `absent` receipt exist, or is absent the absence of a receipt?"
+    },
+    "Q136": {
+      "class": "spec",
+      "evidence": [
+        {
+          "kind": "code",
+          "note": "the receipt store",
+          "ref": "secure-shell:AGENTS.md:124"
+        },
+        {
+          "kind": "code",
+          "note": "the ledger's relationship to it",
+          "ref": "secure-shell:server/ledger.mjs:14"
+        }
+      ],
+      "id": "Q136",
+      "receipt_at": "2026-11-04T11:43:31+00:00",
+      "resolution": "No. Receipts live in the mount store (`dl-enclave` `MountStore`); the ledger row names the receipt as its subject. Two stores, one authority each.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "Is the receipt store the same store as the ledger?"
+    },
+    "Q137": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "verbatim: Kept forever; receipts and their evidence are never removed",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md#8.4"
+        }
+      ],
+      "id": "Q137",
+      "receipt_at": "2026-11-04T11:53:16+00:00",
+      "resolution": "Retention never removes a mount receipt or the evidence it points at. The retention action covers encrypted vault blobs of conversation text only; no receipt is ever named in a retention row.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "How long are mount receipts retained before the retention action removes them?"
+    },
+    "Q138": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "verbatim: Publishable in full, including evidence refs",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md#8.4"
+        }
+      ],
+      "id": "Q138",
+      "receipt_at": "2026-11-04T11:53:17+00:00",
+      "resolution": "Receipts may leave the machine in full, evidence refs included. There is no redaction projection and no withheld field.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "May mount receipts leave the machine \u2014 published, exported or shared outside it?"
+    },
+    "Q139": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "owner",
+          "note": "verbatim: all 3",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md#8.4"
+        }
+      ],
+      "id": "Q139",
+      "receipt_at": "2026-11-04T11:53:17+00:00",
+      "resolution": "All three, in order: a recorded workday of cadence ticks, then the 24-hour continuous simulation, then a count of independently verified tasks. A day passes only when all three hold.",
+      "ruling": "",
+      "status": "resolved",
+      "text": "What counts as a successful acceptance day?"
+    },
+    "Q140": {
+      "class": "owner",
+      "evidence": [
+        {
+          "kind": "doc",
+          "note": "premise false: the family does run Node CUA bots (ala-civ-bots-prototype) and the 1000-driver performance test ran on them. Owner: False, we have node cua bots in ala-civ-bots-prototype, another authorization violation that will have to be refused and backwalked against the hypergrilling tree through an automated audit to see where such a thing came from, which was the performance test for the 1000 cua drivers",
+          "ref": "docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md#8.4"
+        }
+      ],
+      "id": "Q140",
+      "receipt_at": "2026-11-04T11:53:17+00:00",
+      "resolution": "premise false: the family does run Node CUA bots (ala-civ-bots-prototype) and the 1000-driver performance test ran on them. Owner: False, we have node cua bots in ala-civ-bots-prototype, another authorization violation that will have to be refused and backwalked against the hypergrilling tree through an automated audit to see where such a thing came from, which was the performance test for the 1000 cua drivers",
+      "ruling": "",
+      "status": "struck",
+      "text": "May the driver witness its own mount and count that as receipt evidence?"
+    }
+  },
+  "seeded_at": "2026-11-04T11:08:33+00:00",
+  "worksheet": "C:\\Users\\ala\\Documents\\secure_shell_v2\\docs\\SECURE-SHELL-RESTORE@1.HYPERGRILL.md"
+}
