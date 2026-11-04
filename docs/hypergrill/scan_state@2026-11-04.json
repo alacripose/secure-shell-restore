@@ -1,20 +1,20 @@
 {
-  "files": 85319,
-  "seconds": 128.0,
+  "files": 88358,
+  "seconds": 123.1,
   "refs": 6000,
-  "omitted": 27,
+  "omitted": 439,
   "digests": 900,
   "absent": [],
   "topics": {
-    "civilians": 223,
-    "health": 301,
-    "policy": 3049,
-    "ledger": 2616,
-    "witness": 553,
-    "cadence": 590,
+    "civilians": 200,
+    "health": 273,
+    "policy": 2906,
+    "ledger": 2744,
+    "witness": 532,
+    "cadence": 541,
     "mount": 61,
-    "client": 1565,
-    "format": 233
+    "client": 1570,
+    "format": 214
   },
   "formats": {
     "secure-shell.handoff/1": 12,
@@ -162,7 +162,7 @@
     "secure-shell.ledger-row/1": 1,
     "secure-shell.store-record/1": 1,
     "secure-shell.axis-receipt/1": 3,
-    "scales_bytes/2": 1
+    "scales_bytes/2": 2
   },
   "magics": {
     "V4PKG001": 6,
@@ -180,6 +180,6 @@
     "nih.gov/30339280": 1,
     "nih.gov/17368962": 1,
     "nih.gov/31070740": 1,
-    "github.com/1872183316": 1
+    "github.com/1872183316": 2
   }
 }
