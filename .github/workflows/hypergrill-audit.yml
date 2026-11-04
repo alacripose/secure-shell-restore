@@ -43,6 +43,12 @@ jobs:
       # domains. It also asserts that re-signing and re-chunking do not move identity.
       - name: Canonical manifest contract
         run: python tests/packages/run_cases_canonical.py
+      # The stream unit: ordering, truncation, corruption, and the atomic-adoption property —
+      # a faulty stream must leave the recipient's prior state untouched.
+      - name: Package stream contract
+        run: python tests/packages/run_cases_stream.py
+      - name: Source-tree loader
+        run: python tests/packages/run_cases_loader.py
       - name: Re-audit the 500 slots
         run: python tools/hypergrill_reaudit.py --strict
       # hg_check10 pins refs into the family checkouts (testport1, secure-shell, shploingus-clean).
