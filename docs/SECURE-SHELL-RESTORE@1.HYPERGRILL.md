@@ -285,7 +285,7 @@ files and 4,000 insertions, and one pull request closes the day. Rule 5 of the i
 describes the commit and rule 9 keeps its per-commit meaning.
 
 `A-14` makes this workspace a repository with its own remote, and makes the agent's own failures a
-health-and-policy record the driver reads — `SECURE-SHELL-RESTORE@1.FAILURE-LEDGER.md`. The owner's
+health-and-policy record the driver reads — `SECURE-SHELL-HEALTH@1.FAILURE-LEDGER.md`. The owner's
 reason is narrow and is the point: the driver learns the agent's failure shape before it is trusted
 to use git itself.
 

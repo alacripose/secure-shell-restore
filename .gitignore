@@ -2,3 +2,10 @@ __pycache__/
 *.pyc
 .DS_Store
 node_modules/
+*.log
+
+# Working material. Only the checks the CI workflow calls are tracked; one-off
+# emitters and nested checkouts stay out of the record.
+.cache/*
+!.cache/hg_check*.py
+!.cache/normalize_lf.py
