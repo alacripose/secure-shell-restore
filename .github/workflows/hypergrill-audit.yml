@@ -6,12 +6,16 @@ on:
       - "docs/**"
       - "tools/**"
       - ".cache/**"
+      - "tickets/**"
+      - "tests/**"
       - ".github/workflows/hypergrill-audit.yml"
   pull_request:
     paths:
       - "docs/**"
       - "tools/**"
       - ".cache/**"
+      - "tickets/**"
+      - "tests/**"
   workflow_dispatch:
 
 jobs:
@@ -39,7 +43,10 @@ jobs:
         run: python tools/hypergrill_resolver.py self-check
       - name: Handoff ratchet — enumerated refusals and contract
         run: python tools/handoff_ratchet.py list > /dev/null && python tools/handoff_ratchet.py self-check
-      - name: Handoff ratchet — the three unit-close cases
-        run: python tests/handoff/run_cases.py
+      # The enumerated entry: hg_check12 runs the three cases, the missing-store refusal and every
+      # committed close against the committed store, so a unit with no receipt fails here and cannot
+      # merge. `tests/handoff/run_cases.py` asserts the same three cases and stays the unit's own test.
+      - name: Handoff gate — a unit cannot close past the ratchet
+        run: python .cache/hg_check12.py
       - name: Line endings
         run: python .cache/normalize_lf.py
