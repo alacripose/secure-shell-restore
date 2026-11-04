@@ -1,20 +1,20 @@
 {
-  "files": 90723,
-  "seconds": 116.0,
+  "files": 90714,
+  "seconds": 115.7,
   "refs": 6000,
-  "omitted": 1478,
+  "omitted": 1595,
   "digests": 900,
   "absent": [],
   "topics": {
-    "civilians": 167,
-    "health": 242,
-    "policy": 2823,
-    "ledger": 3280,
-    "witness": 528,
-    "cadence": 501,
+    "civilians": 168,
+    "health": 223,
+    "policy": 2769,
+    "ledger": 3370,
+    "witness": 526,
+    "cadence": 493,
     "mount": 59,
-    "client": 1079,
-    "format": 196
+    "client": 1058,
+    "format": 192
   },
   "formats": {
     "secure-shell.handoff/1": 12,
@@ -162,7 +162,8 @@
     "secure-shell.ledger-row/1": 1,
     "secure-shell.store-record/1": 1,
     "secure-shell.axis-receipt/1": 3,
-    "scales_bytes/2": 2
+    "scales_bytes/2": 2,
+    "secure-shell.package/1": 2
   },
   "magics": {
     "V4PKG001": 6,
