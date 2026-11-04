@@ -50,6 +50,8 @@ row already in this table is a ratchet regression, and the ratchet only tightens
 
 | `AF-20` | Quoted planner commentary into the ticket's goal field and attributed it to the owner | the goal field read `That is recorded as a mission brief quoted as a goal, and the owner's own turn named the same work` — the planner describing provenance, presented as the owner's sentence | a ticket whose first field laundered a planner's words into the owner's voice, the refusal `AGENTS.md` §13 names as `attribution-laundered` | the quote is the owner's sentence alone, cut at its own closing quotation mark, and this row records the mis-attribution rather than quietly deleting it |
 
+| `AF-21` | Kept the first four milestones of a running system entirely in prose, with no runnable byte in the repository | `docs/SECURE-SHELL-RESTORE@1.IMPLEMENTATION-PLAN.md` §3 against the tree at `fa4a0bf`: R0–R4 named, `impl/` absent, no command that could produce or refuse a canonical package name | a plan that reads as progress while nothing in it can be executed, the failure the plan's own rule 11 names | `impl/packages/identity.py` implements `name@rev+blake3:` with named refusals, `tests/packages/run_cases.py` is its exit test, and R2/R3 stay `absent` with the missing host and checkout named |
+
 Nothing in this table was closed by the agent's own report. Each correction names the file, the check
 or the owner's words that carry it.
 
