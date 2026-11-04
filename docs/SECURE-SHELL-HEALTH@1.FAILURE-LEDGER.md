@@ -46,6 +46,8 @@ row already in this table is a ratchet regression, and the ratchet only tightens
 
 | `AF-18` | Took the digest baseline from a CRLF working copy | `hg_check11` passed before the commit and then `failed: every digest verifies` on the merged tree at `a515df2` | the published tree was the one tree the check did not hold on, so a reader's fetch disagreed with the recorded digests | the baseline is regenerated from the committed bytes in its own unit (`TICKET-0003`), and the check is run on `main` after the merge, not only on the branch |
 
+| `AF-19` | Reached CI with the ratchet as ad-hoc steps beside the enumerated set, so no entry ever ran a close | inspection of `.github/workflows/hypergrill-audit.yml` against `.cache/hg_check7.py`–`hg_check11.py`: three ratchet steps, no numbered entry, no `close` invocation in CI | a green workflow that had never gated a single unit close | `hg_check12.py` joins the numbered set and the workflow runs it as a step, with every committed close in scope |
+
 Nothing in this table was closed by the agent's own report. Each correction names the file, the check
 or the owner's words that carry it.
 

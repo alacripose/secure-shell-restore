@@ -71,9 +71,18 @@ including a missing store and a receipt whose `evidence` is blank.
 
 ## 5. Where it gates
 
-`.github/workflows/hypergrill-audit.yml` runs the contract and the three cases after the existing
-checks. A push whose close cannot be verified fails there, before it is merged. Locally the same three
-commands are part of the check set that a unit runs before it commits.
+The ratchet is an enumerated member of the check set, not a step bolted beside it. `.cache/hg_check12.py`
+follows the `hg_check7`–`hg_check11` naming and runs, in one entry, the three cases, the missing-store
+refusal and every `tickets/*.close.json` against the committed store. A close committed without a
+receipt fails that entry, and `.github/workflows/hypergrill-audit.yml` runs it as a gating step, so the
+failure happens before the merge rather than after it.
+
+The distinction the entry exists for: `tests/handoff/run_cases.py` proves the three cases on fixtures,
+which a unit could satisfy while never running `close` on its own work. `hg_check12` closes that gap by
+treating the repository's committed closes as part of the check.
+
+`hg_check7` and `hg_check10` stay local checks because they read the owner's disk and the family
+checkouts; `hg_check12` reads only this repository, so a runner can execute it.
 
 ## 6. This unit's own handoff
 
@@ -109,3 +118,5 @@ that refusal is what this unit's transcript shows, and it is why the receipt is 
   and this repository does not yet mint identities.
 - `evidence` is shape-checked only. A receipt must carry something shaped like a path or a
   `path:line`, and nothing opens it, so a verifier's evidence is not yet re-read by the ratchet.
+- `hg_check12` gates the closes that exist. A unit that never writes a `tickets/*.close.json`
+  is not gated by it, and that obligation is convention rather than a check until a unit closes it.
