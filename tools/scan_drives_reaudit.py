@@ -133,7 +133,7 @@ def add_ref(p: Path, topics: list[str]) -> None:
         totals["topics"][topic] += 1
 
 
-def walk(root: Path, budget: float, max_depth: int = 8) -> dict:
+def walk(root: Path, budget: float, max_depth: int = 8, deadline: float | None = None) -> dict:
     global files_seen
     root_start = time.time()
     local = {"root": str(root), "files": 0, "truncated": False, "formats": Counter(),
@@ -145,7 +145,7 @@ def walk(root: Path, budget: float, max_depth: int = 8) -> dict:
         totals["absent"].append(str(root))
         return local
     for dirpath, dirnames, filenames in os.walk(root, onerror=lambda e: local["notes"].append(f"walk: {e}")):
-        if time.time() - root_start > budget or time.time() - started > TOTAL_BUDGET:
+        if time.time() - root_start > budget or time.time() - started > (deadline if deadline is not None else TOTAL_BUDGET):
             local["truncated"] = True
             local["notes"].append(f"budget reached at {dirpath}")
             break
@@ -202,10 +202,10 @@ def walk(root: Path, budget: float, max_depth: int = 8) -> dict:
     return local
 
 
-def repo_scan(root: Path) -> list:
+def repo_scan(root: Path, deadline: float | None = None) -> list:
     repos = []
     for dirpath, dirnames, _ in os.walk(root):
-        if time.time() - started > TOTAL_BUDGET:
+        if time.time() - started > (deadline if deadline is not None else TOTAL_BUDGET):
             return repos
         dirnames[:] = [d for d in dirnames if d not in SKIP]
         if dirpath[len(str(root)):].count(os.sep) >= 3:
@@ -306,13 +306,25 @@ def main() -> int:
     emit(f"Started {time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}. "
          f"Per-root budget {ROOT_BUDGET:.0f}s, drive budget {DRIVE_BUDGET:.0f}s, total {TOTAL_BUDGET:.0f}s. "
          "Each root is flushed as it completes; `truncated: yes` is a refusal, not a pass.")
+    # The drives are the part of the survey that proves this is not a Documents-only scan, and
+    # they are cheap: shallow, 12s each. Their time is reserved *before* the roots run, so a slow
+    # root can no longer starve them into a skipped line and leave an inventory that fails its own
+    # "drives are walked" check depending on how fast the machine happened to be that day.
+    drive_reserve = DRIVE_BUDGET * sum(1 for d in DRIVES if d.exists())
+    root_deadline = max(ROOT_BUDGET, TOTAL_BUDGET - drive_reserve)
     for root in ROOTS:
-        repos = repo_scan(root)
-        found = walk(root, ROOT_BUDGET)
+        repos = repo_scan(root, root_deadline)
+        found = walk(root, ROOT_BUDGET, deadline=root_deadline)
         stream_root(found, repos)
     for d in DRIVES:
         if time.time() - started > TOTAL_BUDGET:
-            emit(f"\n## `{d}` skipped (total budget exhausted)")
+            # Even a starved drive gets a section in the same shape as a walked one, marked
+            # truncated, because silence about a drive is the gap this scan refuses.
+            skipped = {"root": str(d), "files": 0, "truncated": True, "formats": Counter(),
+                       "hash_ids": Counter(), "magics": Counter(), "stores": [], "axis": [],
+                       "qt": [], "xml": 0, "notes": ["total budget exhausted before this drive"],
+                       "own_refs": 0, "topics": Counter(), "seconds": 0.0}
+            stream_root(skipped, [])
             continue
         if d.exists():
             stream_root(walk(d, DRIVE_BUDGET, max_depth=2), repo_scan(d))
