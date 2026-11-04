@@ -38,6 +38,8 @@ row already in this table is a ratchet regression, and the ratchet only tightens
 | `AF-13` | Reported the checks green on the published tree while CI on `main` had already failed twice | `gh run list` rows `41848522887` and `41847898604`, both `completed` / `failure` in 8 s | a publication claim that was local-only, stated as though the remote agreed | CI is read with `gh run list` as part of the check evidence, and a red run is reported red rather than left out |
 | `AF-14` | `tools/hypergrill_reaudit.py` crashes when the family checkout is absent, while the workflow's own comment says it reports `unasked` and refuses | `FileNotFoundError: .../secure-shell/packages` at `tools/hypergrill_reaudit.py:219`, from a run with exit code 1 | every push since the repository was created turned CI red in eight seconds, so the gate protected nothing | `probe_special` treats a missing checkout as `absent` and names the path, so the workflow's claim and the code agree |
 
+| `AF-15` | Treated a probe whose file is absent from the checkout as a refused probe, so `--strict` exits 3 on every runner and CI can never pass | run `41849621425`: `REFUSED: Q060: .../testport1/crates/planet-package/src/frame.rs; …` followed by `REFUSED probes: …` and exit code 3 | the gate refused everything on every runner, which is indistinguishable from a broken gate and trains an owner to ignore it | a probe with no file reports `no-probe` and names the path; only a file that exists without its needle stays `refused` |
+
 Nothing in this table was closed by the agent's own report. Each correction names the file, the check
 or the owner's words that carry it.
 
