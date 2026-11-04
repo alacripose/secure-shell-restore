@@ -29,7 +29,7 @@ CLOSE_FIELDS = ("schema", "unit", "author", "driver_ticket")
 RECEIPT_FIELDS = ("schema", "unit", "author", "verifier", "driver_ticket", "result", "evidence", "at")
 
 REFUSALS = {
-    "handoff-absent": "no verification receipt names this unit and this driver ticket",
+    "handoff-absent": "no verification receipt names this unit",
     "handoff-driver-unnamed": "the close names no driver ticket, or the receipts name a different one",
     "handoff-self-verified": "the verifier is the author; an agent may not verify its own handoff",
     "handoff-receipt-unreadable": "the store, the close or a receipt could not be read against the schema",
