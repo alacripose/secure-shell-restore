@@ -16,7 +16,7 @@ get a better understanding of you until it can be trusted to use git itself."
 | In | Out |
 |---|---|
 | `docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md` §8.8 — five answers verbatim, state table, what they change, the A-11 residue, message provenance, the publication directive | Any traffic-light token written into `axis.data.json` |
-| `docs/SECURE-SHELL-RESTORE@1.FAILURE-LEDGER.md` — nine rows, each with evidence and the correction actually applied | Any claim that a ledger row clears a failure |
+| `docs/SECURE-SHELL-HEALTH@1.FAILURE-LEDGER.md` — nine rows, each with evidence and the correction actually applied | Any claim that a ledger row clears a failure |
 | Repository creation, visibility, first push | Any code, any package, any store schema |
 
 ## CONSTRAINTS

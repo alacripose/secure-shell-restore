@@ -83,8 +83,11 @@ refs: list[dict] = []
 ref_paths: set[str] = set()
 totals = {"formats": Counter(), "magics": Counter(), "hash_ids": Counter(), "xml": Counter(),
           "topics": Counter(), "refs": 0, "digested": 0, "absent": []}
-stream = STREAM.open("w", encoding="utf-8", newline=chr(10))
-report = OUT.open("w", encoding="utf-8", newline=chr(10))
+TMP_OUT = OUT.with_name(OUT.name + ".tmp")
+TMP_STREAM = STREAM.with_name(STREAM.name + ".tmp")
+TMP_STATE = STATE.with_name(STATE.name + ".tmp")
+stream = TMP_STREAM.open("w", encoding="utf-8", newline=chr(10))
+report = TMP_OUT.open("w", encoding="utf-8", newline=chr(10))
 
 
 def emit(line: str) -> None:
@@ -107,7 +110,7 @@ def emit_json(record: dict) -> None:
 def add_ref(p: Path, topics: list[str]) -> None:
     global refs_omitted, digests
     key = str(p)
-    if p in (OUT, STREAM, STATE) or key in ref_paths:
+    if p in (OUT, STREAM, STATE, TMP_OUT, TMP_STREAM, TMP_STATE) or key in ref_paths:
         return  # the scan's own outputs are not references; hashing them mid-write is a false digest
     if len(refs) >= MAX_REFS:
         refs_omitted += 1
@@ -366,7 +369,7 @@ def main() -> int:
         emit_bulk(f"| {ident} | {correction} | `{ref}` | {exit_test} |")
     report.flush()
     os.fsync(report.fileno())
-    STATE.write_text(json.dumps({"files": files_seen, "seconds": round(time.time() - started, 1),
+    TMP_STATE.write_text(json.dumps({"files": files_seen, "seconds": round(time.time() - started, 1),
                                  "refs": len(refs), "omitted": refs_omitted,
                                  "digests": totals["digested"], "absent": totals["absent"],
                                  "topics": totals["topics"], "formats": totals["formats"],
@@ -374,6 +377,11 @@ def main() -> int:
                                 indent=2), encoding="utf-8")
     stream.close()
     report.close()
+    # A killed run leaves only temporary files behind: the completed document is replaced
+    # only after every section, row and state file has been written.
+    os.replace(TMP_STREAM, STREAM)
+    os.replace(TMP_OUT, OUT)
+    os.replace(TMP_STATE, STATE)
     print(f"done in {time.time() - started:.1f}s files={files_seen} refs={len(refs)}"
           f" digests={totals['digested']} omitted={refs_omitted}")
     return 0
