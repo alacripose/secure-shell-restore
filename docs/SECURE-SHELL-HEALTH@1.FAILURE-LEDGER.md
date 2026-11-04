@@ -42,6 +42,8 @@ row already in this table is a ratchet regression, and the ratchet only tightens
 
 | `AF-16` | Put a check into CI that asserts refs into family checkouts, which no runner has, so the job could never be green | run `41849862691`: `FAIL Q060 cites at least two refs: ['docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:208']` | the gate was red for a reason that had nothing to do with the change under test | `hg_check10` stays a local check and is named as one in the workflow; CI runs `hg_ci_gate.py`, which asserts the 500 slots and A-08's zero contradictions |
 
+| `AF-17` | Made CI run a check that reads absolute paths on the owner's disk, so the job crashed instead of gating | run `41849885299`: `FAIL  the client gate exists  <- C:/Users/ala/Documents/secure-shell/...`, then a `FileNotFoundError` traceback and exit 1 | every CI run after the first was red for a reason unrelated to the change | `hg_check7` is named local-only in the workflow, beside `hg_check10`; CI runs the checks that read only this repository |
+
 Nothing in this table was closed by the agent's own report. Each correction names the file, the check
 or the owner's words that carry it.
 
