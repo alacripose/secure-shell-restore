@@ -35,8 +35,11 @@ the same defect `AF-21` recorded one level up.
 
 ## 5. Refusals this unit carries forward
 
-- R2 and R3 remain `absent` with their missing inputs named: no OpenLock checkout for generator
-  identity, no `mongod` and no Debian host for the store digest and the restore drill.
+- R2 and R3 remain unrun: the OpenLock checkout and `mongod` 8.3.11 are on this machine, but no
+  generator was executed and no Debian-hosted store exists. A local `mongod` is not the Debian
+  authority, so the store digest and the restore drill are still not claimed.
+- **Corrected 2026-11-04** (`AF-23`): this section first named those inputs as missing. They were
+  present; the claim was made without checking, and `TICKET-0009` records the paths.
 - Chunking is fixed-offset, not content-defined. That is deliberate for a first cut and is not the
   same property as resumable content-defined chunking; a resume implementation must not assume it.
 - Chunk digests prove bytes arrived under their role domain. They never prove package identity,

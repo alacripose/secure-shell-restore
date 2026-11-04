@@ -36,10 +36,13 @@ package identity, so the runtime starts there rather than with another audit.
 
 ## 5. Refusals this unit carries forward
 
-- R2 cannot run here: no OpenLock checkout, so no generator identity and no byte-stable
-  regeneration proof. It is `absent` with the missing checkout named, not skipped.
-- R3 cannot run here: no `mongod` and no Debian host, so the store digest and the restore drill are
-  `absent`, not claimed.
+- R2 has not run **in this unit**: the OpenLock checkout is on this machine, but no generator was
+  executed here, so generator identity and byte-stable regeneration remain unproven.
+- R3 has not run: `mongod` 8.3.11 is installed on this workstation, but no Debian-hosted store, store
+  digest or restore drill exists, and a local `mongod` is not the Debian authority.
+- **Corrected 2026-11-04** (`AF-23`): this section first said there was no OpenLock checkout and no
+  `mongod`. Both were on disk; the claim was made without checking, and `TICKET-0009` records the
+  paths.
 - Chunk domains and schema ids from R4 remain unimplemented; the entry covers the canonical name,
   the pin-complete set, and the R-C digest preimage only, and this ticket says so rather than
   letting the milestone look finished.
