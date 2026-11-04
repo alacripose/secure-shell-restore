@@ -44,6 +44,8 @@ row already in this table is a ratchet regression, and the ratchet only tightens
 
 | `AF-17` | Made CI run a check that reads absolute paths on the owner's disk, so the job crashed instead of gating | run `41849885299`: `FAIL  the client gate exists  <- C:/Users/ala/Documents/secure-shell/...`, then a `FileNotFoundError` traceback and exit 1 | every CI run after the first was red for a reason unrelated to the change | `hg_check7` is named local-only in the workflow, beside `hg_check10`; CI runs the checks that read only this repository |
 
+| `AF-18` | Took the digest baseline from a CRLF working copy | `hg_check11` passed before the commit and then `failed: every digest verifies` on the merged tree at `a515df2` | the published tree was the one tree the check did not hold on, so a reader's fetch disagreed with the recorded digests | the baseline is regenerated from the committed bytes in its own unit (`TICKET-0003`), and the check is run on `main` after the merge, not only on the branch |
+
 Nothing in this table was closed by the agent's own report. Each correction names the file, the check
 or the owner's words that carry it.
 
