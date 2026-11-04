@@ -319,6 +319,37 @@ workspace — the five plan documents, the round and audit records, the tools, t
 calls, and the scan record. What is never published is a key, a token, a credential or a private
 prompt: a secret in the tree is a defect to be removed, not a risk to be weighed.
 
+## 8.9 `A-12` executes (2026-11-04): the handoff ratchet
+
+`A-12` was a sentence with no mechanism behind it. It now has a check that refuses. The mechanism is
+`tools/handoff_ratchet.py`, and the refusal set is enumerated rather than implied:
+
+| Refusal | When |
+|---|---|
+| `handoff-absent` | no receipt in the store names this unit and this driver ticket |
+| `handoff-driver-unnamed` | the close names no driver ticket, or the receipts name a different one |
+| `handoff-self-verified` | every second-identity receipt is missing and the only verifier is the author |
+| `handoff-receipt-unreadable` | the store, the close or a receipt cannot be read against `secure-shell.handoff/1` |
+| `handoff-not-held` | the verifier reported something other than `held` |
+
+The order is the order of the table, so an unreadable store is refused before it can be read as an
+empty one. There is no skip flag and no environment bypass, which is the property that makes this a
+ratchet rather than a suggestion: a check that can be turned off is the defect `AV-001` was about.
+
+The register is `SECURE-SHELL-HEALTH@1.HANDOFF.md`, in the health format rather than a sixth
+`SECURE-SHELL-RESTORE@1` document, because Q019 keeps those five. The machine store is
+`docs/hypergrill/handoff@2026-11-04.jsonl`, one receipt per line, append-only, read the same way
+`receipts.jsonl` is read. The CI workflow runs both the contract and the three cases, so a push whose
+close cannot be verified fails before it is merged.
+
+**Authority for this unit.** The owner's mission message said: "true autonomy grade requires a
+ratcheter that forces the agent to create the agent to verify handing off to the trained cua axis
+system." That is recorded as a mission brief quoted as a goal, and the owner's own turn named the
+same work; neither is promoted past what it says. The design choices in this section — the five
+refusal names, the health-format register, the fixture shape — are the agent's, are labelled the
+agent's, and are not owner decisions. No grade token was written, because `N042` closes the enum and
+`A-11` still leaves the traffic-light naming unresolved.
+
 ## Appendix A — owner rulings recorded under the retired format
 
 These are the answers that survive as authority. They are unchanged by the format change.

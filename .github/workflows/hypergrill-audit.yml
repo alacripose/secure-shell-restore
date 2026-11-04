@@ -34,5 +34,9 @@ jobs:
         run: python .cache/hg_check7.py
       - name: Resolver contract
         run: python tools/hypergrill_resolver.py self-check
+      - name: Handoff ratchet — enumerated refusals and contract
+        run: python tools/handoff_ratchet.py list > /dev/null && python tools/handoff_ratchet.py self-check
+      - name: Handoff ratchet — the three unit-close cases
+        run: python tests/handoff/run_cases.py
       - name: Line endings
         run: python .cache/normalize_lf.py

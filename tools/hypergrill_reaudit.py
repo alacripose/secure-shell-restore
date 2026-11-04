@@ -216,7 +216,14 @@ def probe_special(entry: dict) -> dict | None:
                     refs=["docs/ (glob SECURE-SHELL-RESTORE@1.*.md): %d plan documents" % len(counted)],
                     note="Five plan documents exist beside the grilling record.")
     if qid == "Q021":
-        packages = sorted(p.name for p in (PARENT / "secure-shell" / "packages").iterdir() if p.is_dir())
+        base = PARENT / "secure-shell" / "packages"
+        if not base.is_dir():
+            # A runner has no family checkout. The probe did not run, so it reports no-probe and
+            # names the missing path, rather than raising and taking the whole gate down with it.
+            return dict(verdict="no-probe", refs=[],
+                        note="the family checkout is not in this working tree (%s); the probe did not run"
+                             % base)
+        packages = sorted(p.name for p in base.iterdir() if p.is_dir())
         bad = [n for n in packages if not re.fullmatch(r"[a-z0-9-]+", n)]
         return dict(verdict="supported" if not bad else "contradicted",
                     refs=["secure-shell/packages/: %d names, %d outside [a-z0-9-]"
