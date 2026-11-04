@@ -26,13 +26,20 @@ jobs:
       # `unasked` and refuses a probe it cannot resolve rather than passing quietly.
       - name: Re-audit the 500 slots
         run: python tools/hypergrill_reaudit.py --strict
-      - name: Pin the audit's own coverage
-        run: python .cache/hg_check10.py
+      # hg_check10 pins refs into the family checkouts (testport1, secure-shell, shploingus-clean).
+      # A runner has none of them, so it cannot run here: it stays a local check. What CI can prove
+      # is A-08 — a contradiction fails the run, and a refused probe is not a pass.
+      - name: Re-audit reports zero contradictions
+        run: python .cache/hg_ci_gate.py
       - name: Ingested-source register
         run: python .cache/hg_check9.py
-      - name: Hypergrill counts and section 9.1
-        run: python .cache/hg_check7.py
+      # hg_check7 asserts paths on the owner's machine and in the family checkouts. A runner has
+      # neither, so it is a local check, like hg_check10. Its absence here is named, not silent.
       - name: Resolver contract
         run: python tools/hypergrill_resolver.py self-check
+      - name: Handoff ratchet — enumerated refusals and contract
+        run: python tools/handoff_ratchet.py list > /dev/null && python tools/handoff_ratchet.py self-check
+      - name: Handoff ratchet — the three unit-close cases
+        run: python tests/handoff/run_cases.py
       - name: Line endings
         run: python .cache/normalize_lf.py

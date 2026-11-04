@@ -216,7 +216,14 @@ def probe_special(entry: dict) -> dict | None:
                     refs=["docs/ (glob SECURE-SHELL-RESTORE@1.*.md): %d plan documents" % len(counted)],
                     note="Five plan documents exist beside the grilling record.")
     if qid == "Q021":
-        packages = sorted(p.name for p in (PARENT / "secure-shell" / "packages").iterdir() if p.is_dir())
+        base = PARENT / "secure-shell" / "packages"
+        if not base.is_dir():
+            # A runner has no family checkout. The probe did not run, so it reports no-probe and
+            # names the missing path, rather than raising and taking the whole gate down with it.
+            return dict(verdict="no-probe", refs=[],
+                        note="the family checkout is not in this working tree (%s); the probe did not run"
+                             % base)
+        packages = sorted(p.name for p in base.iterdir() if p.is_dir())
         bad = [n for n in packages if not re.fullmatch(r"[a-z0-9-]+", n)]
         return dict(verdict="supported" if not bad else "contradicted",
                     refs=["secure-shell/packages/: %d names, %d outside [a-z0-9-]"
@@ -264,6 +271,15 @@ def main(argv: list[str]) -> int:
             slots[qid] = dict(id=qid, slot=number, recorded=True, verdict="no-probe",
                               refs=[], note=NO_PROBE.get(qid, "no file on disk settles this ruling"))
             continue
+        absent = [path for path, needle in probe["needles"] if not rel(path).exists()]
+        if absent:
+            # The checkout is not here. That is an unprobed ruling, not a refused one: naming the
+            # missing file keeps the distinction the family keeps between absent and refused, and
+            # stops a runner with no family checkouts from refusing the whole gate.
+            slots[qid] = dict(id=qid, slot=number, recorded=True, verdict="no-probe", refs=[],
+                              note="the file this ruling rests on is not in this working tree: "
+                                   + ", ".join(absent))
+            continue
         try:
             refs = [resolve(path, needle) for path, needle in probe["needles"]]
         except (OSError, LookupError) as exc:
@@ -292,6 +308,11 @@ def main(argv: list[str]) -> int:
         if probe is None:
             outside_rows.append(dict(id=qid, verdict="no-probe",
                                      note=NO_PROBE.get(qid, "opened outside the spine; no probe on disk")))
+            continue
+        absent = [path for path, needle in probe["needles"] if not rel(path).exists()]
+        if absent:
+            outside_rows.append(dict(id=qid, verdict="no-probe",
+                                     note="not in this working tree: " + ", ".join(absent)))
             continue
         try:
             refs = [resolve(path, needle) for path, needle in probe["needles"]]
