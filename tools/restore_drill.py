@@ -28,6 +28,8 @@ from __future__ import annotations
 
 import hashlib
 import json
+
+from blake3 import blake3
 import os
 import shutil
 import subprocess
@@ -95,8 +97,8 @@ def json_line(text: str) -> dict:
     return {}
 
 
-def dir_digest() -> str:
-    code, out = wsl(f"cd {COLD} && find . -type f -print0 | sort -z | xargs -0 sha256sum")
+def dir_digest(path: str = COLD) -> str:
+    code, out = wsl(f"cd {path} && find . -type f -print0 | sort -z | xargs -0 sha256sum")
     return hashlib.sha256(out.encode()).hexdigest()[:16] if code == 0 else ""
 
 
@@ -173,6 +175,74 @@ def main() -> int:
         "cold digest equals the loader identity",
         identity.endswith(adopted.split(":", 1)[1]),
         f"{adopted} vs {identity}",
+    )
+
+    # The authority R3 names. The URI comes out of a sealed credential at run time, so the drill
+    # exercises the credential path it intends to rely on rather than a plaintext file beside it.
+    # The Mongo record carries the payload digest; the identity digest is over the canonical
+    # package. They are two different digests, and comparing them was the drill's own bug.
+    payload_digest = "blake3:" + blake3((bundle / "payload.bin").read_bytes()).hexdigest()
+    code, out = wsl("systemctl is-active mongod")
+    step("mongod running", code == 0 and out.strip() == "active", f"exit={code}\n{out}")
+
+    code, out = wsl("systemd-creds decrypt --name=mongo-uri /etc/secure-shell/mongo-uri.cred /run/drill-mongo.uri")
+    step("sealed credential decrypts", code == 0, f"exit={code}\n{out.splitlines()[-1] if out else ''}")
+
+    code, out = wsl(
+        f"cd {WSL_ROOT}; {VENV} -m impl.packages.mongo_store admit --uri-file /run/drill-mongo.uri "
+        f"--identity '{identity}' --manifest .cache/realpkg/manifest.json "
+        f"--payload .cache/realpkg/payload.bin --database secure_shell"
+    )
+    admitted = json_line(out) if code == 0 else {}
+    step("admit into mongo", code == 0 and admitted.get("digest") == payload_digest, f"exit={code}\n{out}")
+
+    mongo_dir = "/srv/drill/cold-mongo"
+    code, out = wsl(
+        f"rm -rf {mongo_dir}; mkdir -p {mongo_dir}; cd {WSL_ROOT}; "
+        f"{VENV} -m impl.packages.mongo_store restore --uri-file /run/drill-mongo.uri "
+        f"--identity '{identity}' --database secure_shell --out {mongo_dir}/payload.bin"
+    )
+    restored = json_line(out) if code == 0 else {}
+    step("cold restore from mongo", code == 0 and restored.get("digest") == payload_digest, f"exit={code}\n{out}")
+
+    local = hashlib.sha256((bundle / "payload.bin").read_bytes()).hexdigest()
+    code, out = wsl(f"sha256sum {mongo_dir}/payload.bin")
+    remote = out.split()[0] if code == 0 and out else ""
+    step("restored bytes are the admitted bytes", code == 0 and remote == local, f"exit={code}\nrestored={remote}\nloader={local}")
+
+    wsl(f"cp {mongo_dir}/payload.bin {WSL_ROOT}/.cache/restored-payload.bin")
+    code, out = windows(
+        [sys.executable, "-c", (
+            "import json;from pathlib import Path;"
+            "from impl.packages import canonical as cn;"
+            "from impl.packages.identity import format_identity;"
+            "m=json.loads(Path('.cache/realpkg/manifest.json').read_text());"
+            "p=Path('.cache/restored-payload.bin').read_bytes();"
+            "print(format_identity(m['name'],m['revision'],cn.package_digest(m,p)))"
+        )],
+        ROOT,
+    )
+    step(
+        "restored payload re-derives the loader identity",
+        code == 0 and out.strip() == identity,
+        f"exit={code}\nrestored={out.strip()}\nloader={identity}",
+    )
+
+    mongo_prior = dir_digest(mongo_dir)
+    code, out = wsl(
+        f"{VENV} {WSL_ROOT}/tools/mongo_tamper.py --uri-file /run/drill-mongo.uri "
+        f"--identity '{identity}' --database secure_shell"
+    )
+    step("tamper the stored record", code == 0, f"exit={code}\n{out}")
+    code, out = wsl(
+        f"cd {WSL_ROOT}; {VENV} -m impl.packages.mongo_store restore --uri-file /run/drill-mongo.uri "
+        f"--identity '{identity}' --database secure_shell --out {mongo_dir}/tampered.bin"
+    )
+    refused = json_line(out)
+    step(
+        "mongo refuses a tampered record",
+        code != 0 and refused.get("refusal") == "mongo-digest" and dir_digest(mongo_dir) == mongo_prior,
+        f"exit={code} refusal={refused.get('refusal')} prior_unchanged={dir_digest(mongo_dir) == mongo_prior}",
     )
 
     prior = dir_digest()
