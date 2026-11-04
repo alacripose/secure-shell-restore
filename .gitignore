@@ -9,3 +9,4 @@ node_modules/
 .cache/*
 !.cache/hg_check*.py
 !.cache/normalize_lf.py
+!.cache/hg_ci_gate.py

@@ -26,8 +26,11 @@ jobs:
       # `unasked` and refuses a probe it cannot resolve rather than passing quietly.
       - name: Re-audit the 500 slots
         run: python tools/hypergrill_reaudit.py --strict
-      - name: Pin the audit's own coverage
-        run: python .cache/hg_check10.py
+      # hg_check10 pins refs into the family checkouts (testport1, secure-shell, shploingus-clean).
+      # A runner has none of them, so it cannot run here: it stays a local check. What CI can prove
+      # is A-08 — a contradiction fails the run, and a refused probe is not a pass.
+      - name: Re-audit reports zero contradictions
+        run: python .cache/hg_ci_gate.py
       - name: Ingested-source register
         run: python .cache/hg_check9.py
       - name: Hypergrill counts and section 9.1
