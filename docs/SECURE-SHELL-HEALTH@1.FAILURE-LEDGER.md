@@ -40,6 +40,8 @@ row already in this table is a ratchet regression, and the ratchet only tightens
 
 | `AF-15` | Treated a probe whose file is absent from the checkout as a refused probe, so `--strict` exits 3 on every runner and CI can never pass | run `41849621425`: `REFUSED: Q060: .../testport1/crates/planet-package/src/frame.rs; …` followed by `REFUSED probes: …` and exit code 3 | the gate refused everything on every runner, which is indistinguishable from a broken gate and trains an owner to ignore it | a probe with no file reports `no-probe` and names the path; only a file that exists without its needle stays `refused` |
 
+| `AF-16` | Put a check into CI that asserts refs into family checkouts, which no runner has, so the job could never be green | run `41849862691`: `FAIL Q060 cites at least two refs: ['docs/SECURE-SHELL-RESTORE@1.HYPERGRILL.md:208']` | the gate was red for a reason that had nothing to do with the change under test | `hg_check10` stays a local check and is named as one in the workflow; CI runs `hg_ci_gate.py`, which asserts the 500 slots and A-08's zero contradictions |
+
 Nothing in this table was closed by the agent's own report. Each correction names the file, the check
 or the owner's words that carry it.
 
