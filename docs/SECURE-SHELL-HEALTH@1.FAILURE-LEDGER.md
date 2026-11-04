@@ -48,6 +48,8 @@ row already in this table is a ratchet regression, and the ratchet only tightens
 
 | `AF-19` | Reached CI with the ratchet as ad-hoc steps beside the enumerated set, so no entry ever ran a close | inspection of `.github/workflows/hypergrill-audit.yml` against `.cache/hg_check7.py`–`hg_check11.py`: three ratchet steps, no numbered entry, no `close` invocation in CI | a green workflow that had never gated a single unit close | `hg_check12.py` joins the numbered set and the workflow runs it as a step, with every committed close in scope |
 
+| `AF-20` | Quoted planner commentary into the ticket's goal field and attributed it to the owner | the goal field read `That is recorded as a mission brief quoted as a goal, and the owner's own turn named the same work` — the planner describing provenance, presented as the owner's sentence | a ticket whose first field laundered a planner's words into the owner's voice, the refusal `AGENTS.md` §13 names as `attribution-laundered` | the quote is the owner's sentence alone, cut at its own closing quotation mark, and this row records the mis-attribution rather than quietly deleting it |
+
 Nothing in this table was closed by the agent's own report. Each correction names the file, the check
 or the owner's words that carry it.
 
