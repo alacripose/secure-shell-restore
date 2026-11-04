@@ -59,6 +59,8 @@ row already in this table is a ratchet regression, and the ratchet only tightens
 
 | `AF-25` | Treated OpenLock regeneration as a property of the package alone | `python tools/gen_shell_data.py` run twice on this host: identical, `482,260` bytes, `blake3 7831bd21…`; the committed `openlock_shell_data.js` is `482,057` bytes and differs, carrying `release shape` where a fresh run carries `dev shape` and adding `game:citadel@C:/Users/ala/Downloads/Reduced_CSDK_13` | byte identity would be claimed across machines when the generator shapes its output from the host's discovered Deadlock installs | `TICKET-0010` records the two-run identity and the environment dependence, and R2 stays open with the missing pin named rather than closed on a single host's result |
 
+| `AF-26` | Let the drive walk be starved by the roots, so the inventory could silently become Documents-only | `hg_check11` refused `drives are walked, not just Documents` on a scan that reached 31,432 files and emitted no drive section, because the 16 roots consumed `TOTAL_BUDGET` before the drive loop ran | the same command passed or failed depending on how fast the machine was that day, and a Documents-only inventory could have been committed as a full survey | `tools/scan_drives_reaudit.py` reserves the drive budget before the roots run and still emits a truncated section for any drive that runs out; the rerun walked 21 drive sections with `hg_check11` 21/0 |
+
 Nothing in this table was closed by the agent's own report. Each correction names the file, the check
 or the owner's words that carry it.
 
