@@ -70,6 +70,14 @@ The CGA civilian acceptance contract is in the learned set, twice, because `test
 | Client window, taskbar, delegation chat | `client/index.html` served by the axis at `/`: the taskbar read 3 drivers, 1 ticket, 3 cellframes; the console printed `ticket aria-node:ticket:1 for witness`; the delegation box POSTed `/api/axis/tickets` and showed the ticket the axis issued | HELD |
 | Physical outcome verification (CGA-14, CGA-28) | Verified through a **live Minecraft 1.20.1 server** (port 25566): a mineflayer body (`AxisBody`, server entity id 1) acts by ordinary player input, and `minecraft-live` reports a digest of the state the server sent it. A move changed it `sha256:fc7cfa24…` → `sha256:0ee6c3f5…` (1.91 blocks walked), a dig changed it `sha256:0ee6c3f5…` → `sha256:f49ceb59…` (grass at `6,-61,-3` now air per the server's block update); the axis recorded the adapter's digest (`source: adapter`) and `civ-0000:ticket:1` verified against it. Also held against the game's own `shploingus-voxel-world` substrate crate (`sha256:4677a45c…`). A frame with no observation is still refused `world-not-verified`, an unregistered adapter `world-adapter-unknown`, and a client claim has nothing to cite | HELD |
 
+**Superseded 2026-11-05 by the round at `docs/hypergrill/round@2026-11-05-four-rows.md`.** The rows above
+stay as written. Beside them: `CGA-38` is under-evidenced — a reading that selects one action is not
+influence across generations, so the missing proof is `absent` by name; `CGA-45` gains a requirement — a
+receipt carrying the `axis-cells` aggregate and the cellframe reading side by side, also `absent`;
+`CGA-14`/`CGA-28` keep the recorded run and lose nothing, but the fresh run the owner asked for has not
+happened and is `absent`; `CGA-44` and the client row are unchanged by that round.
+
+
 A `NOT-ENFORCED` row is `absent`, never a pass, and `PARTIAL` is not a pass either: it names which half
 of the row is held and which half is still absent. This report proves that a CUA driver learned from
 every qualifying expectation document every project on this machine carries, through the Debian
@@ -230,6 +238,10 @@ The other five rows cannot leave `NOT-ENFORCED` in this pass, and the reason is 
 `client_witness` and `client_run_h9` need a mounted client window and a human report; 
 `source_access_isolation` needs filesystem/workspace isolation outside the repository;
 `alternate_surface_or_runtime` needs a client crate that does not exist; `branch_and_pr_review` needs a
-configured remote and a human review record; `CGA-38`/`CGA-45` need a cellular substrate that is not
-built here; and `CGA-14`/`CGA-28` were held on a live server whose run is recorded, not re-proved by
-this pass.
+configured remote and a human review record. `CGA-38` and `CGA-45` **are** built — `secure-shell`
+`server/cellframe.mjs` and `server/axis-server.mjs` — and the round of 2026-11-05 holds their evidence
+short of `HELD`: `CGA-38` needs the frame to move between the reading and the act, and `CGA-45` needs a
+receipt carrying the aggregate and the cellframe reading side by side
+(`docs/hypergrill/round@2026-11-05-four-rows.md`). `CGA-14`/`CGA-28` remain `HELD` on a recorded live run,
+and the owner has asked for a fresh run whose digests do not reuse the old ones; that run has not
+happened, so it is `absent`, not passed.
