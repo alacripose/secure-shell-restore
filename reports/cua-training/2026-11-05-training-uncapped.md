@@ -62,10 +62,10 @@ Both were applied under their own `learning-apply` ticket, so a receipt exists f
 | Corpus witnessed | `witness` receipt over the audit file digest | PASS |
 | Kernel scope is declared, not assumed | `kernel` act accepted with `scope: kernel` | PASS |
 | The transcript adopts | `python -m impl.packages.toolstream verify`: `adoptions: 1`, state `held`, exit 0 | PASS |
-| Cellular substrate (CGA-38, CGA-45) | no cellframe/CA runtime exists in this workspace; the axis records decisions, not cellular state | NOT-ENFORCED |
-| Six-star aggregation (CGA-44) | `secure-shell.axis/1` exposes drivers, tickets, receipts; it does not name six stars | NOT-ENFORCED |
-| Client window, taskbar, delegation chat | no client surface built yet | NOT-ENFORCED |
-| Physical outcome verification (CGA-14, CGA-28) | nothing here acts on a body; the game server remains the authority | NOT-ENFORCED |
+| Cellular substrate (CGA-38, CGA-45) | **Corrected 2026-11-05.** `secure-shell/server/cellframe.mjs` (245 lines) implements `CGA-38`'s contract per driver — ownership, declared radius, schedule, `rule-1`, lineage, budget, `stateDigest` — and `axis-server.mjs` refuses a citation of a frame that moved; `tools/axis-scale.mjs` opened 1 000 frames. `CGA-45` keeps `civilian.axis-cells/1` separate from `civilian.cellframe/1`. The round of 2026-11-05 holds both short of `HELD`: `CGA-38` needs the frame to move between reading and act, `CGA-45` needs a side-by-side receipt. Both are `absent`, not passed | NOT-ENFORCED |
+| Six-star aggregation (CGA-44) | **Corrected 2026-11-05.** `secure-shell` 20b3c31: every receipt names six stars, each with its own lens and presenter, held only on a `stateDigest` the axis recomputed; `tools/axis-stars.mjs` → 1 000 drivers, 500/500 held per star, control held 0 | HELD |
+| Client window, taskbar, delegation chat | **Corrected 2026-11-05.** `secure-shell/client/index.html` served by the axis: the taskbar read 3 drivers, 1 ticket, 3 cellframes; the delegation box POSTed `/api/axis/tickets` and showed the issued ticket | HELD |
+| Physical outcome verification (CGA-14, CGA-28) | **Corrected 2026-11-05.** Held on a recorded live Minecraft 1.20.1 run (digests `fc7cfa24…` → `0ee6c3f5…` → `f49ceb59…`). The owner has since asked for a fresh world, body and digests; that run has not happened, so the re-proof is `absent` and the old digests may not be reused | HELD (recorded run); re-proof `absent` |
 
 ## Projects that carry no documents
 
