@@ -77,6 +77,19 @@ receipt carrying the `axis-cells` aggregate and the cellframe reading side by si
 `CGA-14`/`CGA-28` keep the recorded run and lose nothing, but the fresh run the owner asked for has not
 happened and is `absent`; `CGA-44` and the client row are unchanged by that round.
 
+**Standards fixed 2026-11-05 by the second round at
+`docs/hypergrill/round@2026-11-05-four-row-standards.md`.** The rows above stay as written; this block
+says what each one must now observe. `CGA-38`: the act's cited digest must be the immediate successor of
+the read digest in the frame's lineage, and the action must differ from what the reading's rule would
+have chosen at the earlier generation — `axis-scale.mjs` reads once and acts on that reading, so the
+row stays `absent`. `CGA-45`: one receipt document, `cellframe` a nested object carrying its schema,
+driver, generation and digest, the `axis-cells` aggregate a row inside it — still `absent`. `CGA-14` /
+`CGA-28`: the re-proof needs a body that is not `AxisBody` entity id 1 (new name and new UUID); whether
+the level/seed must also differ is a named open tension, not decided. The citation of
+`learn-scope-fixed` at `:203` and `:233` stays readable, but the owner has fixed that refusal as
+*bounded* — a proposed scope change is refused unless it cites evidence the axis verified — which
+`server/learn.mjs:89-91` does not implement yet.
+
 
 A `NOT-ENFORCED` row is `absent`, never a pass, and `PARTIAL` is not a pass either: it names which half
 of the row is held and which half is still absent. This report proves that a CUA driver learned from

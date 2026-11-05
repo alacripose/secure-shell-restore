@@ -67,6 +67,13 @@ Both were applied under their own `learning-apply` ticket, so a receipt exists f
 | Client window, taskbar, delegation chat | **Corrected 2026-11-05.** `secure-shell/client/index.html` served by the axis: the taskbar read 3 drivers, 1 ticket, 3 cellframes; the delegation box POSTed `/api/axis/tickets` and showed the issued ticket | HELD |
 | Physical outcome verification (CGA-14, CGA-28) | **Corrected 2026-11-05.** Held on a recorded live Minecraft 1.20.1 run (digests `fc7cfa24…` → `0ee6c3f5…` → `f49ceb59…`). The owner has since asked for a fresh world, body and digests; that run has not happened, so the re-proof is `absent` and the old digests may not be reused | HELD (recorded run); re-proof `absent` |
 
+**Standards fixed 2026-11-05** by `docs/hypergrill/round@2026-11-05-four-row-standards.md`: the `CGA-45`
+receipt is one document with `cellframe` nested and the aggregate a row inside it; the `CGA-38` proof is
+lineage — the cited digest is the immediate successor of the read digest and the action differs from the
+reading's earlier choice; the fresh physical run needs a body that is neither `AxisBody` nor entity id 1,
+with the question of a differing level/seed left open. No row above changes state: all four remain
+`NOT-ENFORCED`, and the physical row remains `HELD` only on its recorded run.
+
 ## Projects that carry no documents
 
 Five discovered projects contributed no document at all: `DenseOres`, `Ecologics`, `MineFactoryReloaded`, `SeedDelight`, `optical`. Each is a Minecraft mod source clone with no `AGENTS.md`, no `docs/` and no tickets, so there is nothing in them to learn from beyond their audit row. They are named here rather than counted as learned.
