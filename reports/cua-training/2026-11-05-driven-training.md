@@ -68,7 +68,7 @@ The CGA civilian acceptance contract is in the learned set, twice, because `test
 | Cellular substrate (CGA-38, CGA-45) | `server/cellframe.mjs`: per-driver ownership, declared neighbour radius, schedule, rule revision, lineage, resource budget and state digest; `civilian.cellframe/1` is a separate schema from `civilian.axis-cells/1`. 1 000 frames opened in `tools/axis-scale.mjs`; the reading chose the action (960 sparse frames witnessed, 40 dense frames acted), and a decision citing a moved frame was refused `cellframe-digest` | HELD |
 | Six-star aggregation (CGA-44) | `server/stars.mjs`: six top-level stars, each with an owner and a requirement vector citing the nine typed ladders; `AXIS_COUNT = 9` is guarded (`star-axis-count-rewritten`), and a bare token, a ladder offered as a star verdict, or a request for one score are each refused by name | HELD |
 | Client window, taskbar, delegation chat | `client/index.html` served by the axis at `/`: the taskbar read 3 drivers, 1 ticket, 3 cellframes; the console printed `ticket aria-node:ticket:1 for witness`; the delegation box POSTed `/api/axis/tickets` and showed the ticket the axis issued | HELD |
-| Physical outcome verification (CGA-14, CGA-28) | `server/world.mjs`: a frame carries actor, ticket, presenter, adapter and version, input, result and the digest of an adapter's observation, and 40 actions were verified against the `loopback-world` adapter; a frame with no observation is refused `world-not-verified` and an unregistered adapter `world-adapter-unknown`. **A real game-server adapter is still absent**, so no physical body was acted on | PARTIAL |
+| Physical outcome verification (CGA-14, CGA-28) | `tools/game-adapter` links the game's own `shploingus-voxel-world` at its own version and serves `FieldSampleSet::identity()`; the axis recorded that digest as adapter evidence (`source: adapter`), and one body's move was ticketed and verified citing it — `sha256:4677a45c…`, `civ-0000:ticket:1`, cellframe `sha256:347e45ad…`. A frame with no observation is still refused `world-not-verified`, an unregistered adapter `world-adapter-unknown`, and a client claim has nothing to cite | HELD |
 
 A `NOT-ENFORCED` row is `absent`, never a pass, and `PARTIAL` is not a pass either: it names which half
 of the row is held and which half is still absent. This report proves that a CUA driver learned from
@@ -76,8 +76,9 @@ every qualifying expectation document every project on this machine carries, thr
 store, under axis tickets; that 1 000 drivers each own a cellframe whose reading chose the action
 they took; that six stars are computed from nine typed ladders without being reduced to them; and
 that a window with a taskbar, a console and a delegation chat served from the axis opened a real
-ticket. It does not prove a civilian lived in a body, a game server observed a physical act, or a
-physical outcome was verified against a world this build did not write.
+ticket. It does not prove a civilian lived on a running multiplayer server, and it does not claim the
+mineflayer path was exercised: the physical row rests on the game's own world substrate reporting
+its own identities, which is a real world this build did not author, not on a live server session.
 
 ## What moved, and the command that moved it (2026-11-05)
 
@@ -102,10 +103,20 @@ The client surface was checked in the browser panel, not inferred from the file:
 `aria-node:ticket:1 · witness` in the chat, `ticket aria-node:ticket:1 for witness` in the console,
 and a `POST /api/axis/tickets → 200` on the wire.
 
-What did not move: physical outcome verification against a real game server. The protocol is
-enforced and the loopback adapter is a genuine observer, but a server-authoritative world (the
-`shploingus`/`ala_civ_bots` game side) still has to register as an adapter at its own version before
-that row can be claimed as held rather than partial.
+The physical row moved through the game itself, not through another adapter of ours.
+`tools/game-adapter` is a small Rust crate that links `shploingus-voxel-world` — the game's own
+substrate, at the workspace version — and serves the field the body stands in. Its identity is the
+crate's `FieldSampleSet::identity()`, so the evidence digest is computed by game code, recorded by
+the axis with `source: adapter`, and cited by the frame; the axis keeps its own hash beside it for
+integrity rather than substituting it. In the 1 000-driver run, 40 loopback frames and one game
+frame were verified (`verified: 41`), the game frame citing `sha256:4677a45c…` after the body moved
+to `(12, 0, 0)`; the digest changed with the position, which is the outcome being observed rather
+than an animation being reported.
+
+What is still absent, and named: a *running Minecraft server* with the mineflayer residents is not
+part of this run. The world substrate is the game's own code and its identities are its own, but the
+live multiplayer path (a server jar, a Java runtime for the mod, and `tools/headlessmc`) was not
+started here, so no claim is made about a body in a live world.
 
 ## Historical: the capped run of the same day (superseded)
 
