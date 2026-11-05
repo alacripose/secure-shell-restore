@@ -181,3 +181,27 @@ Exit status read from the process: `TRAIN_OK`; transcript `blake3:13a422fd2a0c7e
 Those 368 documents and 425 tickets were true of that run. They are superseded by the 3 264
 documents and 3 321 tickets above; see `reports/cua-training/2026-11-05-training-uncapped.md` for the
 run that replaced them.
+
+## The driver learns from an outcome it did not author
+
+The four rows above are `HELD` on work a driver performed. What they did not show is the last clause
+of the mission: that a driver's *next* choice is decided by what the world said about the last one.
+
+`secure-shell` `43a997b` closes that, in the terms the acceptance document already set. A reward is
+only accepted from a verified record carrying both the adapter's digest and the axis's own hash of the
+state it read (`E6`, and `E11`'s refusal to collapse "not read" into empty); the act receipt names its
+presenter and carries `expected`/`observed` (`E5`, `E7`); a digest mismatch leaves a
+`secure-shell.axis-refusal/1` row, not a string in a response body (`E8`); and a learner that tries to
+set its own scope is refused `learn-scope-fixed` (`E3`).
+
+Measured, not asserted: `node tools/axis-learn.mjs` → exit 0, **1 000 drivers, 500 rewarded from a
+verified observation and 500 control**. Every driver is asked the same probe, whose own reading rule
+says `witness`. The rewarded half answers `move` — 500/500 — and the control answers `witness` —
+500/500. 500 receipts, 0 refusals, and the three plants refused `learn-no-evidence`,
+`learn-unverified-action`, `learn-scope-fixed`. `node --test server/test/*.test.mjs` → 96 tests, 96
+pass, 0 fail.
+
+The three files that made this possible were untracked until now: `server/axis.mjs`,
+`server/axis-driver.mjs` and their suites were written in earlier passes and never committed, so the
+axis runtime a reader needs in order to check any of the four rows above was outside the repository.
+They are in `43a997b` with the rest.
