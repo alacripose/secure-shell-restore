@@ -58,9 +58,10 @@ STREAM = ToolStream("cua-training")
 
 DOC_NAMES = ("AGENTS.md", "VOWS.md", "CHECKPOINT.md", "CONTEXT.md")
 DOC_DIRS = ("docs", "tickets")
-DOC_BYTES = 200_000
-DOCS_PER_PROJECT = 12
+DOC_BYTES = 1_000_000
+DOCS_PER_PROJECT = 24
 MAX_DOC_BUNDLES = 400
+EXPECT_KEYS = ("expectation", "agents", "vows", "checkpoint", "context", "decision", "audit", "cells", "cga")
 
 
 def post(axis: str, path: str, body: dict[str, Any]) -> dict[str, Any]:
@@ -139,6 +140,7 @@ def document_bundles(root: Path) -> list[tuple[str, bytes]]:
             files.append(found)
             if len(files) >= DOCS_PER_PROJECT * 4:
                 break
+    files.sort(key=lambda p: (0 if any(k in p.name.lower() for k in EXPECT_KEYS) else 1, str(p)))
     bundles: list[tuple[str, bytes]] = []
     for path in files:
         if len(bundles) >= DOCS_PER_PROJECT:
