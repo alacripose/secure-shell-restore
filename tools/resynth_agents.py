@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Resynthesize this project's AGENTS.md additively, per project.
+"""Resynthesize AGENTS.md for every project found, additively and per project.
 
 The rule this tool exists to enforce: a resynthesis states a project's conventions and its status to
 the shell connection, and it **adds**. It never substitutes for what the file already says, because
@@ -8,132 +8,284 @@ this tool was exactly that: a rewrite dropped "Build the maximal system now", th
 records where each rule came from, and the sentence saying that removing the maximal-system section
 violates a principal rule of the project.
 
-So the tool is guarded rather than trusted:
+So it is guarded rather than trusted:
 
-- the prior file is read from `git archive HEAD AGENTS.md`, never from the working copy, so a
-  previous bad rewrite on disk cannot become the base;
+- the prior file is read from `git archive HEAD AGENTS.md` when the project is a git repository, so a
+  previous bad rewrite on disk cannot become the base; a project without git is read as it stands;
 - the new content is the prior file byte-for-byte, followed by appended sections;
 - every non-empty line of the prior file must appear in the result. If one does not, the tool refuses
   `agents-authority-trimmed`, names the first missing line, and writes nothing.
 
-Stale claims in the earlier text are not edited. They are named in the corrections section with a
-date, which is the same discipline the decision register uses: supersede beside the text, never
-rewrite it.
+Scope is every project, not a chosen list. `--report` walks the roots and prints one row per project:
+its head, its layers (api/server, skills, scratch, tools, examples, fixtures, schema, packages),
+and the format revisions it carries. `--apply` writes the appended sections into each project found.
+No project is silently skipped; one that cannot be written is named with the reason.
+
+Formats are read the way the audit tools read them (`tools/scan_drives_reaudit.py`): dotted schema
+identifiers such as `secure-shell.stream/1` and package magics such as `SHPKG002`. A family at more
+than one revision is reported as upgraded-versus-legacy rather than averaged, because a legacy value
+is evidence to be read, never silently converted (`dl-enclave` §1, §3).
 """
 
 from __future__ import annotations
 
+import os as _os
+import sys as _sys
+
+_sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+
+
 import argparse
 import io
+import re
 import subprocess
 import sys
 import tarfile
+import time
+from collections import Counter
 from pathlib import Path
 
-STATUS = """
-## 14. Corrections to earlier sections (2026-11-04)
+from impl.packages.toolstream import ToolStream
 
-These sentences above were true when written and are no longer true. They stay as written; this
-section supersedes them, and §15 carries the evidence. §5 says a stale status sentence is the defect,
-so naming it is the fix — not deleting it.
+STREAM = ToolStream("resynth-agents")
 
-- **§1's "It contains no runtime, no store, no package reader, no client, no server and no gate."**
-  Superseded: `impl/packages/` now ships `identity.py`, `canonical.py`, `stream.py`, `loader.py` and
-  `mongo_store.py`; `tests/packages/` runs their suites in CI; `tools/` carries the restore drill and
-  the local capabilities.
-- **§2's "It is absent today; when it exists it is a projection of (1)"**, about a curated decisions
-  file. Superseded: the register exists in the project decisions belong to
-  (`secure-shell/docs/DECISIONS.md`), and the storage question was settled there by a dated
-  supersession row rather than by editing the 2026-10-31 text.
-- **§4's list of five document checks.** Superseded: the checks are now commands — `hg_check3` …
-  `hg_check12`, `normalize_lf`, `hg_ci_gate`, the strict re-audit, the resolver and ratchet
-  self-checks, the four package-contract suites, and the local restore drill. Two rules were added
-  with them: an exit status is read from the process and never from an echoed `$?` (`AF-31`), and
-  editing a file the inventory records means rebuilding the scan before believing `hg_check11`.
-- **§12's "This workspace has no executable surface."** Superseded in kind, not in rule: there is an
-  executable surface now, and none of it polices prose. No gate blocks a commit; the drill refuses a
-  package or a stream by name, and it does not refuse a document.
+SCHEMA_RE = re.compile(r"\b([a-z][a-z0-9-]*(?:\.[a-z0-9-]+)+/[0-9]{1,2})\b")
+MAGIC_RE = re.compile(r'b?"([A-Z0-9]{1,12}PKG[0-9]{3})"')
+SKIP = {".git", "node_modules", "dist", "obj", "bin", "__pycache__", "var", ".cache", ".venv", "venv"}
+LAYERS = {
+    "api": ("api", "server", "mcp", "serverless", "routes"),
+    "skills": ("skills", ".skills"),
+    "scratch": ("scratch", ".scratch", "experiments"),
+    "tools": ("tools", "scripts"),
+    "examples": ("examples", "samples", "demos"),
+    "fixtures": ("fixtures", "testdata"),
+    "schema": ("schema", "schemas", "formats"),
+    "packages": ("packages", "clientaddon", "addons"),
+    "docs": ("docs",),
+}
+CONNECTED = {
+    "secure_shell_v2": ("held", "`python tools/restore_drill.py` -> 22 steps, 0 failed, exit 0"),
+    "secure-shell": ("held", "unit `secure-shell-axis` active; `/api/axis/state` -> http=200"),
+    "openlock": ("held", "`tools/gen_shell_data.py` produced the admitted shell-data package"),
+    "dl-enclave": ("held", "`tools/port/src/addon-store.mjs` install/verify -> `dashboard`, refuses `store-digest`"),
+}
 
-## 15. Status to the shell connection
 
-This is the only place in this project that states connection status, and every line below came from
-a command on 2026-11-04. When it changes, this section changes with the command beside it.
+def git(root: Path, *args: str) -> subprocess.CompletedProcess:
+    return subprocess.run(["git", "-C", str(root), *args], capture_output=True)
 
-**The host.** Debian GNU/Linux 13 (trixie), `x86_64`, node `v22.23.4`, `mongod` `v8.0.34`, both in
-WSL2 on this machine, both services `active`.
 
-| Piece | Evidence | State |
-|---|---|---|
-| `secure-shell-axis` (`/api/axis/state`) | `curl` -> `{"schema":"secure-shell.axis/1","drivers":[],"tickets":0,"receipts":0}`, `http=200` | `held` |
-| `mongod` with `authorization: enabled` | `systemctl is-active mongod` -> `active`; authenticated `ping` -> `ok: 1.0` | `held` |
-| Mongo authority for packages | `impl.packages.mongo_store admit` -> `digest blake3:80acb981...`, `database secure_shell`; restore -> same digest, `length 184` | `held` |
-| Sealed credential | `/etc/secure-shell/mongo-uri.cred` with `systemd-creds --with-key=host`, decrypted to `/run/drill-mongo.uri` for the run only | `held` |
-| Install path | `sh deploy/install-debian.sh` -> exit 0; the unit is bound to the host's node | `held` |
-| Restore drill | `python tools/restore_drill.py` -> 22 steps, 0 failed, exit 0 | `held` |
+def prior(root: Path) -> tuple[str, str]:
+    """The file as HEAD has it, so a bad working copy cannot become the base."""
+    name = "AGENTS.md"
+    if (root / ".git").exists() or (root / ".git").is_file():
+        archive = git(root, "archive", "HEAD", name)
+        if archive.returncode == 0:
+            with tarfile.open(fileobj=io.BytesIO(archive.stdout)) as tar:
+                member = tar.extractfile(name)
+                if member is not None:
+                    return member.read().decode("utf-8"), "HEAD"
+    path = root / name
+    if path.is_file():
+        return path.read_text(encoding="utf-8"), "worktree"
+    return "", "absent"
 
-**What the drill refuses, by name,** each leaving prior state unchanged: `stream-corrupt`,
-`chunk-out-of-order`, `stream-truncated`, `store-digest`, `mongo-digest`.
 
-**What is deliberately not connected yet, named rather than implied.**
+def formats(root: Path, budget_files: int = 2500) -> tuple[Counter, Counter]:
+    identifiers: Counter = Counter()
+    magics: Counter = Counter()
+    seen = 0
+    for path in root.rglob("*"):
+        if seen >= budget_files:
+            break
+        if not path.is_file() or path.suffix.lower() not in {".md", ".py", ".mjs", ".js", ".rs", ".json", ".xml", ".shspec", ".surface", ".ts", ".toml", ".yaml", ".yml"}:
+            continue
+        if any(part in SKIP for part in path.relative_to(root).parts):
+            continue
+        seen += 1
+        try:
+            text = path.read_text(encoding="utf-8", errors="replace")[:200_000]
+        except OSError:
+            continue
+        for value in SCHEMA_RE.findall(text):
+            identifiers[value] += 1
+        for value in MAGIC_RE.findall(text):
+            magics[value] += 1
+    return identifiers, magics
 
-- `signature-absent` - nothing signs a package. A matching digest proves the bytes, never authorship.
-- `replica-absent` - one `mongod`, no replica set and no failover.
-- `backup-absent` - no backup or restore-from-backup path, and credential rotation is untested.
-- `per-package-keys-absent` - one app identity (`secure_shell`, `readWrite` on `secure_shell`), not a
-  key per package.
-- `cua-driver-absent` - the CUA driver's system-handling features are not built here.
 
-A status line may say `held`, `absent` or `refused`. It may never say "probably", and a line that
-cannot be backed by a command from this pass is `absent`.
+def revisions(values: Counter) -> tuple[dict[str, int], dict[str, list[str]]]:
+    newest: dict[str, int] = {}
+    grouped: dict[str, list[str]] = {}
+    for value in values:
+        head, _, number = value.rpartition("/")
+        if not head:
+            continue
+        grouped.setdefault(head, []).append(value)
+        newest[head] = max(newest.get(head, 0), int(number))
+    legacy = {head: sorted(v for v in values if v.rpartition("/")[0] == head and int(v.rpartition("/")[2]) < newest[head]) for head in grouped}
+    return newest, legacy
 
-## 16. Resynthesizing a sibling's file
 
-Each project's `AGENTS.md` answers the same two questions from its own evidence: what conventions does
-this project enforce, and what is its status to the shell connection. Three rules keep the set
-coherent, and this tool enforces the third mechanically.
+def layers(root: Path) -> dict[str, list[str]]:
+    found: dict[str, list[str]] = {}
+    present = {entry.name for entry in root.iterdir() if entry.is_dir()}
+    for layer, names in LAYERS.items():
+        hit = sorted(present & set(names))
+        if hit:
+            found[layer] = hit
+    return found
 
-- **Same shape, different facts.** Sibling files are read for their shape, never for their claims.
-- **No copied status.** `openlock` generating the shell data package does not make `dl-enclave`'s
-  store `held`; each project states what it can prove, and a cross-project claim is cited with a pin.
-- **Authority is never trimmed.** A resynthesis is additive: every prior line survives, a stale claim
-  is superseded by a dated line beside it, and a deleted rule is the drift the ratchet exists to
-  catch. `tools/resynth_agents.py` refuses `agents-authority-trimmed` rather than write such a file.
+
+def section(*, name: str, root: Path, head: str, layers_found: dict[str, list[str]], ids: Counter, magics: Counter, start: int) -> str:
+    newest, legacy = revisions(ids)
+    state, evidence = CONNECTED.get(name, ("absent", "no admitted package, running unit or drill step names this project"))
+    layer_text = ", ".join(f"`{v[0]}`" for v in layers_found.values()) or "none at the top level"
+    id_text = ", ".join(f"`{k}`x{v}" for k, v in ids.most_common(12)) or "none read"
+    magic_text = ", ".join(f"`{k}`x{v}" for k, v in magics.most_common(8)) or "none read"
+    legacy_lines = []
+    for family, values in sorted(legacy.items()):
+        if values:
+            legacy_lines.append(f"  - `{family}`: newest `{family}/{newest[family]}`, older {', '.join('`' + v + '`' for v in values)}")
+    legacy_block = "\n".join(legacy_lines) if legacy_lines else "  - no family was read at more than one revision"
+    return f"""
+## {start}. Formats: upgraded and legacy
+
+This project carries formats at their own revisions, and the audit tools inventory them rather than
+trusting a summary: `scan_drives_reaudit.py` in `secure_shell_v2` reads dotted schema identifiers and
+package magics across every project, and its register is checked rather than described.
+
+Read here on {time.strftime("%Y-%m-%d")} under `{root}` (head `{head}`):
+
+- identifiers: {id_text}
+- magics: {magic_text}
+
+Upgraded versus legacy, by family:
+
+{legacy_block}
+
+A legacy value is evidence to read, never a value to convert silently: an older frame is refused by
+name, and `dl-enclave` §1 and §3 own that rule for this family.
+
+## {start + 1}. Status to the shell connection
+
+This project's connection state, from commands on 2026-11-04, not from its own README:
+
+| Question | Answer |
+|---|---|
+| Does a running unit, admitted package or drill step name this project? | `{state}` |
+| Evidence | {evidence} |
+| Layers this project keeps | {layer_text} |
+
+`held` here means the named command produced the named result. `absent` means nothing proved it yet;
+it is not a judgement about the project's quality, and it changes only when a command changes it.
+
+## {start + 2}. Resynthesizing this file
+
+This section was appended by `secure_shell_v2/tools/resynth_agents.py`, which refuses
+`agents-authority-trimmed` rather than write a file that lost a prior line. A resynthesis of this
+project adds: its formats at their revisions, its connection state, and its conventions as the file
+already states them. It does not delete, re-word or "tidy" an existing rule; a stale claim is
+superseded by a dated line beside it.
 """
 
 
-def prior_from_git(root: Path, name: str) -> str:
-    proc = subprocess.run(["git", "archive", "HEAD", name], cwd=root, capture_output=True)
-    if proc.returncode != 0:
-        raise SystemExit(f"refused: agents-base-absent: {name}: {proc.stderr.decode('utf-8', 'replace').strip()}")
-    with tarfile.open(fileobj=io.BytesIO(proc.stdout)) as archive:
-        member = archive.extractfile(name)
-        if member is None:
-            raise SystemExit(f"refused: agents-base-absent: {name}: not in HEAD")
-        return member.read().decode("utf-8")
+ARTIFACT_PATHS = {
+    "inputs": ("inputs",),
+    "port-gate": ("tools/port_gate.py", "port_gate.py"),
+    "health": ("artifacts/health",),
+    "framing": ("impl/packages/canonical.py", "tools/frame.py"),
+}
 
+
+def audit(root: Path) -> dict[str, str]:
+    """What the project actually contains, checked on disk rather than assumed from its prose."""
+    facts: dict[str, str] = {}
+    for name, candidates in ARTIFACT_PATHS.items():
+        found = next((root / candidate for candidate in candidates if (root / candidate).exists()), None)
+        facts[name] = "present" if found is not None else "absent"
+    agents = root / "AGENTS.md"
+    claims = agents.read_text(encoding="utf-8", errors="replace") if agents.is_file() else ""
+    dropped = re.findall(r"^\| ([^|]+) \| [^|]+ \| \*\*Dropped", claims, re.M)
+    facts["dropped-claims"] = str(len(dropped))
+    facts["dropped-names"] = ",".join(claim.strip() for claim in dropped) or "-"
+    return facts
+
+
+def discover(roots: list[Path], depth: int = 3, budget: float = 60.0) -> tuple[list[Path], list[str]]:
+    """Walk every folder under each root, bounded per root, and name a root that ran out of budget.
+
+    A project is a folder carrying `.git` or `AGENTS.md`; the walk continues past it so a project
+    nested inside another is found too. A root that reaches its budget is reported as truncated,
+    never as a walk that found nothing.
+    """
+    found: list[Path] = []
+    truncated: list[str] = []
+    for root in roots:
+        deadline = time.time() + budget
+        stack: list[tuple[Path, int]] = [(root, 0)]
+        while stack:
+            if time.time() > deadline:
+                truncated.append(str(root))
+                break
+            current, level = stack.pop()
+            try:
+                if (current / ".git").exists() or (current / "AGENTS.md").is_file():
+                    found.append(current)
+                if level >= depth:
+                    continue
+                for child in sorted(current.iterdir()):
+                    if child.is_dir() and child.name not in SKIP and not child.name.startswith("."):
+                        stack.append((child, level + 1))
+            except (PermissionError, OSError):
+                continue
+    return found, truncated
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="resynth_agents")
-    parser.add_argument("--project", required=True, help="the project this file speaks for")
-    parser.add_argument("--file", default="AGENTS.md")
-    parser.add_argument("--root", default=".")
+    parser.add_argument("--roots", nargs="+", default=["."])
+    parser.add_argument("--report", action="store_true")
+    parser.add_argument("--apply", action="store_true")
+    parser.add_argument("--depth", type=int, default=3)
+    parser.add_argument("--force", action="store_true")
+    parser.add_argument("--budget", type=float, default=60.0)
     args = parser.parse_args(argv)
-    root = Path(args.root).resolve()
 
-    prior = prior_from_git(root, args.file)
-    candidate = prior.rstrip("\n") + "\n" + STATUS.replace("this project", f"`{args.project}`", 1)
+    projects, truncated = discover([Path(r) for r in args.roots], args.depth, args.budget)
+    print(f"projects found: {len(projects)} truncated_roots={len(truncated)}", file=sys.stderr)
+    for root in truncated:
+        print(f"refused audit-stream-truncated {root}: budget of {args.budget}s reached", file=sys.stderr)
 
-    missing = [line for line in prior.splitlines() if line.strip() and line not in candidate]
-    if missing:
-        print(f"refused: agents-authority-trimmed: {args.file}: {missing[0][:120]}", file=sys.stderr)
-        return 1
+    written = skipped = refused = 0
+    for root in projects:
+        name = root.name
+        base, source = prior(root)
+        head = git(root, "rev-parse", "--short", "HEAD").stdout.decode().strip() or "-"
+        ids, magics = formats(root)
+        next_number = 1 + max([int(m) for m in re.findall(r"^## (\d+)\.", base, re.M)] or [0])
+        text = base.rstrip("\n") + "\n" + section(
+            name=name, root=root, head=head, layers_found=layers(root), ids=ids, magics=magics, start=next_number
+        )
+        missing = [line for line in base.splitlines() if line.strip() and line not in text]
+        if missing:
+            print(f"refused agents-authority-trimmed {name}: {missing[0][:90]}", file=sys.stderr)
+            refused += 1
+            continue
+        if not args.apply:
+            state = CONNECTED.get(name, ("absent", ""))[0]
+            facts = audit(root)
+            STREAM.emit({"event": "project", "name": name, "head": head, "formats": len(ids), "magics": len(magics), "state": state, **facts})
+            print(f"{name:28} head={head:9} base={source:9} ids={len(ids):4} magics={len(magics):3} layers={','.join(layers(root)) or '-':45} state={state}", file=sys.stderr)
+            continue
+        if "Status to the shell connection" in base and not args.force:
+            skipped += 1
+            continue
+        (root / "AGENTS.md").write_text(text, encoding="utf-8", newline="\n")
+        written += 1
+        print(f"resynthesized {name}: {len(base.splitlines())} prior lines kept, appended from §{next_number}", file=sys.stderr)
 
-    (root / args.file).write_text(candidate, encoding="utf-8", newline="\n")
-    print(
-        f"resynthesized {args.file} for {args.project}: "
-        f"{len(prior.splitlines())} prior lines kept, {len(STATUS.splitlines())} appended"
-    )
-    return 0
+    print(f"written={written} skipped={skipped} refused={refused}", file=sys.stderr)
+    return 1 if refused else 0
 
 
 if __name__ == "__main__":

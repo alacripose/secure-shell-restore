@@ -262,3 +262,34 @@ coherent, and this tool enforces the third mechanically.
 - **Authority is never trimmed.** A resynthesis is additive: every prior line survives, a stale claim
   is superseded by a dated line beside it, and a deleted rule is the drift the ratchet exists to
   catch. `tools/resynth_agents.py` refuses `agents-authority-trimmed` rather than write such a file.
+## 17. Dropped-rule review: where those examples actually live (2026-11-05)
+
+§0 records four rules dropped from the inherited `testport1` file because this workspace appeared
+not to contain them. The folder audit in `docs/secure-shell-audit/resynth_audit@2026-11-04.json`
+(55 project rows, written by `tools/resynth_agents.py --report`, whose output is itself a verified
+`secure-shell.stream/1` transcript) says otherwise, and the CUA axis drivers are meant to train on
+these examples, so the rows are corrected here rather than left standing.
+
+| Dropped rule | §0's reason | What the folder audit found |
+|---|---|---|
+| The source movie is not agent-readable | `testport1` §1 — "there is no `inputs/` here" | `testport1\inputs` is **present**; the rule is enforceable in the project that owns the movie |
+| `port_gate.py` and the pre-commit hook | `testport1` §8 — "there is no gate script in this workspace" | `testport1\tools\port_gate.py` is **present**: 24 checks, and its git pre-commit hook refuses a commit — it refused this resynthesis with `selftest_record` until the selftest was re-run |
+| Health ratchet and `artifacts/health` | `testport1` §16 — "recorded, not measured by a ratchet" | `testport1\artifacts\health` is **present** |
+| Digest framing `domain ‖ schema ‖ len ‖ payload` | `testport1` §12 — "the plan describes the frame; nothing implements it" | `impl/packages/canonical.py` here **implements** it: `content_segments` yields the canonical manifest then the payload, and `chunk_digest` binds domain, index and bytes |
+
+What follows, stated rather than left to inference:
+
+- **"Dropped" in §0 describes this workspace's inheritance, not the family's practice.** None of the
+  four is deleted from the family; each lives in a project that owns it, and this section is the
+  place that records where. The rows stay readable above; this section supersedes their conclusion.
+- **The refusal already existed for this failure.** `tools/resynth_agents.py` refuses
+  `agents-authority-trimmed` by reading the prior file from `git archive HEAD` and refusing to write
+  a file that lost a line. The original deletion is why that refusal exists.
+- **The training examples are named, not implied.** For the CUA axis drivers they are `testport1`'s
+  gate with its `NOT-ENFORCED (5)` rows each carrying an owner and a blocker, plus this workspace's
+  framing and refusal suites under `impl/packages/`. Each is a decidable check with a named failure
+  mode; none of them demonstrates a shell connection.
+- **A dropped row is not a status.** `absent` may be stated only from a command in the pass that
+  states it, and §0's table was written from a document audit rather than a filesystem one. The
+  command that answers it is `python tools/resynth_agents.py --report`, and its rows are the JSON
+  cited above, not this prose.

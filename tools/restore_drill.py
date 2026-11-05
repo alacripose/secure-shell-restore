@@ -26,10 +26,18 @@ Nothing here signs anything. A BLAKE3 digest proves bytes, never authorship.
 
 from __future__ import annotations
 
+import os as _os
+import sys as _sys
+
+_sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+
+
 import hashlib
 import json
 
 from blake3 import blake3
+
+from impl.packages.toolstream import ToolStream
 import os
 import shutil
 import subprocess
@@ -60,6 +68,7 @@ WSL_SHELL = mount(SECURE_SHELL)
 STORE_CLI = mount(ENCLAVE) + "/tools/port/src/addon-store.mjs"
 
 results: list[tuple[str, int]] = []
+STREAM = ToolStream("restore-drill")
 
 
 def wsl(script: str, timeout: int = 300) -> tuple[int, str]:
@@ -75,10 +84,17 @@ def wsl(script: str, timeout: int = 300) -> tuple[int, str]:
 
 
 def step(name: str, ok: bool, detail: str) -> bool:
+    """One event on the stream, one human line on stderr; stdout stays adoptable."""
     results.append((name, 0 if ok else 1))
-    print(f"{'ok  ' if ok else 'FAIL'} {name}")
+    STREAM.emit({
+        "event": "step",
+        "name": name,
+        "state": "held" if ok else "refused",
+        "detail": detail.splitlines()[:12],
+    })
+    print(f"{'ok  ' if ok else 'REFUSED'} {name}", file=sys.stderr)
     for line in detail.splitlines()[:12]:
-        print(f"       {line}")
+        print(f"       {line}", file=sys.stderr)
     return ok
 
 
@@ -103,7 +119,7 @@ def dir_digest(path: str = COLD) -> str:
 
 
 def main() -> int:
-    print(f"=== restore drill · {time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}")
+    print(f"=== restore drill · {time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}", file=sys.stderr)
 
     code, out = wsl("grep -E '^(PRETTY_NAME|VERSION_ID)=' /etc/os-release; uname -m; node -v; id -u")
     step("host identity", code == 0 and "Debian" in out, f"exit={code}\n{out}")
@@ -288,11 +304,15 @@ def main() -> int:
     )
 
     failed = [name for name, status in results if status != 0]
-    print(f"\n{len(results)} steps, {len(failed)} failed")
+    print(f"\n{len(results)} steps, {len(failed)} failed", file=sys.stderr)
     if failed:
-        print("failed: " + ", ".join(failed))
+        print("failed: " + ", ".join(failed), file=sys.stderr)
     return 1 if failed else 0
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    try:
+        code = main()
+    finally:
+        STREAM.close()
+    sys.exit(code)
