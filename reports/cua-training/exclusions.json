@@ -1,0 +1,20 @@
+[
+ {
+  "project": "shploingus-clean",
+  "path": "docs/LEDGER.md",
+  "reason": "axis-body-limit",
+  "bytes": 1048524
+ },
+ {
+  "project": "shploingus",
+  "path": "docs/design_reference/GOD_AGENTS.md",
+  "reason": "axis-body-limit",
+  "bytes": 2815216
+ },
+ {
+  "project": "shploingus",
+  "path": "docs/original_reference/GOD_AGENTS.md",
+  "reason": "axis-body-limit",
+  "bytes": 2826918
+ }
+]

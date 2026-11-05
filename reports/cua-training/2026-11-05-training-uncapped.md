@@ -1,0 +1,74 @@
+# CUA axis driver training: the Debian store, end to end (2026-11-05)
+
+Command (inside the Debian host, sealed credential decrypted for the run only):
+
+```
+systemd-creds decrypt --name=mongo-uri /etc/secure-shell/mongo-uri.cred /run/drill-mongo.uri
+cd /mnt/c/Users/ala/Documents/secure_shell_v2
+/opt/drill-venv/bin/python tools/cua_training.py --uri-file /run/drill-mongo.uri --documents --depth 2 --budget 90
+```
+
+Exit status read from the process: `TRAIN_OK`; transcript `blake3:18c6607b9dd1e67ca102e746df7e46e5bf81a6096f28b6b6b44d9aaf1607980b`, 3 390 events, 1 545 317 bytes, re-adopted by the shipped `Receiver` (`adoptions: 1`, state `held`, exit 0).
+
+## What was admitted
+
+| Corpus | Items | Evidence |
+|---|---|---|
+| Project bundles (one per audit row) | 55 | `project-corpus-driver` trained, `state.tickets = 3 321` |
+| Project documents | 3 264 | 3 264 `trained-document` events with `store` and `receipt` digests |
+| Learning-apply tickets / receipts | 3 319 / 3 319 | 55 + 3 264, one ticket per item, one receipt per ticket |
+| Witness and kernel tickets | 2 | `witnessed` and `kernel-scope` events, `receipts = 3 321` |
+
+Projects discovered: 67. Projects that contributed documents: 62. There is **no per-project cap and no bundle ceiling**: the largest corpora were learned whole — `shploingus` 1 154 documents, `planet-shploingus` 710, `shploingus-clean` 601, `testport1` 128, `GregTech-Modern` 117, `ala-system` 80.
+
+Selection rules, widened on purpose and stated here rather than implied: root `.md`/`.txt`, `docs/**`, `tickets/**`, `patches/**` and `.agents/skills/**/SKILL.md`. Vendored trees (`references/`, `node_modules/`, `target/`, `build/`, `generated/`, `.cache/`, `.git/`) are skipped by rule — 64 such directories across the corpus — because they hold copies of other projects, not this project's expectations.
+
+## Every exclusion, named
+
+Three documents were not admitted, for one deterministic reason: the axis accepts a request body of at most 1 000 000 bytes (`server/axis-server.mjs`), and these bundles exceed it.
+
+| Project | Document | Encoded bundle bytes |
+|---|---|---|
+| `shploingus` | `docs/design_reference/GOD_AGENTS.md` | 2 815 216 |
+| `shploingus` | `docs/original_reference/GOD_AGENTS.md` | 2 826 918 |
+| `shploingus-clean` | `docs/LEDGER.md` | 1 048 524 |
+
+This is a limit, not a cap: it is computed from the axis's own maximum body, it names each document and its size, and it changes the count in this report only when one of those documents changes. Learning them needs the axis to accept a multi-part bundle, which is a contract change and needs its own ticket.
+
+Encoding is not a filter. These projects keep evidence as UTF-16 with a byte-order mark and as cp1252; 334 documents that the previous run recorded as `unreadable-utf8` are admitted in this run under the decode order UTF-8 → UTF-16 (BOM) → cp1252, with a NUL-and-no-BOM guard so binary is excluded by name instead of admitted as mojibake.
+
+Revisions are deduplicated deliberately, by relative path and content digest: two copies of one file are two documents, and a changed document is a new identity beside the old one. Duplicate admissions in this run: 0.
+
+## The expectation contract
+
+The CGA civilian acceptance contract is in the learned set, twice, because `testport1` carries it at two paths:
+
+- `secure-shell.training.docs/testport1-docs-cellular-generativity-axis--37a681f1b0@a0b10dc468719c38`
+- `secure-shell.training.docs/testport1-docs-cellular-generativity-axis--877a73489e@a61b512143291176`
+
+Both were applied under their own `learning-apply` ticket, so a receipt exists for each.
+
+## Checks
+
+| Check | Evidence | State |
+|---|---|---|
+| Driver registers and attests | `/api/axis/state` names `project-corpus-driver`, capabilities `witness, learning-apply, kernel` | PASS |
+| Corpus is the folder audit | `docs/secure-shell-audit/resynth_audit@2026-11-04.json`, 55 rows | PASS |
+| Every bundle reaches the Mongo authority | `impl.packages.mongo_store.admit` digest per item, restore digest matches | PASS |
+| Every item is ticketed before it is applied | one `learning-apply` ticket and one applied receipt per item; tickets = receipts = 3 321 | PASS |
+| No per-project cap remains | largest corpora admitted whole (1 154 / 710 / 601 documents) | PASS |
+| Every exclusion is deterministic and named | the three `axis-body-limit` rows above, with sizes | PASS |
+| The expectation contract is in the corpus | both CGA identities above | PASS |
+| Corpus witnessed | `witness` receipt over the audit file digest | PASS |
+| Kernel scope is declared, not assumed | `kernel` act accepted with `scope: kernel` | PASS |
+| The transcript adopts | `python -m impl.packages.toolstream verify`: `adoptions: 1`, state `held`, exit 0 | PASS |
+| Cellular substrate (CGA-38, CGA-45) | no cellframe/CA runtime exists in this workspace; the axis records decisions, not cellular state | NOT-ENFORCED |
+| Six-star aggregation (CGA-44) | `secure-shell.axis/1` exposes drivers, tickets, receipts; it does not name six stars | NOT-ENFORCED |
+| Client window, taskbar, delegation chat | no client surface built yet | NOT-ENFORCED |
+| Physical outcome verification (CGA-14, CGA-28) | nothing here acts on a body; the game server remains the authority | NOT-ENFORCED |
+
+## Projects that carry no documents
+
+Five discovered projects contributed no document at all: `DenseOres`, `Ecologics`, `MineFactoryReloaded`, `SeedDelight`, `optical`. Each is a Minecraft mod source clone with no `AGENTS.md`, no `docs/` and no tickets, so there is nothing in them to learn from beyond their audit row. They are named here rather than counted as learned.
+
+A `NOT-ENFORCED` row is `absent`, never a pass. This report proves that a CUA driver learned from every qualifying document every project on this machine carries, through the Debian store, under axis tickets; it does not prove a civilian lived, a cellframe evolved, or a window rendered.
