@@ -68,7 +68,7 @@ The CGA civilian acceptance contract is in the learned set, twice, because `test
 | Cellular substrate (CGA-38, CGA-45) | `server/cellframe.mjs`: per-driver ownership, declared neighbour radius, schedule, rule revision, lineage, resource budget and state digest; `civilian.cellframe/1` is a separate schema from `civilian.axis-cells/1`. 1 000 frames opened in `tools/axis-scale.mjs`; the reading chose the action (960 sparse frames witnessed, 40 dense frames acted), and a decision citing a moved frame was refused `cellframe-digest` | HELD |
 | Six-star aggregation (CGA-44) | `server/stars.mjs`: six top-level stars, each with an owner and a requirement vector citing the nine typed ladders; `AXIS_COUNT = 9` is guarded (`star-axis-count-rewritten`), and a bare token, a ladder offered as a star verdict, or a request for one score are each refused by name | HELD |
 | Client window, taskbar, delegation chat | `client/index.html` served by the axis at `/`: the taskbar read 3 drivers, 1 ticket, 3 cellframes; the console printed `ticket aria-node:ticket:1 for witness`; the delegation box POSTed `/api/axis/tickets` and showed the ticket the axis issued | HELD |
-| Physical outcome verification (CGA-14, CGA-28) | `tools/game-adapter` links the game's own `shploingus-voxel-world` at its own version and serves `FieldSampleSet::identity()`; the axis recorded that digest as adapter evidence (`source: adapter`), and one body's move was ticketed and verified citing it — `sha256:4677a45c…`, `civ-0000:ticket:1`, cellframe `sha256:347e45ad…`. A frame with no observation is still refused `world-not-verified`, an unregistered adapter `world-adapter-unknown`, and a client claim has nothing to cite | HELD |
+| Physical outcome verification (CGA-14, CGA-28) | Verified through a **live Minecraft 1.20.1 server** (port 25566): a mineflayer body (`AxisBody`, server entity id 1) acts by ordinary player input, and `minecraft-live` reports a digest of the state the server sent it. A move changed it `sha256:fc7cfa24…` → `sha256:0ee6c3f5…` (1.91 blocks walked), a dig changed it `sha256:0ee6c3f5…` → `sha256:f49ceb59…` (grass at `6,-61,-3` now air per the server's block update); the axis recorded the adapter's digest (`source: adapter`) and `civ-0000:ticket:1` verified against it. Also held against the game's own `shploingus-voxel-world` substrate crate (`sha256:4677a45c…`). A frame with no observation is still refused `world-not-verified`, an unregistered adapter `world-adapter-unknown`, and a client claim has nothing to cite | HELD |
 
 A `NOT-ENFORCED` row is `absent`, never a pass, and `PARTIAL` is not a pass either: it names which half
 of the row is held and which half is still absent. This report proves that a CUA driver learned from
@@ -76,9 +76,39 @@ every qualifying expectation document every project on this machine carries, thr
 store, under axis tickets; that 1 000 drivers each own a cellframe whose reading chose the action
 they took; that six stars are computed from nine typed ladders without being reduced to them; and
 that a window with a taskbar, a console and a delegation chat served from the axis opened a real
-ticket. It does not prove a civilian lived on a running multiplayer server, and it does not claim the
-mineflayer path was exercised: the physical row rests on the game's own world substrate reporting
-its own identities, which is a real world this build did not author, not on a live server session.
+ticket. The physical row now rests on a real server holding the world and a real client acting in it. What
+it still does not prove: that the Fabric *mind* ran the body. This is a mineflayer session, not the
+headless Fabric client, so the server-side decision layer, the mod's control bridge and
+`tools/headlessmc` are not exercised here; the adapter is a motor, and the axis verified its
+effects rather than the mind that would author them.
+
+## The wiring that was already in the civilian project
+
+`ala_civ_bots_prototype` had a decision format this axis never spoke, so 1 000 operable drivers
+produced nothing that project's learners could ingest. The formats are now emitted, and the
+vocabulary is read from that project's own published package rather than copied here.
+
+| Wiring, and where it is owned | What the 1 000 drivers do with it |
+|---|---|
+| `civilian.decision/1` (`axis/DecisionPackage.java`) — artifact, digest, tick span, world, presenter, ticket, token, witness, target | every driver emits one package per act: `var/axis-packages.jsonl`, 1 000 built, **1 000 stood**, 0 refused |
+| `civilian.axis-cells/1` (`axis/AxisGate.java`, batch 200 decisions / 1 200 ticks, chained by `prev`) | 5 batch records, 200 decisions each, 1 000 counted, 4/4 chain links, 9 ladders each |
+| framed digest `planet-artifact-v1` (`axis/AxisProof.java`; body-side twin in `tools/residents/src/axis.mjs`) | the artifact is the decision, so re-hashing `artifact_bytes` yields the named digest; tampered bytes are `DigestMismatch` |
+| nine qualified ladders (`axis/AxisVocabulary.java`; table at `tools/proofs/ingest/ledger.jsonl`) | read with `--coverage` from that package and compared value-for-value with this axis's own nine `LADDERS`; a missing package is `coverage-absent`, a disagreement `coverage-mismatch`, never a default |
+| `civilian.ticket/1`, `CompletionByDeclaration` (`tools/residents/src/axis.mjs`) | a `HELD` ticket must cite an observed count: `held 40/40` reads clean, `done` is refused |
+| the four damaged packages (`tools/residents/probe-axis.mjs`) | the same four plants are refused here by the same codes: `BareTokenRefused`, `AxisInterchangeRefused`, `UncheckedReading`, `DigestMismatch` |
+
+The bridge is `server/axispackage.mjs`; the run that carries it is
+`node tools/axis-scale.mjs --drivers 1000 --game http://127.0.0.1:8789 --coverage ../ala_civ_bots_prototype/tools/proofs/ingest/ledger.jsonl`,
+exit 0, with the ticket's four other rows unchanged.
+
+**Still stray, named rather than implied.** `FileMotor`'s per-frame client evidence
+(`tools/residents/src/observation.mjs`: render, audio, UI rows) is not yet a driver feed, so the
+client window still shows axis rows rather than what a body saw. `ExternalBrains`
+(`world/ensouled/external-brains.txt`) is that project's identity rule and does not yet feed the
+axis's `world-driver` refusal. `TrainingLedger.clientResult` revises a skill→verb mapping on that
+side; this axis emits `verb` and `verb_basis` but holds no verb library a result could revise. And
+the batch digest is this family's framed digest over its body, not `StreamLedger`'s digest of the
+ledger row — two owners, not one fact written twice.
 
 ## What moved, and the command that moved it (2026-11-05)
 
@@ -113,10 +143,20 @@ frame were verified (`verified: 41`), the game frame citing `sha256:4677a45c…`
 to `(12, 0, 0)`; the digest changed with the position, which is the outcome being observed rather
 than an animation being reported.
 
-What is still absent, and named: a *running Minecraft server* with the mineflayer residents is not
-part of this run. The world substrate is the game's own code and its identities are its own, but the
-live multiplayer path (a server jar, a Java runtime for the mod, and `tools/headlessmc`) was not
-started here, so no claim is made about a body in a live world.
+**Superseded the same day — a live server now runs.** The gap named above was a server, a JVM and a
+body; all three were already on this machine in `ala_civ_bots_prototype` (the 1.20.1 server jar
+fabric-loom had cached, JDK 21, and `tools/residents`' mineflayer 4.39), so the adapter was built
+against them rather than against another model of a world:
+
+- `tools/residents/world-adapter.mjs` logs in as an ordinary player (`AxisBody`) and serves
+  `/version`, `/state` and `POST /act`; its digest is a sha256 over the position and the 245 blocks
+  the server sent it, so an unloaded cell reads `unloaded` and is never guessed;
+- `move` walks through the pathfinder and refuses `world-not-moved` if the body stayed put; `dig`
+  re-reads the block and refuses `world-not-dug` unless the server's update made it air;
+- `axis-scale.mjs` now acts from the position the world reports (`/state` then a target two blocks
+  on) instead of a coordinate the script invented, and refuses a run whose digest did not change.
+
+Measured on the running server, then in the scale run:
 
 ## Historical: the capped run of the same day (superseded)
 
