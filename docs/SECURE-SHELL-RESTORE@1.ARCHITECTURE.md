@@ -297,6 +297,13 @@ else.
 know whether an ask call reached anyone. Those are the client's job. The gate makes the bad state
 unrepresentable: a round that was never asked cannot be read, drawn or completed.
 
+**Superseded 2026-11-05.** The absence above was real and stays as written. The `client/` directory
+now carries `index.html`: a served window with a taskbar, a console and a delegation chat, reading
+`/api/axis/state` and opening real tickets through `/api/axis/tickets`. It was checked in the browser
+panel, not inferred (`client-window` evidence in `TICKET-0013`). The sentence below still governs: the
+window requires the axis API and does not restate the round rule, so it is not the second reader this
+paragraph refuses.
+
 ## 10. Axis CUA as a system, not a screenshot tool
 
 The driver owns boot, recovery, health, format identification, mounting, and pre/post-migration verification, with every action ticketed, bounded, and witnessed. The ratchet measures how much of the system is **streamed versus legacy**, so the driver's progress is a number with evidence rather than a narrative.

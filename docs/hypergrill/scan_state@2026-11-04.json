@@ -1,30 +1,30 @@
 {
-  "files": 61271,
-  "seconds": 137.3,
-  "refs": 4468,
+  "files": 84117,
+  "seconds": 136.9,
+  "refs": 5587,
   "omitted": 0,
   "digests": 900,
   "absent": [],
   "topics": {
-    "civilians": 228,
-    "health": 275,
-    "policy": 2618,
-    "ledger": 1727,
-    "witness": 545,
-    "cadence": 559,
-    "format": 227,
+    "civilians": 234,
+    "health": 322,
+    "policy": 3033,
+    "ledger": 2342,
+    "witness": 554,
+    "cadence": 580,
+    "format": 247,
     "mount": 67,
-    "client": 1188
+    "client": 1426
   },
   "formats": {
-    "secure-shell.axis/1": 11,
+    "secure-shell.axis/1": 10,
     "secure-shell.stream/1": 17,
     "secure-shell.handoff/1": 12,
     "secure-shell.agent-api/1": 2,
     "surface.mount/2": 115,
     "dl-enclave.sig/1": 16,
     "secure-shell.round/1": 3,
-    "civilian.axis-cells/1": 19,
+    "civilian.axis-cells/1": 21,
     "shploingus.cellframe/1": 54,
     "shploingus.cells/1": 50,
     "dl-enclave.surface/1": 85,
@@ -162,7 +162,7 @@
     "secure-shell.ledger-row/1": 1,
     "secure-shell.store-record/1": 1,
     "secure-shell.axis-receipt/1": 3,
-    "scales_bytes/2": 1,
+    "scales_bytes/2": 2,
     "secure-shell.package/1": 12,
     "secure-shell.chunk/1": 2,
     "secure-shell.stream/0": 3,
@@ -180,7 +180,14 @@
     "docs.gradle.org/9": 2,
     "secure-shell.training/1": 4,
     "secure-shell.training.document/1": 2,
-    "std.identity2/3": 3
+    "std.identity2/3": 3,
+    "civilian.cellframe/1": 4,
+    "civilian.cellframe-reading/1": 2,
+    "secure-shell.axis-stars/1": 2,
+    "secure-shell.axis-stars-verdict/1": 2,
+    "civilian.world-act/1": 3,
+    "civilian.world-observation/1": 2,
+    "secure-shell.axis-scale/1": 3
   },
   "magics": {
     "V4PKG001": 6,
@@ -198,6 +205,6 @@
     "nih.gov/30339280": 1,
     "nih.gov/17368962": 1,
     "nih.gov/31070740": 1,
-    "github.com/1872183316": 1
+    "github.com/1872183316": 2
   }
 }
