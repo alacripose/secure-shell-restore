@@ -107,15 +107,56 @@ freshness, or must the world's level/seed differ as `R5`'s words say?** It is no
 queued unit must not assume either answer. The one thing both readings forbid is reuse of the three
 recorded digests, which `R5` states in terms.
 
+**Answered 2026-11-05, in this round.** The question above was put and answered: "A new body identity
+is sufficient — a body that is not `AxisBody` entity id 1, with a new name and UUID, makes the run
+fresh". The tension is resolved in that direction: `R5`'s "new world" is read as the world the new body
+stands in, not as a requirement that the seed differ. The paragraph above stays as written so the
+question and its answer can both be read.
+
 ## What this round does not decide
 
 - It does not promote any row. All four remain `NOT-ENFORCED` / `HELD (recorded run); re-proof absent`.
-- It does not decide the S1 tension above.
+- It does not decide the S1 tension above. **Superseded 2026-11-05:** the owner answered it, above —
+  a new body identity is sufficient and a differing level/seed is not required.
 - It does not authorise deleting the old world, the old body, the old digests or the older report text.
 - It does not change `learn.mjs`; the bounded refusal is a standard for a ticket, and the plant that fires
   today fires for a different reason.
 - It does not say the world-outcome or denial standards are wrong — only that the lineage standard is the
   one that counts.
+
+## The scan file count, reconciled 2026-11-05
+
+The previous turn recorded two different totals for the same tree and could not explain them: 55 545 files
+and 4 943 refs, then 30 466 files and 2 057 refs. The explanation is in the scanner, and it means neither
+number is an inventory.
+
+`tools/scan_drives_reaudit.py` walks sixteen roots under `ROOT_BUDGET = 5.0` seconds per root and
+`TOTAL_BUDGET = 195.0` seconds overall, and `walk()` breaks out of `os.walk` when either expires, setting
+the root's `truncated` flag. The synthesis it writes states the rule in its own header
+(`docs/secure-shell-audit/cua_driver_reaudit_synthesis.md:2`): "Per-root budget 5s, drive budget 12s,
+total 195s. Each root is flushed as it completes; `truncated: yes` is a refusal, not a pass."
+
+The two passes show the truncation directly, root by root:
+
+| Root | 2026-11-05T00:30Z pass (133.9 s) | 2026-11-05T04:29Z pass (274.9 s) |
+|---|---|---|
+| `testport1` | 1 294 files, 5.2 s, `truncated: yes` | 538 files, 5.0 s, `truncated: yes` |
+| `shploingus-clean` | 746 files, 5.0 s, `truncated: yes` | 420 files, 5.1 s, `truncated: yes` |
+| `shploingus-game` | 3 020 files, 5.1 s, `truncated: yes` | 2 763 files, 5.0 s, `truncated: yes` |
+
+Both passes capped digests at `MAX_DIGESTS = 900` and both wrote 900, which is why `hg_check11` (21 checks,
+0 failed) accepts either state: it compares the digests that were recorded, not a file total. So `files` in
+`scan_state@2026-11-04.json` is a lower bound that moves with how fast the machine walked before each root's
+clock ran out — a slower pass is not a smaller family, and a larger number is not a better inventory.
+
+Two further passes in the same turn produced **54 686 files / 4 274 refs / 138.9 s** and **77 971 files /
+5 049 refs / 141.1 s**. Four passes, four totals, the same sixteen roots.
+
+What the recorded numbers mean, stated once: all four are budgeted samples of the same roots. The committed
+`scan_state@2026-11-04.json` carries whichever total the pass that wrote it happened to reach; that number is
+not quoted here as a fact about the family, because the next pass will reach a different one. No row in this
+round rests on a file total. Neither is quoted as the size of the family, and no
+row in this round rests on a file total.
 
 ## Next units, in the order the answers force
 

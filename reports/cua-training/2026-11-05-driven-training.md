@@ -90,6 +90,37 @@ the level/seed must also differ is a named open tension, not decided. The citati
 *bounded* — a proposed scope change is refused unless it cites evidence the axis verified — which
 `server/learn.mjs:89-91` does not implement yet.
 
+**Landed 2026-11-05.** The three rulings are implemented and measured. A row moves only where a command
+in this pass proves the standard it was given:
+
+- **`CGA-38` — `PARTIAL`, up from `absent`, and short of `HELD` on purpose.** `server/cellframe.mjs`
+  now refuses a citation whose read digest is not the generation immediately before the one it acts on
+  (`cellframe-successor`), and `tools/axis-scale.mjs` reads at `g`, moves the frame to `g+1`, then acts
+  citing both digests. `node tools/axis-scale.mjs --drivers 200 --coverage
+  ../ala_civ_bots_prototype/tools/proofs/ingest/ledger.jsonl` → exit 0: 200 drivers, 200 cellframes,
+  200 receipts, five refusals by name including `cellframe-digest` and `cellframe-successor`, and
+  `choice {"differed": 22, "unchanged": 178}`. The 178 are recorded as **not differing**, not averaged
+  into influence. The mechanism holds for every act; a difference is observed for 22 of 200, and that
+  half is `absent`.
+- **`CGA-45` — `HELD`.** One receipt document. `receipt.cellframe` carries
+  `civilian.cellframe-reading/1` with its `driver`, `generation` and `digest`, and
+  `receipt.cellframe.cells` carries the `civilian.axis-cells/1` row (`decisions`, `admitted`,
+  `refused`, `evidenceSeq`, `tickHorizon`, `prev`). `server/axis-server.mjs` re-stamps a citation from
+  the frame it verified, so a receipt cannot carry a generation the frame never had. `node --test
+  server/test/*.test.mjs` → 106 tests, 106 pass, 0 fail, including `server/test/cellframe-successor.test.mjs`
+  over HTTP and the shape tests in `server/test/receipt.test.mjs`. The two-document variant is retired,
+  not duplicated: the batch package says `role: "retired-two-document"` and is kept only as the ladder
+  table a learner reads.
+- **The learner — bounded, and both branches measured.** `learn-scope-fixed` stays as a refusal and now
+  gates rather than walls: `setScope` accepts a scope change carrying a verified record's two digests
+  and refuses one without. `AXIS_DRIVERS=200 node tools/axis-learn.mjs` → exit 0, 100 rewarded / 100
+  control, `followed_own_reward` 100, `control_kept_reading` 100, the `learn-scope-fixed` plant still
+  refused, and `scope_granted_with_evidence` true. The sentences above that cite `learn-scope-fixed` as
+  an absolute refusal stay readable and are superseded by this one.
+- **`CGA-14` / `CGA-28` — unmoved.** The owner answered the freshness question: a new body identity
+  (new name and UUID, not `AxisBody` entity id 1) is sufficient, and a differing level/seed is not
+  required. No new live run has happened, so the re-proof is still `absent`.
+
 
 A `NOT-ENFORCED` row is `absent`, never a pass, and `PARTIAL` is not a pass either: it names which half
 of the row is held and which half is still absent. This report proves that a CUA driver learned from

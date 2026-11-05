@@ -74,6 +74,17 @@ reading's earlier choice; the fresh physical run needs a body that is neither `A
 with the question of a differing level/seed left open. No row above changes state: all four remain
 `NOT-ENFORCED`, and the physical row remains `HELD` only on its recorded run.
 
+**Landed 2026-11-05.** The three standards are implemented and measured, and the two rows that could
+move have moved: `CGA-38` is `PARTIAL` (the successor rule is enforced and `cellframe-successor` fires;
+`tools/axis-scale.mjs` → 200 drivers, `choice {"differed": 22, "unchanged": 178}`, so a difference is
+observed for 22 and the other 178 are recorded as not differing), `CGA-45` is `HELD` (one receipt,
+`cellframe` nested with its own schema, driver, generation and digest, the `axis-cells` row inside it,
+`server/test/receipt.test.mjs` and `server/test/cellframe-successor.test.mjs` passing in a 106-test
+suite), and the learner's scope refusal is bounded — `setScope` accepts a verified record's two digests
+and refuses one without, proven by `server/test/learn.test.mjs` and by `tools/axis-learn.mjs` →
+`scope_granted_with_evidence` true with the refusal plant still firing. `CGA-14`/`CGA-28` are unmoved:
+the owner's answer (a new body identity is sufficient) is recorded, and no fresh run has happened.
+
 ## Projects that carry no documents
 
 Five discovered projects contributed no document at all: `DenseOres`, `Ecologics`, `MineFactoryReloaded`, `SeedDelight`, `optical`. Each is a Minecraft mod source clone with no `AGENTS.md`, no `docs/` and no tickets, so there is nothing in them to learn from beyond their audit row. They are named here rather than counted as learned.
