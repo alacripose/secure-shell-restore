@@ -41,6 +41,12 @@ Client surface, checked in the browser panel rather than read from the file: tas
 `1 ticket`, `3 cellframes`; typing `aria-node witness` produced `aria-node:ticket:1 · witness` in the
 chat, `ticket aria-node:ticket:1 for witness` in the console, and `POST /api/axis/tickets → 200`.
 
+## Superseded in part, the same day
+
+The `PARTIAL` verdict in this ticket's table was true when it was written and is not true now:
+`TICKET-0014` built `tools/game-adapter` against the game's own `shploingus-voxel-world` crate and
+the row is now `HELD`. This paragraph stays readable rather than being edited away.
+
 ## What this ticket does not claim
 
 Physical outcome verification stays `PARTIAL`. The frame protocol is enforced and `loopback-world` is
