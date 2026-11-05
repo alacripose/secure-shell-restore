@@ -1,5 +1,11 @@
 # CUA axis driver training: the Debian store, end to end (2026-11-05)
 
+> **Superseded 2026-11-05** by `reports/cua-training/2026-11-05-training-uncapped.md`. This run was
+> capped at 24 documents per project and 400 bundles, so it learned 368 documents from 24 projects.
+> The replacement removes both limits and admits 3 264 documents from 62 projects. The lines below
+> stay as written: the counts were true of this run, and the cap is exactly what the newer run
+> removed.
+
 Command (inside the Debian host, sealed credential decrypted for the run only):
 
 ```
