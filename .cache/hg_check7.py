@@ -19,8 +19,12 @@ CLIENT_DIR = pathlib.Path("C:/Users/ala/Documents/secure-shell/client")
 
 check("the client gate exists", MODULE.is_file(), str(MODULE))
 check("its test exists", TEST.is_file(), str(TEST))
-check("the client/ directory is still empty (absence is real)",
-      CLIENT_DIR.is_dir() and not any(CLIENT_DIR.iterdir()),
+# The 2026-11-04 claim was that client/ is empty. It was true then and false from 2026-11-05, when
+# the window was built (TICKET-0013). The check now asserts the state that exists, not the absence
+# that ended; the document keeps the original sentence and its dated supersession beside it.
+CLIENT_WINDOW = CLIENT_DIR / "index.html"
+check("the client window exists and is the one TICKET-0013 names",
+      CLIENT_WINDOW.is_file() and CLIENT_WINDOW.stat().st_size > 0,
       str(sorted(p.name for p in CLIENT_DIR.iterdir())) if CLIENT_DIR.is_dir() else "missing")
 
 module_text = MODULE.read_text(encoding="utf-8")
@@ -37,7 +41,9 @@ check("9.1 claims no code the module lacks", codes_in_doc <= codes_in_module,
       str(sorted(codes_in_doc - codes_in_module)))
 check("9.1 names the module path", "shell/openlock/panorama/scripts/secure_shell_rounds.js" in section)
 check("9.1 names the test", "tests/rounds.test.mjs" in section)
-check("9.1 records the client/ absence", "`ls -la client`" in section and "empty directory" in section)
+check("9.1 records the client/ absence and its dated supersession",
+      "`ls -la client`" in section and "empty directory" in section
+      and "Superseded 2026-11-05" in section and "index.html" in section)
 check("9.1 states what the gate does not do", "does not deliver a round" in section)
 check("9.1 no longer claims enforcement it lacks", "A question only the owner can answer is recorded as open" in section)
 

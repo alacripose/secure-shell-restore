@@ -96,7 +96,7 @@
       "verdict": "superseded"
     }
   ],
-  "generated_at": "2026-11-05T00:51:40+00:00",
+  "generated_at": "2026-11-05T01:14:47+00:00",
   "outside_spine": [
     {
       "id": "N001",
@@ -1511,7 +1511,7 @@
       "recorded": true,
       "refs": [
         "docs/SECURE-SHELL-RESTORE@1.CUA-CIVILIAN-ACCEPTANCE.md:69",
-        "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:321"
+        "docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md:328"
       ],
       "slot": 135,
       "verdict": "supported"
