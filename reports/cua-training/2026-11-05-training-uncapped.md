@@ -85,6 +85,14 @@ and refuses one without, proven by `server/test/learn.test.mjs` and by `tools/ax
 `scope_granted_with_evidence` true with the refusal plant still firing. `CGA-14`/`CGA-28` are unmoved:
 the owner's answer (a new body identity is sufficient) is recorded, and no fresh run has happened.
 
+**At mission scale, 2026-11-05.** `tools/axis-scale.mjs --drivers 1000` → exit 0: 1 000 drivers,
+1 000 cellframes, 1 000 receipts, 1 002 tickets, the five refusals by name, 1 000 packages built/stood,
+`choice {"differed": 75, "unchanged": 925}`. `AXIS_DRIVERS=1000 node tools/axis-learn.mjs` → exit 0:
+1 000 drivers, 500 rewarded / 500 control, `scope_granted_with_evidence` true with the
+`learn-scope-fixed` plant still firing. `CGA-38` remains `PARTIAL` at the observed ratio; `CGA-45` and
+the bounded scope row keep their proven blocks; `CGA-14`/`CGA-28` remain unmoved for the reason already
+written.
+
 ## Projects that carry no documents
 
 Five discovered projects contributed no document at all: `DenseOres`, `Ecologics`, `MineFactoryReloaded`, `SeedDelight`, `optical`. Each is a Minecraft mod source clone with no `AGENTS.md`, no `docs/` and no tickets, so there is nothing in them to learn from beyond their audit row. They are named here rather than counted as learned.

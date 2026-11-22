@@ -1,0 +1,69 @@
+{
+  "corner_px": {
+    "height": 11.0,
+    "width": 7.67
+  },
+  "images": {
+    "activated": "c788bab89ecdf8115639ec8f676515ee5231e1c782777167278d78693bcbbe8c",
+    "drag": "48784345adcecada8be184e953912217814f92e620bb8f9331c74ee45dccdaf4",
+    "hover": "ccfb7e8479737636b8947fd1f65cf780ca1413b541acf016b38e3783521c05c0",
+    "idle": "a0fccb707ca3171ff7a20d3a79770642287a599ab5296545d7f7333f3b5ada9f",
+    "pin": "c0236e887529b694ef9c030a6f9c9fc5d87c244ee1dfd2058b81530e48b3b99f",
+    "resized": "0f68fd475b5349d1fa45f3db1038ab77ee937b651968fdd7a38560899ac79a88",
+    "start_window": "f7626b0275e0ff24253a8d448cb817e1e7a01e19ca89cb65d496b07bcce498a1",
+    "start_window_reference": "9788bb984617ef92666153eaf3da656875393f58646d66c725f44095817bd6f4",
+    "taskbar": "30d1ba23dde376bc93d492d7737e3196ee020c8beec0634393ff4244d49b8d29"
+  },
+  "implementations": {
+    "openlock": {
+      "draws": [
+        "surface silhouette through --clip",
+        "frame stroke on the host edge",
+        "overhang"
+      ],
+      "path": "openlock/clientaddon/panorama/scripts/openlock_contour.js",
+      "sha256": "13ff4f88be9cd960f6c7909c7251903d1f1b1efcc860d0575c0afaeeb9868256"
+    },
+    "popit": {
+      "draws": [
+        "surface silhouette through --clip",
+        "frame stroke inside the clip",
+        "corner of the chip"
+      ],
+      "path": "popit-shell/ui/contour.js",
+      "sha256": "395d41fe2be5310533af92abd0a3914ac8c54da6b205ee77d8bbcb93f0e4efdc"
+    }
+  },
+  "name": "contour-pin",
+  "note": "Both implementations are read from their own files; this record names them and their digests, it does not restate their code.",
+  "owners": {
+    "pin": "<home>/Documents/deadlock-model-forge/pins/contour-pin.json",
+    "pin_sha256": "6fb21ef1f94e4c82503fa0180cf89660b45d5d841ea36375e6f563ed55c1aa03"
+  },
+  "revision": 1,
+  "schema": "secure-shell.contour/1",
+  "surfaces": {
+    "application": {
+      "clip_pad": 0.5,
+      "frame_pad": 1.5,
+      "overhang_px": 1,
+      "rule": "the silhouette is drawn on a surface inflated by the overhang and placed back over the host, so the frame lands on the host edge with both halves of its stroke inside the clip",
+      "stroke_px": 1
+    },
+    "card": {
+      "fill": "#23211c",
+      "fill_on": "#302a1f",
+      "glyph": "a drawn contour chip, 9x11, brass-lit; no codepoint in the chrome",
+      "meta_px": 10.26,
+      "meta_tracking_px": 0.37,
+      "name_px": 13.44
+    },
+    "plate": {
+      "authority": "this build: .WindowTitle 36, .FormPopit .WindowButton 20x20, .ViewRowBox 22, .HasMeta 43.2; the reference renders the same shapes at its own --u",
+      "card_px": 43.2,
+      "control_px": 20,
+      "row_px": 22,
+      "title_px": 36
+    }
+  }
+}

@@ -121,6 +121,25 @@ in this pass proves the standard it was given:
   (new name and UUID, not `AxisBody` entity id 1) is sufficient, and a differing level/seed is not
   required. No new live run has happened, so the re-proof is still `absent`.
 
+**At mission scale, 2026-11-05.** Both tools ran at 1 000 drivers, unmodified — no lowered count, no
+loosened assertion, no skipped plant — and both exit 0:
+
+- `node tools/axis-scale.mjs --drivers 1000 --coverage
+  ../ala_civ_bots_prototype/tools/proofs/ingest/ledger.jsonl` → exit 0 in 132 s: **1 000 drivers,
+  1 000 cellframes, 1 002 tickets, 1 000 receipts**, `verified 35` and `witnessed 965`, the five refusals
+  by name (`cellframe-owner`, `world-not-verified`, `world-adapter-unknown`, `cellframe-digest`,
+  `cellframe-successor`), **1 000 decision packages built and 1 000 stood**, the batch closure at
+  5 packages / 1 000 decisions / 9 ladders / 4 chained carrying `role: "retired-two-document"`, and
+  `choice {"differed": 75, "unchanged": 925}`.
+- `AXIS_DRIVERS=1000 node tools/axis-learn.mjs` → exit 0: **1 000 drivers, 500 rewarded, 500 control**,
+  `followed_own_reward 500`, `control_kept_reading 500`, 500 receipts, 0 refusals, the three plants
+  refused by name including `learn-scope-fixed`, and `scope_granted_with_evidence: true`.
+
+`CGA-38` stays **`PARTIAL`** at the real number: 75 of 1 000 acts chose differently after the frame
+moved, and the other 925 are recorded as **not differing**. No assertion was relaxed to lift that ratio,
+and no test pins a per-act difference for those 925, so the row carries the observed 75 / 1 000 beside
+it instead of rising.
+
 
 A `NOT-ENFORCED` row is `absent`, never a pass, and `PARTIAL` is not a pass either: it names which half
 of the row is held and which half is still absent. This report proves that a CUA driver learned from

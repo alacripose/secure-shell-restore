@@ -1,0 +1,14 @@
+{
+  "name": "contour-pin",
+  "revision": 1,
+  "schemas": [
+    "secure-shell.contour/1"
+  ],
+  "dependencies": [],
+  "entry_points": [
+    "packages/contour/contour.json"
+  ],
+  "lengths": {
+    "payload": 2717
+  }
+}

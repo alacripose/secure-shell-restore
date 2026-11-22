@@ -1,0 +1,330 @@
+{
+  "repo": "<home>\\Documents\\secure_shell_v2",
+  "at": "2026-11-20T18:11:55+00:00",
+  "file_digest": "5ec00cbd9a9d6a01196f1ef8cfc03fcceed7473c70a30a708ae936121258649a",
+  "sections": 21,
+  "ladders": {
+    "evidence_grade": {
+      "A": 8,
+      "C": 13
+    },
+    "gate_status": {
+      "current": 20,
+      "refuted": 1
+    },
+    "evidence_origin": {
+      "diagnostic": 17,
+      "read-back": 2,
+      "owner": 2
+    }
+  },
+  "open_limits": [
+    {
+      "id": "6b54391d8c",
+      "section": "## 2026-11-20 \u2014 evidence is superseded, and every gap is a ticket",
+      "date": "2026-11-20",
+      "text": "- **A \"Not checked\" line is a ticket, not an apology.** It carries an id in"
+    },
+    {
+      "id": "2644af20f3",
+      "section": "## 2026-11-20 \u2014 evidence is superseded, and every gap is a ticket",
+      "date": "2026-11-20",
+      "text": "`artifacts/agents-judge.json` under `open_limits`. It is closed by a later measured section that"
+    },
+    {
+      "id": "1830cca8ca",
+      "section": "## 2026-11-20 \u2014 evidence is superseded, and every gap is a ticket",
+      "date": "2026-11-20",
+      "text": "- **A repeated gap is a refusal.** A limit that survives several turns without a closing attempt is"
+    },
+    {
+      "id": "f9c61bfa24",
+      "section": "## 2026-11-20 \u2014 evidence is superseded, and every gap is a ticket",
+      "date": "2026-11-20",
+      "text": "`limit-stale`, and the work to close it is the ticket it already has."
+    },
+    {
+      "id": "f2e02fbccb",
+      "section": "## 2026-11-20 \u2014 evidence is superseded, and every gap is a ticket",
+      "date": "2026-11-20",
+      "text": "the judge export, which states what is current, what is superseded and what is still open."
+    }
+  ],
+  "rows": [
+    {
+      "heading": "__head__",
+      "date": "",
+      "digest": "c1c22c8590be04f6586f3914cf87e7b0780a8c93839db6ed7c488a13fcef8eee",
+      "evidence_grade": "C",
+      "gate_status": "current",
+      "evidence_origin": "diagnostic",
+      "refusals": [],
+      "limits": [],
+      "superseded_by": ""
+    },
+    {
+      "heading": "## -1. Build the maximal system now; trim API surface later",
+      "date": "",
+      "digest": "04629729c472c110aa764eda02f589cb6b5e7e2a4635f69a5d144f68e7a236ac",
+      "evidence_grade": "A",
+      "gate_status": "current",
+      "evidence_origin": "diagnostic",
+      "refusals": [],
+      "limits": [],
+      "superseded_by": ""
+    },
+    {
+      "heading": "## 0. What this file replaced, and why (audit, 2026-11-04)",
+      "date": "",
+      "digest": "75c1b317efad5dcbb71a88e5804e9bff6a2314397102972d7a01fa9116b561ab",
+      "evidence_grade": "A",
+      "gate_status": "current",
+      "evidence_origin": "read-back",
+      "refusals": [
+        "dl-enclave",
+        "secure-shell"
+      ],
+      "limits": [],
+      "superseded_by": ""
+    },
+    {
+      "heading": "## 1. What this workspace is",
+      "date": "",
+      "digest": "6d19adee631be0cc64709b32e62e086a724e45d9615178c414762ff759bea384",
+      "evidence_grade": "C",
+      "gate_status": "current",
+      "evidence_origin": "diagnostic",
+      "refusals": [],
+      "limits": [],
+      "superseded_by": ""
+    },
+    {
+      "heading": "## 2. Truth, in order",
+      "date": "",
+      "digest": "f043f304e8f1107612877f54f92d92a872a8b173457c0890c86ea28ecd9a73d8",
+      "evidence_grade": "C",
+      "gate_status": "current",
+      "evidence_origin": "diagnostic",
+      "refusals": [],
+      "limits": [],
+      "superseded_by": ""
+    },
+    {
+      "heading": "## 3. Refuse by name",
+      "date": "",
+      "digest": "aa9bdabad5015cc2cc16a12f9aad7d718932c2863d6cf2057516b9fa5ee39f60",
+      "evidence_grade": "C",
+      "gate_status": "current",
+      "evidence_origin": "diagnostic",
+      "refusals": [],
+      "limits": [],
+      "superseded_by": ""
+    },
+    {
+      "heading": "## 4. A check that did not run is not a pass",
+      "date": "",
+      "digest": "af72a9faeadd3811a3581faacd93171668df1445eb463a37cb919f754810f0e2",
+      "evidence_grade": "A",
+      "gate_status": "current",
+      "evidence_origin": "diagnostic",
+      "refusals": [],
+      "limits": [],
+      "superseded_by": ""
+    },
+    {
+      "heading": "## 5. Prose does not outrank its own record",
+      "date": "",
+      "digest": "42752663b3ef5db8a18dd02b93927dfd4bad8f94059a5cc41af1ba30ad5058bd",
+      "evidence_grade": "C",
+      "gate_status": "current",
+      "evidence_origin": "diagnostic",
+      "refusals": [],
+      "limits": [],
+      "superseded_by": ""
+    },
+    {
+      "heading": "## 6. The mission planner contract",
+      "date": "",
+      "digest": "c98bc6b004bd5d313cd972a70d4cfa4d1c03c0b19c28e739af540e2f41187d8a",
+      "evidence_grade": "C",
+      "gate_status": "current",
+      "evidence_origin": "diagnostic",
+      "refusals": [],
+      "limits": [],
+      "superseded_by": ""
+    },
+    {
+      "heading": "## 7. Manual grilling rounds**The driver loop governs; manual rounds are the fallback** (owner ruling, 2026-11-04). A question",
+      "date": "",
+      "digest": "2c9c45d267891bcaa2ab0c0af60c4b57d88cb0665f5a9ea138b6ceddd19e4a34",
+      "evidence_grade": "A",
+      "gate_status": "current",
+      "evidence_origin": "diagnostic",
+      "refusals": [],
+      "limits": [],
+      "superseded_by": ""
+    },
+    {
+      "heading": "## 8. Evidence",
+      "date": "",
+      "digest": "14b7382f4468c34366adf6b4de61104279232b76fe39b7e1f9da5576caad52b7",
+      "evidence_grade": "C",
+      "gate_status": "current",
+      "evidence_origin": "diagnostic",
+      "refusals": [],
+      "limits": [],
+      "superseded_by": ""
+    },
+    {
+      "heading": "## 9. One owner per fact",
+      "date": "",
+      "digest": "ebe0bac009b8cf28719a1f90e6a48a52af10082a88366a7c8b643a84a750c420",
+      "evidence_grade": "C",
+      "gate_status": "current",
+      "evidence_origin": "diagnostic",
+      "refusals": [],
+      "limits": [],
+      "superseded_by": ""
+    },
+    {
+      "heading": "## 10. Authority",
+      "date": "",
+      "digest": "bb04d7c43fe8e39f91c18ead5599674e7b6aa1848e16fcb857e37a9625ea9558",
+      "evidence_grade": "C",
+      "gate_status": "current",
+      "evidence_origin": "diagnostic",
+      "refusals": [],
+      "limits": [],
+      "superseded_by": ""
+    },
+    {
+      "heading": "## 11. A long run is one waitable command",
+      "date": "",
+      "digest": "e7d329d8125503d342174d12974965ae95df10b7502c28e76dc902b764205e67",
+      "evidence_grade": "C",
+      "gate_status": "current",
+      "evidence_origin": "diagnostic",
+      "refusals": [],
+      "limits": [],
+      "superseded_by": ""
+    },
+    {
+      "heading": "## 12. What this file deliberately does not contain",
+      "date": "",
+      "digest": "840e80300428eea4221a11fa1192d175566535355d60861ab2785d8a5c43e3a3",
+      "evidence_grade": "C",
+      "gate_status": "current",
+      "evidence_origin": "diagnostic",
+      "refusals": [],
+      "limits": [],
+      "superseded_by": ""
+    },
+    {
+      "heading": "## 13. Message provenance: system, mission, user",
+      "date": "",
+      "digest": "8001083ba4816bfd693abb9453deb6bea45a60652a290cf87a44fed28f65ecc9",
+      "evidence_grade": "C",
+      "gate_status": "current",
+      "evidence_origin": "diagnostic",
+      "refusals": [
+        "attribution-laundered",
+        "attribution-missing"
+      ],
+      "limits": [],
+      "superseded_by": ""
+    },
+    {
+      "heading": "## 14. Corrections to earlier sections (2026-11-04)",
+      "date": "",
+      "digest": "836d6998a0eb7e0f34c438bda6df3118a088844484e5218b8308c361a8c40f22",
+      "evidence_grade": "C",
+      "gate_status": "current",
+      "evidence_origin": "diagnostic",
+      "refusals": [],
+      "limits": [],
+      "superseded_by": ""
+    },
+    {
+      "heading": "## 15. Status to the shell connection",
+      "date": "",
+      "digest": "d0cb4c8ac55447de8cd85c30ce4cc62abbc45d77741195d6cd93f92d2129d99b",
+      "evidence_grade": "A",
+      "gate_status": "current",
+      "evidence_origin": "diagnostic",
+      "refusals": [
+        "backup-absent",
+        "chunk-out-of-order",
+        "cua-driver-absent",
+        "mongo-digest",
+        "per-package-keys-absent",
+        "replica-absent",
+        "secure-shell-axis",
+        "signature-absent",
+        "store-digest",
+        "stream-corrupt",
+        "stream-truncated"
+      ],
+      "limits": [],
+      "superseded_by": ""
+    },
+    {
+      "heading": "## 16. Resynthesizing a sibling's file",
+      "date": "",
+      "digest": "3b004358e1fb33e997e4106d5833bb7245dcb86c4b05838d111a7f6d7c51178c",
+      "evidence_grade": "C",
+      "gate_status": "current",
+      "evidence_origin": "diagnostic",
+      "refusals": [
+        "agents-authority-trimmed",
+        "dl-enclave"
+      ],
+      "limits": [],
+      "superseded_by": ""
+    },
+    {
+      "heading": "## 17. Dropped-rule review: where those examples actually live (2026-11-05)",
+      "date": "",
+      "digest": "c33914d8805676321d455f5f1d89bdc307f5d5af2ae79794b73177fa7fc41b93",
+      "evidence_grade": "A",
+      "gate_status": "current",
+      "evidence_origin": "read-back",
+      "refusals": [
+        "agents-authority-trimmed"
+      ],
+      "limits": [],
+      "superseded_by": ""
+    },
+    {
+      "heading": "## 2026-11-20 \u2014 agents files stay readable, and the judge reads the archive",
+      "date": "2026-11-20",
+      "digest": "496b6aaecf2974a9d20558ea357400e62762a8549872a35af2374a674a539c21",
+      "evidence_grade": "A",
+      "gate_status": "refuted",
+      "evidence_origin": "owner",
+      "refusals": [
+        "shorthand-compaction"
+      ],
+      "limits": [],
+      "superseded_by": ""
+    },
+    {
+      "heading": "## 2026-11-20 \u2014 evidence is superseded, and every gap is a ticket",
+      "date": "2026-11-20",
+      "digest": "cbcaaf7958f90063ee016986ebdfc321c04bdb7b6ef6bc4323e7b3c6386ed40c",
+      "evidence_grade": "A",
+      "gate_status": "current",
+      "evidence_origin": "owner",
+      "refusals": [
+        "limit-stale"
+      ],
+      "limits": [
+        "- **A \"Not checked\" line is a ticket, not an apology.** It carries an id in",
+        "`artifacts/agents-judge.json` under `open_limits`. It is closed by a later measured section that",
+        "- **A repeated gap is a refusal.** A limit that survives several turns without a closing attempt is",
+        "`limit-stale`, and the work to close it is the ticket it already has.",
+        "the judge export, which states what is current, what is superseded and what is still open."
+      ],
+      "superseded_by": ""
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "host-voice",
+  "revision": 1,
+  "schemas": ["secure-shell.voice/1"],
+  "dependencies": [],
+  "entry_points": ["impl/packages/voice.py"],
+  "lengths": {
+    "payload": 1097
+  }
+}

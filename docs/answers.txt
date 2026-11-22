@@ -375,3 +375,38 @@ I would make reusable verification tools part of the driver’s versioned capabi
 Next question: Should normal health checks be incremental—checking changed components and their dependency closure—while full-tree audits and exhaustive migration checks happen at release gates and scheduled 24-hour runs?
 
 Yes, continue
+---
+
+## ROUND 2026-11-21 — the voice of the host, and the primary driver
+
+Answered by the owner in a ten question round. The selected words are recorded as given.
+
+**Q-S1 · Which component is the voice of the host?**
+A: "The host's package carries the line and neither axis nor driver composes it, per Voice.java"
+
+**Q-S2 · What is the primary driver?**
+A: "The axis itself is the primary driver, and nodes are its hands"
+
+**Q-S3 · May the primary driver hand work to other drivers?**
+A: "Yes, but only to drivers that declared the action, and the sub-ticket names its parent"
+
+**Q-S4 · Must every word come from the host's served data?**
+A: "Yes — lines are assembled from served fields only, and an unnamed state is refused", "Yes, A, but the system handles lies as well, in ala-cities original reference in shploingus/github , speech is still only authored from the things the system learns and our prose checkers in the blender addon and brass meridian are new and need to be backported"
+
+**Q-S5 · Where does the waveform live?**
+A: "The host writes a WAV artifact and streams it as a package with a receipt"
+
+**Q-S6 · Is espeak-ng the accepted engine?**
+A: "Voice is a separate packaged component with its own revision"
+
+**Q-S7 · Does every spoken line become a ledger row?**
+A: "Yes — one row per line, naming the engine, the values read and whether sound was produced"
+
+**Q-S8 · What comes next, MongoDB or the speech loop?**
+A: "MongoDB restore first, as Restore@1 states"
+
+**Q-S9 · Are evidence documents in the two-second rule's scope?**
+A: "Yes — every document, including the evidence records"
+
+**Q-S10 · Is ala_civ_bots_prototype the speech reference?**
+A: "Yes — port the rule (attested words, unsayable refusal, one line per breath) to the host"

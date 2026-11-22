@@ -1,0 +1,35 @@
+{
+  "schema": "secure-shell.voice/1",
+  "component": "host-voice",
+  "revision": 1,
+  "engine": {
+    "name": "fish-audio",
+    "endpoint": "https://api.fish.audio/v1/tts",
+    "model": "s2.1-pro-free",
+    "method": "POST",
+    "audio": "mp3",
+    "key_env": "FISH_AUDIO_API_KEY",
+    "why": "Q-S6: the voice is a packaged component invoked by pinned name, not a host package installed ad hoc."
+  },
+  "voices": {
+    "wukong": {
+      "reference_id": "96664a5214884cbabe8e3a3ba7b1f9c6",
+      "source": "https://fish.audio/m/96664a5214884cbabe8e3a3ba7b1f9c6/",
+      "label": "Wukong"
+    },
+    "pigsy": {
+      "reference_id": "684bdfc2180f4b4e8f837ca25109e256",
+      "source": "https://fish.audio/m/684bdfc2180f4b4e8f837ca25109e256",
+      "label": "Pigsy"
+    }
+  },
+  "lines": {
+    "wish": "wukong",
+    "response": "pigsy"
+  },
+  "limits": {
+    "line_chars": 300,
+    "one_line_per_breath": true
+  },
+  "note": "The two voices are hosted models with stable ids; the host names them, it does not clone them. A kind that is not in 'lines' is unsayable and is refused, never described."
+}
