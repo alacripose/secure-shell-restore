@@ -26,7 +26,7 @@ OUT = ROOTDIR / "docs" / "secure-shell-audit" / "cua_driver_reaudit_synthesis.md
 STREAM = ROOTDIR / "docs" / "hypergrill" / "scan_stream@2026-11-04.jsonl"
 STATE = ROOTDIR / "docs" / "hypergrill" / "scan_state@2026-11-04.json"
 
-D = Path("<home>/Documents")
+D = Path(os.path.expanduser("~/Documents"))
 ROOTS = [
     D / "secure_shell_v2", D / "testport1", D / "shploingus-clean", D / "shploingus-game",
     D / "shploingus", D / "openlock", D / "secure-shell", D / "dl-enclave",

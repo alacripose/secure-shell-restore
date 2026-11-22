@@ -20,7 +20,7 @@ OUT = HERE / "secure_shell_synthesis.md"
 STREAM = HERE / "scan_stream.jsonl"
 STATE = HERE / "scan_state.json"
 
-D = Path("<home>/Documents")
+D = Path(os.path.expanduser("~/Documents"))
 ROOTS = [
     D / "testport1", D / "shploingus-clean", D / "shploingus-game", D / "shploingus",
     D / "openlock", D / "secure-shell", D / "dl-enclave", D / "ala_civ_bots_prototype",

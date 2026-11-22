@@ -47,7 +47,7 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DOCS = Path("<home>/Documents")
+DOCS = Path(os.path.expanduser("~/Documents"))
 OPENLOCK = DOCS / "openlock"
 SECURE_SHELL = DOCS / "secure-shell"
 ENCLAVE = DOCS / "dl-enclave"

@@ -17,6 +17,8 @@ file is `contour-owner-absent`. Neither falls back to a remembered number.
 """
 from __future__ import annotations
 
+import os
+
 import argparse
 import hashlib
 import json
@@ -27,10 +29,10 @@ ROOT = Path(__file__).resolve().parents[1]
 RECORD = ROOT / "packages" / "contour" / "contour.json"
 MANIFEST = ROOT / "packages" / "contour" / "contour.meta.json"
 
-FAMILY = Path("<home>/Documents/deadlock-model-forge")
+FAMILY = Path(os.path.expanduser("~/Documents/deadlock-model-forge"))
 OWNERS = {
     "pin": FAMILY / "pins" / "contour-pin.json",
-    "openlock": Path("<home>/Documents/openlock/clientaddon/panorama/scripts/openlock_contour.js"),
+    "openlock": Path(os.path.expanduser("~/Documents/openlock/clientaddon/panorama/scripts/openlock_contour.js")),
     "popit": Path("F:/Documents/popit-shell/ui/contour.js"),
 }
 

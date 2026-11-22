@@ -275,7 +275,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--limit", type=int, default=0)
     parser.add_argument("--ticks", type=int, default=1)
     parser.add_argument("--documents", action="store_true")
-    parser.add_argument("--roots", nargs="+", default=["<home>/Documents", "F:/"])
+    parser.add_argument("--roots", nargs="+", default=[os.path.expanduser("~/Documents"), "F:/"])
     parser.add_argument("--depth", type=int, default=2)
     parser.add_argument("--budget", type=float, default=20.0)
     args = parser.parse_args(argv)

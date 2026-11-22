@@ -1,3 +1,4 @@
+import os
 import json
 import pathlib
 import re
@@ -12,10 +13,10 @@ def check(name, ok, detail=""):
         failures.append(name)
 
 
-MODULE = pathlib.Path("<home>/Documents/secure-shell/shell/openlock/panorama/scripts/secure_shell_rounds.js")
-TEST = pathlib.Path("<home>/Documents/secure-shell/tests/rounds.test.mjs")
+MODULE = pathlib.Path(os.path.expanduser("~/Documents/secure-shell/shell/openlock/panorama/scripts/secure_shell_rounds.js"))
+TEST = pathlib.Path(os.path.expanduser("~/Documents/secure-shell/tests/rounds.test.mjs"))
 ARCH = pathlib.Path("docs/SECURE-SHELL-RESTORE@1.ARCHITECTURE.md")
-CLIENT_DIR = pathlib.Path("<home>/Documents/secure-shell/client")
+CLIENT_DIR = pathlib.Path(os.path.expanduser("~/Documents/secure-shell/client"))
 
 check("the client gate exists", MODULE.is_file(), str(MODULE))
 check("its test exists", TEST.is_file(), str(TEST))
