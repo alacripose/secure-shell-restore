@@ -145,9 +145,18 @@ def scan_line(path: str, number: int, line: str) -> list[dict]:
 
 
 def git(*arguments: str) -> str:
-    return subprocess.run(
-        ["git", *arguments], cwd=ROOT, capture_output=True, text=True, check=False
-    ).stdout
+    """Git's output as text. A binary diff is decoded with replacement rather than raising, because a
+    history scan reads every blob the repository has ever held, including the ones that are not text."""
+    result = subprocess.run(
+        ["git", *arguments],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        check=False,
+    )
+    return result.stdout or ""
 
 
 def resolve_root(start: Path) -> Path:
